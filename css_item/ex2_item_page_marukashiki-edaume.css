@@ -1,0 +1,33 @@
+﻿/*メダル*/
+div#ex2_container div#ex2_medal div.ex2_descp{margin:-26.5% 0 8%;}
+div#ex2_container div#ex2_medal:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+
+/*モチーフ　その一　梅*/
+div#ex2_container div#ex2_motif_1{margin-bottom:2%;}
+
+
+
+/*iframe*/
+div#ex2_container div.extended div.marukashiki-edaume iframe{width:101%; height:4900px; margin:3.5% 0 0 -0.9%;}
+
+/*iframe　TB　Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	div#ex2_container div.extended div.marukashiki-edaume iframe{height:4800px;}
+}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_container div.extended div.marukashiki-edaume iframe{height:4850px;}
+}
+
+/*iframe　IEハック*/
+@media all and (-ms-high-contrast:none){
+	div#ex2_container div.extended div.marukashiki-edaume iframe{height:4860px;}
+}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto) {
+	div#ex2_container div.extended div.marukashiki-edaume iframe{height:4850px;}
+}

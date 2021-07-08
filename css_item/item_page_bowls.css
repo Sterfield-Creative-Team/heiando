@@ -1,0 +1,62 @@
+﻿body{margin:0; padding:0; color:#000000; font-size:11px; line-height:1.8em; letter-spacing:0.1em; text-align:left; text-justify:inter-ideograph;
+font-family:"Meiryo UI",Arial,"Lucida Sans Unicode",sans-serif !important;
+}
+
+
+div#Wrap{width:890px; height:auto; margin:0; padding:0;}
+div#Wrap:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#background{width:850px; margin:0 3%; background-color:#ffffff;}
+div#container{padding:20px 40px;}
+
+div#container a:link{text-decoration:underline; color:#000000;}
+div#container a:visited{text-decoration:underline; color:#000000;}
+div#container a:hover{text-decoration:underline; color:#cc3333; font-weight:600; filter:alpha(opacity=100); opacity:1.0;}
+div#container a img{border-style:none;}
+div#container a img:hover{filter:alpha(opacity=50); opacity:0.5;}
+
+.title{color:#831111; font-family:"Garamond"; font-weight:600; font-size:26px; line-height:1.6em; margin:50px 0;}
+
+div.clear{width:100%; height:0px; clear:both;}
+
+
+/*ディテール*/
+div#container div.detail{position:relative;}
+div#container div.detail img{margin:0 -40px;}
+
+/*ディテール*丸菓子器　枝梅蒔絵*/
+div#container div.detail div.marukashiki-edaume div.size p.title{position:absolute; top:28px; left:0;}
+div#container div.detail div.marukashiki-edaume div.size p.description{position:absolute; top:415px; left:0; margin-right:50%;}
+div#container div.detail div.marukashiki-edaume div.inside p.note{position:absolute; top:815px; left:0; margin-right:50%; border:1px solid #cccccc; background-color:#eaeaea; padding:20px;}
+div#container div.detail div.marukashiki-edaume div.inside p.description{position:absolute; top:1000px; left:0; margin-right:65%;}
+div#container div.detail div.marukashiki-edaume div.back p.title{position:absolute; top:1750px; left:0;}
+div#container div.detail div.marukashiki-edaume div.back p.description{position:absolute; top:1910px; left:0; margin-right:58%;}
+
+
+
+/*絵柄　iframe*丸菓子器　枝梅蒔絵*/
+div#container div.design div.marukashiki-edaume iframe{width:150%; height:1210px; margin:0 -51px;}
+
+/*絵柄*/
+div#container div.design{position:relative;}
+div#container div.design p.title{position:absolute; top:0; left:0; z-index:2;}
+
+/*絵柄サムネイル　3表示*/
+div#container div.slider-nav3{margin:0 -20px; width:150px; position:absolute; top:80px; right:65px; z-index:2;}
+div#container div.slider-nav3 img{height:50px; float:left;}
+
+/*絵柄サムネイル矢印*/
+div#container button.slick-prev{position:absolute; top:12px; left:-40px; z-index:2; background-color:transparent; border:none; outline:none;}
+div#container button.slick-prev img{height:25px;}
+div#container button.slick-next{position:absolute; top:12px; right:-40px; z-index:2; background-color:transparent; border:none; outline:none;}
+div#container button.slick-next img{height:25px;}
+
+/*絵柄スライダー*/
+div#container div.slider-for{margin:0 -40px; width:850px; height:1210px; position:relative; overflow:hidden; z-index:1;}
+div#container div.slider-for img{margin-left:-270px; height:850px;}
+div#container div.slider-for img.motif{width:650px; height:auto; margin:0 100px;}
+div#container div.slider-for p{margin:0 100px; text-align:center;}
+div#container div.slider-for p.number{position:absolute; top:230px; left:0; z-index:2; background-color:rgba(131,17,17,0.5); padding:24px 19px; border-radius:50%; font-family:"Garamond"; font-size:30px; font-weight:600; color:#831111;} 
+div#container div.slider-for p.name{margin:-50px 0 50px; font-family:"Garamond"; font-weight:600; font-size:20px; font-weight:600; color:#831111;}
+div#container div.slider-for p.descriptionhalfleft{width:35%; display:inline-block; padding:10px; margin:20px 0 20px 100px; background-color:#eaeaea; border:1px solid #cccccc; font-style:italic;}
+div#container div.slider-for p.descriptionhalfright{width:35%; display:inline-block; padding:10px; margin:20px 100px 20px 0; background-color:#eaeaea; border:1px solid #cccccc; font-style:italic;}
+div#container div.slider-for p.recommendation{margin:20px 100px; padding:15px 10px; background-color:#eaeaea; border:1px solid #cccccc;}

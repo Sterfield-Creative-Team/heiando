@@ -1,0 +1,1539 @@
+{# Reference: https://launchcart.jp/reference/2-%e3%82%a4%e3%83%b3%e3%83%87%e3%83%83%e3%82%af%e3%82%b9%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88/ #}
+
+{% TemplateInclude "html head" %} 
+
+{# Variables Settings #}
+
+{# insert to html head title #}
+{%- set productName = product.attribute('product name') ? product.attribute('product name') : product.name -%}
+{%- set title = productName -%}
+
+{# set current currency #}
+{%- set currentCurrency = app.session.has('currency_unit') ? app.session.get('currency_unit') : is_authorized() ? app.security.token.user.settingCurrency : get_entity_manager().find("EcCoreBundle:Currency", system_config("base_currency")) -%}
+{%- set selectedCurrencyLabel = '' -%}
+{%- for key , item in supported_currencies -%}
+  {%- set currency = get_entity_manager().find("EcCoreBundle:Currency", item) -%}
+  {%- set name = currency.code -%}
+  {%- if name == currentCurrency -%}
+    {%- set selectedCurrencyLabel = name -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if not selectedCurrencyLabel -%}
+  {%- set currency = get_entity_manager().find("EcCoreBundle:Currency", supported_currencies|first) -%}
+  {%- set selectedCurrencyLabel = currency.code -%}
+{%- endif -%}
+
+{# get base currency unit #}
+{%- set baseCurrency = get_entity_manager().find('EcCoreBundle:Currency', system_config('base_currency')) -%}
+{%- set baseUnitFront = baseCurrency.getBeforeUnit() -%}
+{%- set baseUnitBack = baseCurrency.getAfterUnit() -%}
+
+{# flag of subscription #}
+{%- set isRegular = product.productType == 'regular' ? true : false -%}
+
+{# organize product sku information #}
+{%- set isInStock = false -%}
+{%- set productskus = product.productSku -%}
+{%- set defaultSkuNum = 0 -%}
+{%- set isExistSku1 = productskus.first.getSkuDetail1 ? true : false -%}
+{%- set isExistSku2 = productskus.first.getSkuDetail2 ? true : false -%}
+{%- set sku1Details = [] -%}
+{%- set sku2Details = [] -%}
+{%- for productsku in productskus -%}
+  {%- if not (productsku.stockUnlimited or (productsku.stock > 0)) -%}
+    {%- if loop.index0 == defaultSkuNum -%}
+      {%- set defaultSkuNum = loop.index0 -%}
+    {%- endif -%}
+  {%- else -%}
+    {%- set isInStock = true -%}
+  {%- endif -%}
+  {%- if isExistSku1 or isExistSku2 -%}
+    {%- if not (productsku.getSkuDetail1 in sku1Details) -%}
+      {%- set sku1Details = sku1Details|merge([productsku.getSkuDetail1]) -%}
+    {%- endif -%}
+    {%- if not (productsku.getSkuDetail2 in sku2Details) -%}
+      {%- set sku2Details = sku2Details|merge([productsku.getSkuDetail2]) -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{# end Variables Setting #}
+  
+<div class="layout_body">
+  <div class="layout_header">
+  {% TemplateInclude "header" %}
+  </div>
+
+{# Contents #}
+  <table border="0" cellspacing="0" cellpadding="0" class="layout_table">
+    <tbody>
+      <tr>
+        <td class="layout_menu">
+          {% TemplateInclude "leftnavi" %}
+        </td>
+        <td class="layout_content">
+          <div class="system_content">
+              <p class="pan FS2_breadcrumbs">
+                <a href="http://www.heiando1919.com">Top</a> &gt; 
+                <a href="/shop">shop</a> &gt; 
+                <a href="/interiors">Interior</a> &gt; UME Wall Art
+              </p>
+              <div class="FS2_GroupLayout">                               
+          {%- set qb = get_entity_manager().getRepository('EcCoreBundle:Product').createQueryBuilder('p').leftJoin('p.categories', 'c') -%}
+          {%- set products = qb.where('c.id = :id').setMaxResults(8).setParameter('id', 16).getQuery().getResult() -%}
+           	{%- set productsTotal = products | length -%}
+                {# page information #}
+                  <p class="pager">
+                    <span class="FS2_pager_text">
+                      {{ #pagingnavi_showing# }}
+                      <em>
+                        {{1}} -  {{ productsTotal }}
+                      </em>
+                      of
+                      <em>{{ productsTotal }}</em>  
+                    </span> 
+                  </p>
+            
+                <div class="groupLayout">
+                  <div class="alignItem_01">
+            
+                    <a name="gaku-kh-50-058"></a>
+                    <div class="gl_Item" id="FS2_itemlayout_I">
+                      <div class="user_inner_content FS2_upper_comment"> 
+                        <div id="ex2_Wrap">
+                          <div id="centerling_background">
+                            <div id="ex2_background">
+                              <div id="ex2_container">
+                          
+                          
+                                <!-- メダル -->
+                                <div id="ex2_medal" class="ex2_content_c">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_medal03.jpg">
+                                </div>
+                          
+                          
+                                <!-- コンセプト -->
+                                <h2 id="ex2_concept">
+                                  <div class="ex2_content_c">
+                            
+                                    <img src="../images/page/interiors/gaku-kh/gaku-kh_decor01a.jpg">
+                            
+                                  <div class="ex2_concept_t">
+                                    <div class="ex2_catch">
+                                      <p class="garamond">Art from 300 Years Ago.<br>
+                                        Timeless Beauty Flowering on Your Wall.
+                                      </p>
+                                    </div>
+                                    <div class="ex2_hr"></div>
+                                    <div class="ex2_descp">
+                                      <p>
+                                        <span class="italic">" Have a flower in life. Fill the room with your favourites. "</span>
+                                      </p>
+                                      <p>Such is the idea that sophisticated Japanese Art of its timeless beauty.
+                                      </p>
+                                    </div>
+                                    <div class="ex2_descp">
+                                      <p>Unique in design, sparkling in colour.<br>
+                                      This flower look has always been attracting enthusiasts around the world.
+                                      </p>
+                                      <p>Collectors from Japanese Emperor to Peter Drucker and<br>
+                                      artists from van Gogh, Klimt, Monet to Debussy.<br>
+                                      All hung their favourite Japanese Art in their rooms.
+                                      </p>
+                                    </div>
+                                    <div class="ex2_descp">
+                                      <p>Based on the renowned painting by Master Artisan Ogata Korin,<br>
+                                      this wall art revives traditional aesthetics<br>
+                                      unique as the original yet beautiful than ever.
+                                      </p>
+                                      <p>With sensations in design and colour. With delicacy in touch and nuance.<br>
+                                      The most famous masterpiece of Japanese Art is brought into today, after centuries of history.
+                                      </p>
+                                    </div>
+                                    <div class="ex2_descp">
+                                      <p>This is the art.
+                                      </p>
+                                    </div>
+                                  </div>
+                            
+                                  <ul class="ex2_img_plus">
+                                    <li class="ex2_img_plus_100">
+                                      <img src="../images/page/interiors/gaku-kh/gaku-kh_concept02.jpg">
+                                    </li>
+                                  </ul>
+                            
+                                  </div>
+                                </h2>
+                          
+                          
+                                <div id="ex2_marker" class="ex2_content_r">
+                                  <img src="../images/page/feature/item/item_marker01.jpg" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                </div>
+                          
+                          
+                                <!-- ブランド -->
+                                <h3 id="ex2_brand">
+                                  <div class="ex2_content_r">
+                                    <img src="../images/page/feature/about/ex2_about_us05.jpg" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                    <div class="ex2_catch">
+                                      <p class="garamond">About YAMADA HEIANDO:<br>
+                                      We are Proud Purveyor of Lacquerware<br>
+                                      to JAPANESE IMPERIAL HOUSEHOLD.
+                                      </p>
+                                    </div>
+                                    <div class="ex2_hr"></div>
+                            
+                                    <!-- ブランド　フレックス -->
+                                    <div class="ex2_flex">
+                                      <input type="checkbox" id="ex2_brand_category">
+                                      <label for="ex2_brand_category" id="ex2_brand_flex"></label>
+                                      <ul class="ex2_flex_more">
+                                        <li>
+                                          <div class="ex2_descp">
+                                            <p>YAMADA HEIANDO is a Japanese lacquerware brand, with more than 90 years of history and traditions. Founded in 1919 in Tokyo, Japan, we have always been serving the finest lacquer items. The extensive lineup ranges from classic sets of tableware to jewelry boxes in luxury, with more than 400 items in total.
+                                            </p>
+                                            <p>Our customers include: the Japanese Emperor and his Imperial Family, Foreign Embassies of Japan, renowned shrines and temples for worship, major global enterprises, and, of course, private individuals throughout the world.
+                                            </p>
+                                            <p>In the hope that more people will feel the art of lacquerware, we use only the best materials for our best craftsmen to work in. Genuine URUSHI lacquer in red and black, sparkling MAKI-E gilding in gold, delicate RADEN inlays of mother-of-pearls. We hold pride in possessing such techniques of Japanese traditions, still as unique as they were centuries ago.
+                                            </p>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </h3>
+                          
+                          
+                                <div id="ex2_marker" class="ex2_content_r">
+                                  <img src="../images/page/feature/item/item_marker01.jpg">
+                                </div>
+                          
+                          
+                          
+                                <!-- 尾形光琳 -->
+                                <div id="ex2_korin">
+                                  <div class="ex2_catch">
+                                  <p class="garamond">Based on Master Artisan Ogata Korin's<br>
+                                  <span class="ex2_korin_l">NATIONAL TREASURE PAINTING</span>
+                                  </p>
+                                  </div>
+                          
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_makie03.jpg">
+                          
+                                  <div class="ex2_korin_1">
+                                    <img src="../images/page/interiors/gaku-kh/gaku-kh_korin04.jpg" alt="Master Artisan Ogata Korin | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                    <div class="ex2_catch">
+                                      <p class="garamond">The Painter the World Fell in Love with.
+                                      </p>
+                                    </div>
+                                    <div class="ex2_descp">
+                                      <p>Over the course of Japanese painting history, OGATA KORIN is recognised as the everlasting grand master.
+                                      </p>
+                                      <p>His unique structural sense attracted collectors, critics, and artists around the world, raising Art Nouveau in 19th Century Europe.
+                                      </p>
+                                    </div>
+                                    <ul class="ex2_korin_2">
+                                      <li>Why This Wall Art is Popular<br>
+                                      Among Collectors
+                                      </li>
+                                      <li>Master Artisan Korin Ogata's timeless structural beauty, which marks flourishing of Japanese Art
+                                      </li>
+                                      <li>three-dimensional effect of traditional Japanese Art
+                                      </li>
+                                      <li>hand-painted nuance in genuine gold powders
+                                      </li>
+                                      <li>longer lasting &amp; easier maintenance than paintings
+                                      </li>
+                                    </ul>
+                                  </div>
+                          
+                                  <ul class="ex2_korin_3">
+                                    <li>Famous Collectors &amp; Artists Who Love Japanese Art
+                                    </li>
+                                    <li>Japanese Emperor
+                                    </li>
+                                    <li>Peter Drucker
+                                    </li>
+                                    <li>Donald Keene
+                                    </li>
+                                    <li>Joe Price
+                                    </li>
+                                    <li>Vincent van Gogh
+                                    </li>
+                                    <li>Edgar Degas
+                                    </li>
+                                    <li>Paul Gauguin
+                                    </li>
+                                    <li>Hikonobu Ise
+                                    </li>
+                                    <li>Gustav Klimt
+                                    </li>
+                                    <li>Henri de Toulouse-Lautrec
+                                    </li>
+                                    <li>Edouard Manet
+                                    </li>
+                                    <li>Alphonse Mucha
+                                    </li>
+                                    <li>Claude Monet
+                                    </li>
+                                    <li>Claude Debussy
+                                    </li>
+                                  </ul>
+                          
+                                  <div class="ex2_korin_4">
+                                    <img src="../images/page/interiors/gaku-kh/gaku-kh_korin03.jpg">
+                                    <div class="ex2_descp ex2_korin_4org">
+                                      <p>▲ original <span class="italic underline">Red &amp; White Plum Blossoms</span>&emsp;by Master Artisan Ogata Korin<br>
+                                      Japanese National Treasure from 18th Century<br>
+                                      gold leaf on folding screens&emsp;© MOA Museum of Art
+                                      </p>
+                                    </div>
+                                    <div class="ex2_descp ex2_korin_4re">
+                                      <p>▲ reproduced <span class="underline">UME Wall Art</span>&emsp;by YAMADA HEIANDO<br>
+                                      top selling décor in Japan
+                                      </p>
+                                    </div>
+                                  </div>
+                          
+                                </div>
+                          
+                          
+                                <!-- 飾り方 -->
+                                <div id="ex2_style" class="ex2_content_l">
+                          
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_korin02.jpg">
+                            
+                                  <ol class="ex2_style_1">
+                                    <li>How to Style Rooms :
+                                    </li>
+                                    <li>Cast light
+                                    </li>
+                                    <li>Arrange accent colours
+                                    </li>
+                                    <li>Coordinate motifs
+                                    </li>
+                                  </ol>
+
+                                  <!-- 飾り方　室内イメージ -->
+                                  <div class="ex2_style_2">
+                                    <div class="ex2_style_2t">
+                                      <div class="ex2_catch">
+                                        <p>Room with <span class="italic">My</span>&ensp;Favourites
+                                        </p>
+                                      </div>
+                                      <div class="ex2_descp">
+                                        <p>▼ House tour for decorating ideas &amp; inspirations
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                            
+                                  <!-- スライダー -->
+                                  <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 621px;">
+                                    <ul class="ex2_bxslider" style="width: 17215%; position: relative; transition-duration: 0s; transform: translate3d(-4440px, 0px, 0px);">
+                                      <li style="float: left; list-style: none; position: relative; width: 880px;" class="bx-clone" aria-hidden="true">
+                                        <img src="../images/page/interiors/gaku-kh/gaku-kh_decor05.jpg" title="">
+                                      </li>
+                                      <li style="float: left; list-style: none; position: relative; width: 880px;" aria-hidden="true"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor08.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor07.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor21.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor06.jpg" title=""></li>
+                                      <li aria-hidden="false" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor02.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor17.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor12.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor01.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor20.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor19.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor09.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor18.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor03.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor14.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor04.jpg" title=""></li>
+                                      <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor15.jpg" title=""></li>
+                                      <li style="float: left; list-style: none; position: relative; width: 880px;" aria-hidden="true"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor05.jpg" title=""></li>
+                                      <li style="float: left; list-style: none; position: relative; width: 880px;" class="bx-clone" aria-hidden="true"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor08.jpg" title=""></li>
+                                    </ul>
+                                  </div>
+                                  <div class="bx-controls bx-has-controls-direction bx-has-pager">
+                                    <div class="bx-controls-direction">
+                                      <a class="bx-prev" href="">Prev</a>
+                                      <a class="bx-next" href="">Next</a>
+                                    </div>
+                                    <div class="bx-pager bx-default-pager">
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="0" class="bx-pager-link">1</a>
+                                      </div>
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="1" class="bx-pager-link">2</a>
+                                      </div>
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="2" class="bx-pager-link">3</a>
+                                      </div><div class="bx-pager-item">
+                                        <a href="" data-slide-index="3" class="bx-pager-link">4</a>
+                                      </div>
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="4" class="bx-pager-link active">5</a>
+                                      </div>
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="5" class="bx-pager-link">6</a>
+                                      </div>
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="6" class="bx-pager-link">7</a>
+                                      </div>
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="7" class="bx-pager-link">8</a>
+                                      </div>
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="8" class="bx-pager-link">9</a>
+                                      </div><div class="bx-pager-item">
+                                        <a href="" data-slide-index="9" class="bx-pager-link">10</a>
+                                      </div>
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="10" class="bx-pager-link">11</a>
+                                      </div>
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="11" class="bx-pager-link">12</a>
+                                      </div>
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="12" class="bx-pager-link">13</a>
+                                      </div><div class="bx-pager-item">
+                                        <a href="" data-slide-index="13" class="bx-pager-link">14</a>
+                                      </div>
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="14" class="bx-pager-link">15</a>
+                                      </div>
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="15" class="bx-pager-link">16</a>
+                                      </div>
+                                      <div class="bx-pager-item">
+                                        <a href="" data-slide-index="16" class="bx-pager-link">17</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- スライダー自動リピートは他と同様 -->
+                              </div>
+                                    
+                          
+                                <!-- 飾り方　画像追加 -->
+                          
+                                <!-- 飾り方　お客様投稿 -->
+                                <div class="ex2_style_3">
+                                <div class="ex2_style_3t">
+                                <div class="ex2_catch">
+                                <p>« SNAP, SHARE, SHOP »
+                                </p>
+                                </div>
+                                <div class="ex2_descp">
+                                <p>Share your YAMADA HEIANDO décors with <span class="red">#heiando</span> to be featured on our page.
+                                </p>
+                                <p>#heiando #yamadaheiando #lacquerware
+                                </p>
+                                </div>
+                                <div class="ex2_style_sns">
+                                <a href="https://www.facebook.com/heiando/" target="_blank">
+                                <img class="ex2_f_brand_sns_s" src="https://secure1.future-shop.jp/%7Eheiando1919/images/icon/facebook.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                </a>
+                                <a href="https://www.instagram.com/yamadaheiando/" target="_blank">
+                                <img class="ex2_f_brand_sns_s" src="https://secure1.future-shop.jp/%7Eheiando1919/images/icon/instagram.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                </a>
+                          
+                                <a href="mailto:global@heiando.com">
+                                <img src="https://secure1.future-shop.jp/%7Eheiando1919/images/icon/email.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                          
+                                </a>
+                          
+                                </div>
+                                </div>
+                                <img src="../images/page/interiors/gaku-kh/gaku-kh_cart04.png">
+                                </div>
+                          
+                                </div>
+                          
+                          
+                                <!-- 金箔 -->
+                                <div id="ex2_kinpaku">
+                          
+                                  <div class="ex2_kinpaku_1">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_kinpaku02a.jpg">
+                                  </div>
+                                  <div class="ex2_catch">
+                                  <p class="garamond">Sparkles of Gold Leaf,<br>
+                                  Appearing &amp; Disappearing.
+                                  </p>
+                                  </div>
+                                  <div class="ex2_descp">
+                                  <p>Ultra thin layers of gold leaves will emerge when light shines in the perfect angle.
+                                  </p>
+                                  <p>Such delicate trick is what gives it three-dimensional effect of traditional Japanese Art.
+                                  </p>
+                                  </div>
+                                  <p class="ex2_note">◀ Roll over for the light effect.
+                                  </p>
+                          
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_kinpaku06.jpg">
+                          
+                                </div>
+                          
+                          
+                                <div id="ex2_marker" class="ex2_content_r">
+                                  <img src="../images/page/feature/item/item_marker01.jpg">
+                                </div>
+                          
+                          
+                                <!-- 技法 -->
+                                <div id="ex2_technique" class="ex2_content_c">
+                                  <div class="ex2_catch">
+                                    <p class="garamond">Quintessence of Traditional Techniques, in Pursuit of Quality.
+                                    </p>
+                                  </div>
+                                </div>
+                          
+                          
+                                <!-- 蒔絵 -->
+                                <div id="ex2_makie" class="ex2_content_l">
+                            
+                                  <!-- スライダー -->
+                                  <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 621px;"><ul class="ex2_bxslider" style="width: 14215%; position: relative; transition-duration: 0s; transform: translate3d(-5320px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 880px;" class="bx-clone" aria-hidden="true"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie02b.jpg" title=""></li>
+                                  <li style="float: left; list-style: none; position: relative; width: 880px;" aria-hidden="true"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie03.jpg" title=""></li>
+                                  <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie05b.jpg" title=""></li>
+                                  <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie06.jpg" title=""></li>
+                                  <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie01.jpg" title=""></li>
+                                  <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie09.jpg" title=""></li>
+                                  <li aria-hidden="false" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie06b.jpg" title=""></li>
+                                  <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie04a.jpg" title=""></li>
+                                  <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie02a.jpg" title=""></li>
+                                  <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie08b.jpg" title=""></li>
+                                  <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie04.jpg" title=""></li>
+                                  <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie09b.jpg" title=""></li>
+                                  <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie07a.jpg" title=""></li>
+                                  <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie08.jpg" title=""></li>
+                                  <li style="float: left; list-style: none; position: relative; width: 880px;" aria-hidden="true"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie02b.jpg" title=""></li>
+                                  <li style="float: left; list-style: none; position: relative; width: 880px;" class="bx-clone" aria-hidden="true"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie03.jpg" title=""></li></ul></div><div class="bx-controls bx-has-controls-direction bx-has-pager"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="" data-slide-index="2" class="bx-pager-link">3</a></div><div class="bx-pager-item"><a href="" data-slide-index="3" class="bx-pager-link">4</a></div><div class="bx-pager-item"><a href="" data-slide-index="4" class="bx-pager-link">5</a></div><div class="bx-pager-item"><a href="" data-slide-index="5" class="bx-pager-link active">6</a></div><div class="bx-pager-item"><a href="" data-slide-index="6" class="bx-pager-link">7</a></div><div class="bx-pager-item"><a href="" data-slide-index="7" class="bx-pager-link">8</a></div><div class="bx-pager-item"><a href="" data-slide-index="8" class="bx-pager-link">9</a></div><div class="bx-pager-item"><a href="" data-slide-index="9" class="bx-pager-link">10</a></div><div class="bx-pager-item"><a href="" data-slide-index="10" class="bx-pager-link">11</a></div><div class="bx-pager-item"><a href="" data-slide-index="11" class="bx-pager-link">12</a></div><div class="bx-pager-item"><a href="" data-slide-index="12" class="bx-pager-link">13</a></div><div class="bx-pager-item"><a href="" data-slide-index="13" class="bx-pager-link">14</a></div></div></div></div>
+                                  <!-- スライダー自動リピートは他と同様 -->
+                          
+                                  <div class="ex2_catch">
+                                  <p class="garamond">Sparkling MAKI-E Gilding with<br>
+                                  Ultrafine Gold Powders.
+                                  </p>
+                                  </div>
+                                  <div class="ex2_hr"> </div>
+                            
+                                  <!-- 蒔絵　フレックス -->
+                                  <div class="ex2_flex">
+                                  <input type="checkbox" id="ex2_makie_category">
+                                  <label for="ex2_makie_category" id="ex2_makie_flex"></label>
+                                  <ul class="ex2_flex_more">
+                                  <li>
+                                  <div class="ex2_descp">
+                                  <p>A renowned decoration technique in Japan's lacquerware creation, MAKI-E gilding applies gold in multiple yet thin layers. We draw pictures by sprinkling ultrafine gold powders over wet lacquer.
+                                  </p>
+                                  <p>What characterises our MAKI-E gilding is its soothing touch, made possible with our wide variety of gold powders. We have more than 300 variations in total, each with different nuance in size, thickness, and form.
+                                  </p>
+                                  <p>They have been hammered out from solid gold to 1-1.2/10,000mm, so thin that it lets light shine right through.
+                                  </p>
+                                  </div>
+                                  </li>
+                                  <li>
+                                  <div class="ex2_descp ex2_descp_r">
+                                  <div class="ex2_descp_hr_f">
+                                  </div>
+                                  <p>MAKI-E gilding can be classified further depending on how they are finished: HIRA MAKI-E for a flat finish and TAKA MAKI-E for a high finish.
+                                  </p>
+                                  <p>In flat HIRA MAKI-E, the design is first drawn on a special tracing paper and then traced onto the undercoated surface in golden lacquer. Various types of fine paint brushes are used, so that gold powders will adhere evenly when sprinkled over.
+                                  </p>
+                                  <p>The glittering particles are to be put more than thoroughly in multiple sizes, from 0.005mm to 0.3mm in diameter, to ensure complete coverage.
+                                  </p>
+                                  <p>It is only with artisans' exceptional skills to spread lacquer thin and powders uniform that the whole surface stays flat. Smooth to the touch but stunning to the eyes, powdered and plain areas become borderless.
+                                  </p>
+                                  <div class="ex2_descp_hr_b">
+                                  </div>
+                                  </div>
+                                  </li>
+                                  <li>
+                                  <div class="ex2_descp">
+                                  <p>Once the lacquer has been dried off in a chamber and excess gold is removed with a soft cotton ball, a clear outline of the design comes up to the surface.
+                                  </p>
+                                  <p>The sparkling powders are to be covered with additional coats of finishing lacquer, to give the final gloss as well as to protect them from falling off. These coating layers are done extremely thin that the powders' gold texture is still tangible.
+                                  </p>
+                                  <p>At last, elaborate design features, including veins of leaves or filaments of flowers, are drawn on the gold powders with thin lines of matching coloured lacquer.
+                                  </p>
+                                  </div>
+                                  </li>
+                                  <li>
+                                  <div class="ex2_descp ex2_descp_r">
+                                  <div class="ex2_descp_hr_f">
+                                  </div>
+                                  <p>High TAKA MAKI-E follows basically the same process, except that it has an additional step in the initial design tracing. After painting the design onto the undercoated surface, gold foils are cut in precise patterns and pasted to enhance the design in high relief.
+                                  </p>
+                                  <p>The surface is then covered with layers of golden lacquer, sparkling powders in the same colour, and finishing lacquer to reflect the glitter of light.
+                                  </p>
+                                  <p>TAKA MAKI-E is what makes the design three-dimensional, one distinguishing characteristic of traditional Japanese Art.
+                                  </p>
+                                  </div>
+                                  </li>
+                                  </ul>
+                                  </div>
+                          
+                                  <!-- 蒔絵　画像追加　平 -->
+                                  <ul class="ex2_img_plus ex2_makie_hira">
+                                  <li class="ex2_img_plus_20">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_makie04b.jpg">
+                                  </li>
+                                  <li class="ex2_img_plus_20">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_makie02.jpg">
+                                  </li>
+                                  <li class="ex2_img_plus_20">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_makie01b.jpg">
+                                  </li>
+                                  <li class="ex2_img_plus_20">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_makie03a.jpg">
+                                  </li>
+                                  </ul>
+                          
+                                  <!-- 蒔絵　画像追加　他 -->
+                                  <ul class="ex2_img_plus ex2_makie_other">
+                                  <li class="ex2_img_plus_20">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_kinpaku02.jpg">
+                                  </li>
+                                  <li class="ex2_img_plus_20">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_kinpaku04.jpg">
+                                  </li>
+                                  <li class="ex2_img_plus_20">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_makie09.jpg">
+                                  </li>
+                                  <li class="ex2_img_plus_20">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_makie09b.jpg">
+                                  </li>
+                                  </ul>
+                          
+                                  <!-- 蒔絵　画像追加　高 -->
+                                  <ul class="ex2_img_plus ex2_makie_taka">
+                                  <li class="ex2_img_plus_20">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_makie05b.jpg">
+                                  </li>
+                                  <li class="ex2_img_plus_20">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_makie06.jpg">
+                                  </li>
+                                  <li class="ex2_img_plus_20">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_makie06b.jpg">
+                                  </li>
+                                  <li class="ex2_img_plus_20">
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_makie08.jpg">
+                                  </li>
+                                  </ul>
+                          
+                                </div>
+                          
+                          
+                                <!-- 漆 -->
+                                <div id="ex2_urushi" class="ex2_content_r">
+                          
+                                  <img src="../images/page/interiors/gaku-kh/gaku-kh_side01.jpg">
+                            
+                                  <div class="ex2_catch">
+                                    <p class="garamond">URUSHI Lacquer Coating,<br>
+                                    Highly Rare and 100% Ecological.
+                                    </p>
+                                  </div>
+                                  <div class="ex2_hr"></div>
+                            
+                                  <!-- 漆　フレックス -->
+                                  <div class="ex2_flex">
+                                  <input type="checkbox" id="ex2_urushi_category">
+                                  <label for="ex2_urushi_category" id="ex2_urushi_flex"></label>
+                                  <ul class="ex2_flex_more">
+                                  <li>
+                                  <div class="ex2_descp">
+                                  <p>URUSHI lacquer is a 100% ecological coating material made from sap of special trees (Rhus Verniciflua). One tree can produce 200ml sap at most in a lifetime, which makes it highly rare.
+                                  </p>
+                                  <p>The history goes back as far as 3.4 million years to the Stone Age, when URUSHI lacquer was used as an adhesive in Asia. With high resistance even to acid and alkali and a natural tendency to solidify at room temperature, the 100% ecological coating has developed suitable for daily use.
+                                  </p>
+                                  </div>
+                                  </li>
+                                  <li>
+                                  <div class="ex2_descp ex2_descp_l">
+                                  <div class="ex2_descp_hr_f">
+                                  </div>
+                                  <p>It was the Japanese, however, that first recognised the beauty inherent in lacquerware.
+                                  </p>
+                                  <p>URUSHI lacquer trees may grow in other Asian countries, but Japanese ones are famous for containing the most amount of sparkling component (It is named in Japanese, <span class="italic">Urushiol</span>.). Our URUSHI lacquer has 65-70% of shining urushiol in comparison to others' 5-10%.
+                                  </p>
+                                  <p>The perfectly smooth surface, reflecting the light and sparkling vivid colours. We refined the coating technique to the level where it became nothing but art.
+                                  </p>
+                                  </div>
+                                  </li>
+                                  </ul>
+                                  </div>
+                          
+                                  <!-- 漆　画像追加 -->
+                                  <ul class="ex2_img_plus">
+                                  <li class="ex2_img_plus_80">
+                                  <img src="../images/page/feature/lacquerware/urushi02.jpg">
+                                  </li>
+                                  <div class="ex2_text_plus">
+                                  <div class="ex2_catch">
+                                  <p class="garamond">Black<br>
+                                  from Nature
+                                  </p>
+                                  </div>
+                                  <div class="ex2_descp">
+                                  <p>The deep black colour is made by blending clear URUSHI lacquer with mineral-based pigments.
+                                  </p>
+                                  </div>
+                                  </div>
+                                  </ul>
+                          
+                                </div>
+                          
+                          
+                                <div class="extended">
+                                  <div class="gaku-kh01">
+                                  <div class="iframe">
+                                   <div id="ex2_Wrap" style="width:100%; margin-left:0.6%;">
+                                      <div id="centerling_background">
+                                        <div id="ex2_background">
+                                        <div id="ex2_container">
+                                      
+                                      
+                                          <!-- 切り替え画像 -->
+                                          <div id="ex2_marker" class="ex2_content_r">
+                                          <img src="../images/page/feature/item/item_marker01.jpg" alt="Ume Wall Art | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                          </div>
+                                      
+                                      
+                                          <!-- モチーフ　その一　梅 -->
+                                          <div id="ex2_motif_1" class="ex2_content_l">
+                                      
+                                          <div class="ex2_catch ex2_motif_t">
+                                            <p class="garamond">Japanese Aesthetics from Centuries Ago,<br>
+                                            Featuring Good Luck Symbols in Traditional Colours.
+                                            </p>
+                                          </div>
+                                      
+                                          <img src="../images/page/interiors/gaku-kh/gaku-kh_motif01.jpg" alt="Ume Wall Art | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                          <div class="ex2_motif_1t">
+                                            <div class="ex2_catch">
+                                            <p class="garamond">Japanese UME Roses
+                                            </p>
+                                            </div>
+                                            <div class="ex2_descp">
+                                            <p class="garamond">( Ume 梅 )
+                                            </p>
+                                            </div>
+                                            <ul class="ex2_info">
+                                            <li>Symbols of high spirits
+                                            </li>
+                                            <li>Recommended as celebration gifts, especially for house warming and anniversaries<br>
+                                              <img class="ex2_info_icon" src="../../images/icon/email.png" alt="Ume Wall Art | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                              <div>For corporate gifts and other large orders, please contact us via <a href="mailto:global@heiando.com">email</a>. We will be happy to help you.
+                                              </div>
+                                            </li>
+                                            </ul>
+                                          </div>
+                                      
+                                          </div>
+                                      
+                                      
+                                          <!-- サイズ -->
+                                          <div id="ex2_size" class="ex2_content_r">
+                                          <img src="../images/page/interiors/gaku-kh/gaku-kh_size01.jpg" alt="Ume Wall Art | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                          <div class="ex2_descp_more">
+                                            <p>2 variations in size and colour, for your choice.
+                                            </p>
+                                          </div>
+                                          </div>
+                                      
+                                      
+                                          <!-- デザイン -->
+                                          <div id="ex2_design" class="ex2_content_l">
+                                          <img src="../images/page/interiors/gaku-kh/gaku-kh_design01.jpg" alt="Ume Wall Art | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                          <div class="ex2_descp_more">
+                                            <p>Each design is hand-painted with different gold powders.<br>
+                                            ( large : yellow gold / small : orange gold )
+                                            </p>
+                                          </div>
+                                          </div>
+                                      
+                                      
+                                          <!-- 後ろ -->
+                                          <div id="ex2_back" class="ex2_content_r">
+                                          <img src="../images/page/interiors/gaku-kh/gaku-kh_back01.jpg" alt="Ume Wall Art | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                          <div class="ex2_descp_more">
+                                            <p>A hanging ribbon on the back.
+                                            </p>
+                                          </div>
+                                          </div>
+                                      
+                                      
+                                          <!-- 形状 -->
+                                          <div id="ex2_form" class="ex2_content_l">
+                                          <img src="../images/page/interiors/gaku-kh/gaku-kh_form01.jpg" alt="Ume Wall Art | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                          <div class="ex2_descp_more">
+                                            <p>Small size can also stand alone, with the supporting plate.
+                                            </p>
+                                          </div>
+                                          </div>
+                                      
+                                      
+                                          <!-- 角度 -->
+                                          <div id="ex2_angle" class="ex2_content_r">
+                                          <img src="../images/page/interiors/gaku-kh/gaku-kh_kinpaku03.jpg" alt="Ume Wall Art | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                          <div class="ex2_descp_more">
+                                            <p>Sparkles of gold leaves appear on the river depending on the angle.
+                                            </p>
+                                          </div>
+                                          </div>
+                                      
+                                      
+                                          <!-- 切り替え画像 -->
+                                          <div id="ex2_marker" class="ex2_content_r">
+                                          <img src="../images/page/feature/item/item_marker01.jpg" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                          </div>
+                                      
+                                      
+                                        </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    </div>
+                                  </div>
+                                </div>
+                          
+                          
+                                <!-- スライダー -->
+                                <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 621px;"><ul class="ex2_bxslider" style="width: 31215%; position: relative; transition-duration: 0s; transform: translate3d(-7960px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 880px;" class="bx-clone" aria-hidden="true"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie06b.jpg" title=""></li>
+                                <li style="float: left; list-style: none; position: relative; width: 880px;" aria-hidden="true"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor08.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie03.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie05b.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor07.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor21.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie06.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor06.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor02.jpg" title=""></li>
+                                <li aria-hidden="false" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie01.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie09.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor17.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor12.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie04a.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor01.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie02a.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor20.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie08b.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor19.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie04.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor09.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie09b.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor18.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie07a.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor03.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie02b.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor14.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor04.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie08.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor15.jpg" title=""></li>
+                                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 880px;"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor05.jpg" title=""></li>
+                                <li style="float: left; list-style: none; position: relative; width: 880px;" aria-hidden="true"><img src="../images/page/interiors/gaku-kh/gaku-kh_makie06b.jpg" title=""></li>
+                                <li style="float: left; list-style: none; position: relative; width: 880px;" class="bx-clone" aria-hidden="true"><img src="../images/page/interiors/gaku-kh/gaku-kh_decor08.jpg" title=""></li></ul></div><div class="bx-controls bx-has-controls-direction bx-has-pager"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="" data-slide-index="2" class="bx-pager-link">3</a></div><div class="bx-pager-item"><a href="" data-slide-index="3" class="bx-pager-link">4</a></div><div class="bx-pager-item"><a href="" data-slide-index="4" class="bx-pager-link">5</a></div><div class="bx-pager-item"><a href="" data-slide-index="5" class="bx-pager-link">6</a></div><div class="bx-pager-item"><a href="" data-slide-index="6" class="bx-pager-link">7</a></div><div class="bx-pager-item"><a href="" data-slide-index="7" class="bx-pager-link">8</a></div><div class="bx-pager-item"><a href="" data-slide-index="8" class="bx-pager-link active">9</a></div><div class="bx-pager-item"><a href="" data-slide-index="9" class="bx-pager-link">10</a></div><div class="bx-pager-item"><a href="" data-slide-index="10" class="bx-pager-link">11</a></div><div class="bx-pager-item"><a href="" data-slide-index="11" class="bx-pager-link">12</a></div><div class="bx-pager-item"><a href="" data-slide-index="12" class="bx-pager-link">13</a></div><div class="bx-pager-item"><a href="" data-slide-index="13" class="bx-pager-link">14</a></div><div class="bx-pager-item"><a href="" data-slide-index="14" class="bx-pager-link">15</a></div><div class="bx-pager-item"><a href="" data-slide-index="15" class="bx-pager-link">16</a></div><div class="bx-pager-item"><a href="" data-slide-index="16" class="bx-pager-link">17</a></div><div class="bx-pager-item"><a href="" data-slide-index="17" class="bx-pager-link">18</a></div><div class="bx-pager-item"><a href="" data-slide-index="18" class="bx-pager-link">19</a></div><div class="bx-pager-item"><a href="" data-slide-index="19" class="bx-pager-link">20</a></div><div class="bx-pager-item"><a href="" data-slide-index="20" class="bx-pager-link">21</a></div><div class="bx-pager-item"><a href="" data-slide-index="21" class="bx-pager-link">22</a></div><div class="bx-pager-item"><a href="" data-slide-index="22" class="bx-pager-link">23</a></div><div class="bx-pager-item"><a href="" data-slide-index="23" class="bx-pager-link">24</a></div><div class="bx-pager-item"><a href="" data-slide-index="24" class="bx-pager-link">25</a></div><div class="bx-pager-item"><a href="" data-slide-index="25" class="bx-pager-link">26</a></div><div class="bx-pager-item"><a href="" data-slide-index="26" class="bx-pager-link">27</a></div><div class="bx-pager-item"><a href="" data-slide-index="27" class="bx-pager-link">28</a></div><div class="bx-pager-item"><a href="" data-slide-index="28" class="bx-pager-link">29</a></div><div class="bx-pager-item"><a href="" data-slide-index="29" class="bx-pager-link">30</a></div><div class="bx-pager-item"><a href="" data-slide-index="30" class="bx-pager-link">31</a></div></div></div></div>
+                                <!-- スライダー自動リピート -->
+                                <script>
+                                  $(document).ready(function(){
+                                  $('.ex2_bxslider').bxSlider({
+                                  speed: 200,
+                                  randomStart: true,
+                                  captions: true,
+                                  auto: true,
+                                  autoHover: true,
+                                  responsive:true,
+                                  });
+                                  });
+                                </script>
+                          
+                          
+                                <div class="extended">
+                                  <div class="gaku-kh02">
+                                   <div class="iframe">
+                                   <div id="ex2_Wrap" style="width:100%; margin-left:0.6%;">
+                                      <div id="centerling_background">
+                                      <div id="ex2_background">
+                                       <div id="ex2_container">
+                                    
+                                    
+                                        <!-- メダル -->
+                                        <div id="ex2_medal" class="ex2_content_c ex2_medal02">
+                                         	<img src="../images/page/interiors/gaku-kh/gaku-kh_medal03.jpg" alt="Ume Wall Art | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                        </div>
+                                    
+                                    
+                                        <!-- コラボレーション -->
+                                        <div id="ex2_collab">
+                                         <div class="ex2_collab_img">
+                                          <ul id="ex2_info_img">
+                                           <li><img src="../images/page/feature/about/ex2_about_us04.jpg" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                           </li>
+                                          </ul>
+                                         </div>
+                                         <p class="ex2_catch_s garamond">
+                                         THEY TRUST US
+                                         </p>
+                                         <div class="ex2_collab_txt">
+                                          <ul id="ex2_info_btn">
+                                           <li><img src="../images/collab/Christofle.png" alt="Christofle | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li><img src="../images/collab/Richard Ginori.png" alt="Richard Ginori | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li><img src="../images/collab/Orrefors.png" alt="Orrefors | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li><img src="../images/collab/House of Amber.png" alt="House of Amber | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li><img src="../images/collab/MUHLE.png" alt="MUHLE | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li><img src="../images/collab/Shu Uemura.png" alt="Shu Uemura | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li><img src="../images/collab/Chopard.png" alt="Chopard | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li class="ex2_info_btn_m"><img src="../images/collab/Fran's Chocolates.png" alt="Fran's Chocolates | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                            &#9650;	Then President Obama's favourite chocolates
+                                           </li>
+                                           <li><img src="../images/collab/MAJANI.png" alt="MUJANI | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li><img src="../images/collab/Nicolai Bergmann.png" alt="Nicolai Bergmann | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li><img src="../images/collab/Japan Airlines.png" alt="Japan Airlines | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li><img src="../images/collab/Platinum.png" alt="Platinum Fountain Pen | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li><img src="../images/collab/Sailor.png" alt="Sailor Fountain Pen | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li><img src="../images/collab/Credor.png" alt="Credor | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li class="ex2_info_btn_m"><img src="../images/collab/Akasaka Aono.png" alt="Akasaka Aono | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                            &#9650;	Steve Jobs' favourite Japanese mochi sweets<br>[ Akasaka Aono ]
+                                           </li>
+                                           <li class="ex2_info_btn_m"><img src="../images/collab/Chidoriya.png" alt="Chidoriya | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                            &#9650;	traditional style Japanese cakes<br>[ Chidoriya ]
+                                           </li>
+                                           <li class="ex2_info_btn_s">
+                                            Imperial Household Agency of Japan
+                                           </li>
+                                           <li class="ex2_info_btn_s">
+                                            Ministry of Foreign Affairs of Japan
+                                           </li>
+                                           <li class="ex2_info_btn_s">
+                                            Ise<br>Grand Shrine
+                                           </li>
+                                          </ul>
+                                         </div>
+                                        </div>
+                                    
+                                        <!-- メディア掲載 -->
+                                        <div id="ex2_media">
+                                         <div class="ex2_media_txt">
+                                          <p class="ex2_catch_s garamond">
+                                          They Love Our Items
+                                          </p>
+                                          <ul id="ex2_info_btn">
+                                           <li>&#171; Magazines &#187;
+                                           </li>
+                                           <li>The Washoku Way
+                                           </li>
+                                           <li>Beautiful Kimono
+                                           </li>
+                                           <li>Japanese Wedding
+                                           </li>
+                                           <li>Kateigaho
+                                           </li>
+                                           <li>Cruise Traveller
+                                           </li>
+                                           <li>Hotel Wedding
+                                           </li>
+                                           <li>25ans
+                                           </li>
+                                           <li>The Nikkei Magazine Style
+                                           </li>
+                                          </ul>
+                                          <ul>
+                                           <li>&#171; Awards &#187;
+                                           </li>
+                                           <li><img src="../images/media/The Japan Gift Award_2016.jpg" alt="The Japan Gift Award | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                           <li class="wo">Made in Japan
+                                           </li>
+                                           <li class="wo">Living National Treasures of craftsmanship
+                                           </li>
+                                          </ul>
+                                         </div>
+                                         <div class="ex2_media_img">
+                                          <ul id="ex2_info_img">
+                                           <li><img src="../images/media/The Washoku Way01.jpg" alt="The Washoku Way | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor" />
+                                           </li>
+                                          </ul>
+                                         </div>
+                                        </div>
+
+                                    
+                                        <!-- 実店舗 -->
+                                        <div id="ex2_store" class="ex2_content_r">
+                                         <img src="../images/page/feature/item/item_store01.jpg" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                         <div class="ex2_r_text">
+                                          <div class="ex2_catch">
+                                           <p class="garamond">From Tokyo, Center of Japan.
+                                           </p>
+                                          </div>
+                                          <div class="ex2_descp">
+                                           <p>Our stores are located in traditional areas around Tokyo, Japan.<br>
+                                           We have been telling our story with our 90 year heritage at heart.
+                                           </p>
+                                          </div>
+                                          <ul class="ex2_info">
+                                           <li>Narita International Airport
+                                           </li>
+                                           <li>Daikanyama
+                                            <div class="ex2_info_s">( flagship )</div>
+                                           </li>
+                                           <li>Nihonbashi
+                                           </li>
+                                           <li>Ginza
+                                           </li>
+                                          </ul>
+                                         </div>
+                                    
+                                        </div>
+                                    
+                                    
+                                        <!-- バリエーション -->
+                                        <div id="ex2_variation" class="ex2_content_h">
+                                         <div class="ex2_catch">
+                                          <p class="garamond">Design Variations
+                                          </p>
+                                         </div>
+                                         <img src="../images/page/interiors/gaku-kh/gaku-kh_variation05.jpg" alt="Ume Wall Art | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                         <div class="ex2_h_r">
+                                          <ol>
+                                           <li>&emsp;UME&emsp;
+                                           </li>
+                                           <li>01. large x yellow gold
+                                           </li>
+                                           <li>&emsp;UME&emsp;
+                                           </li>
+                                           <li>02. small x orange gold
+                                           </li>
+                                          </ol>
+                                         </div>
+                                    
+                                        </div>
+                                    
+                                    
+                                        <!-- スペックデータ -->
+                                        <div id="ex2_spec">
+                                         <ul>
+                                          <li class="ex2_spec_l spec_l2">Product
+                                          </li>
+                                          <li class="ex2_spec_r spec_r_f">UME Wall Art<br>
+                                          ( Gaku & Panel Kouhakubai Ryusui no zu )
+                                          </li>
+                                         </ul>
+                                         <ul>
+                                          <li class="ex2_spec_l">Design
+                                          </li>
+                                          <li class="ex2_spec_r">based on Master Artisan Ogata Korin's <span class="italic">Red & White Plum Blossoms</span> ( 18th Century National Treasure )
+                                          </li>
+                                         </ul>
+                                         <ul>
+                                          <li class="ex2_spec_l">Country of Origin
+                                          </li>
+                                          <li class="ex2_spec_r">JAPAN
+                                          </li>
+                                         </ul>
+                                         <ul>
+                                          <li class="ex2_spec_l spec_l2">Size
+                                          </li>
+                                          <li class="ex2_spec_r">large - height 27.5cm * length 54.5cm * width 1cm<br>
+                                          small - height 16cm * length 44cm * width 6cm
+                                          </li>
+                                         </ul>
+                                         <ul>
+                                          <li class="ex2_spec_l spec_l2">Weight
+                                          </li>
+                                          <li class="ex2_spec_r">large - 1,270g<br>
+                                          small - 1,110g
+                                          </li>
+                                         </ul>
+                                         <ul>
+                                          <li class="ex2_spec_l">Material
+                                          </li>
+                                          <li class="ex2_spec_r">MDF ( medium density fibreboard )
+                                          </li>
+                                         </ul>
+                                         <ul>
+                                          <li class="ex2_spec_l spec_l2">Finishing
+                                          </li>
+                                          <li class="ex2_spec_r">Urethane URUSHI ( lacquer )<br>
+                                          MAKI-E ( gold gilding )
+                                          </li>
+                                         </ul>
+                                         <ul>
+                                          <li class="ex2_spec_l spec_l2">Included Items
+                                          </li>
+                                          <li class="ex2_spec_r">1 wall art<br>
+                                          1 hanging ribbon
+                                          </li>
+                                         </ul>
+                                        </div>
+                                    
+                                    
+                                        <!-- アテンションノート -->
+                                        <div id="ex2_attention">
+                                         <ul>
+                                          <li>Notes
+                                          </li>
+                                          <li>Props in pictures on this page are not part of the actual product. They are for illustrative purposes only.
+                                          </li>
+                                          <li>These UME wall arts can only be introduced for a limited number in stock, as they are thoroughly made by hand. It takes well over a year to create a single piece. We greatly appreciate your understanding and patience in case we are out of stock.
+                                          </li>
+                                         </ul>
+                                        </div>
+                                    
+                                    
+                                        <!-- メイン画像 -->
+                                        <div>
+                                         <img src="../images/page/interiors/gaku-kh/gaku-kh_decor01.jpg" alt="Ume Wall Art | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                        </div>
+                                    
+                                    
+                                        <!-- ギフトラッピング -->
+                                        <div id="ex2_giftwrap" class="ex2_content_r">
+                                         <img src="../images/page/feature/item/item_giftwrap01.jpg" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                                         <div class="ex2_catch">
+                                          <p class="garamond">Gift Wrapping on All Orders.
+                                          </p>
+                                         </div>
+                                         <div class="ex2_hr">
+                                         </div>
+                                         <div class="ex2_descp">
+                                          <p>YAMADA HEIANDO's lacquer items are the perfect choice for your next gift, satisfying everything you could ask for in gift-giving.
+                                          </p>
+                                          <p>We wrap all items with our original wrapping paper, ribbons, and bags (We do not charge extra for wrapping. It is free.).
+                                          </p>
+                                          <p>Your order will usually be shipped within 2 business days after the payment is confirmed. The final shipping schedule may differ depending on the destination country, but you can well have your item when you want it.
+                                          </p>
+                                         </div>
+                                    
+                                         <div class="ex2_catch ex2_catch_l">
+                                          <p class="garamond">Handling Manual is also included.
+                                          </p>
+                                         </div>
+                                         <div class="ex2_hr ex2_hr_l">
+                                         </div>
+                                         <div class="ex2_descp ex2_descp_l">
+                                          <p>Don't worry even if it is your first time to use lacquerware - We send a compact handling manual with each item.
+                                          </p>
+                                          <p>Written inside are our fundamental philosophy, the basic history of lacquerware, and notes on using them in daily life.
+                                          </p>
+                                         </div>
+                                        </div>
+                                    
+                                    
+                                       </div>
+                                      </div>
+                                     </div>
+                                    </div>
+                                    </div>
+                                   </div>
+                                  </div>
+                                    
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                
+				<!--  商品詳細  -->
+           {# Products #}            
+          {%- for product in products -%}
+          	{%- set productskus = get_entity_manager().getRepository('EcCoreBundle:ProductSku').createQueryBuilder('ps').innerJoin('ps.product', 'p').where(' p.id = :id').setParameter('id', product.id).getQuery().getResult() -%}
+              {%- set productAvailable = false -%}
+              {%- set isMultiplePrices = false -%}
+
+                            {# confirm the stock and the min price in sku #}
+                            {%- set minPrice = 0 -%}
+                            {%- for productsku in productskus -%}
+                              {%- if (productsku.getStockUnlimited or (productsku.getStock > 0)) -%}
+                                {%- set productAvailable = true -%}
+                                {%- if minPrice == 0 -%}
+                                  {%- set minPrice = productsku.price -%}
+                                {%- else -%}
+                                  {%- if (productsku.price != minPrice) -%}
+                                    {%- set isMultiplePrices = true -%}
+                                    {%- if (productsku.price < minPrice) -%}
+                                      {%- set minPrice = productsku.price -%}
+                                    {%- endif -%}
+                                  {%- endif -%}
+                                {%- endif -%}
+                              {%- endif -%}
+                            {%- endfor -%}
+                            {%- set productName = product.attribute('product name') ? product.attribute('product name') : product.name -%}
+                                                                        
+                    <div class="gl_Item" id="FS2_itemlayout_I">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="FS2_itemlayout_td_Left">
+                              <div class="FS2_thumbnail_container">
+                                 {%- for index in 1..8 -%}
+                                    {%- if product.attribute('image' ~ index) -%}
+                                      <a href="{{ ('/uploads/media/'~get_entity_manager().find('MediaCoreBundle:Media', product.attribute('image' ~ index)).path) }}" target="_blank">
+                                        <img src="{{ ('/uploads/media/'~get_entity_manager().find('MediaCoreBundle:Media', product.attribute('image' ~ index)).path) }}" alt="{{ productName|striptags }}" class="thumbnail">
+                                      </a>
+                                    {%- elseif index == 1 -%}
+                                       <img src="{{ asset('assets/img/no-image.png') }}" alt="no image">
+                                    {%- endif -%}
+                                  {%- endfor -%}
+                              </div>
+                            </td>
+                            <td class="FS2_itemlayout_td_Right">
+                              <h2 class="itemTitle">
+                                <span class="itemCatchCopy">{{ productName }}</span>
+                              </h2>
+                              <p class="itemNumber">Item number　{{ product.attribute('item', language) }}</p>
+                              <div class="FS2_itemWeight">
+                                <span class="FS2_itemWeightLabel">Weight</span>
+                                <span class="FS2_itemWeightValue">{{ product.attribute('weight', language) }}</span>
+                              </div>
+                              <div class="FS2_itemCountryofOrigin">
+                                <span class="FS2_itemCountryofOriginLabel">Country of origin</span>
+                                <span class="FS2_itemCountryofOriginValue">{{ product.attribute('country', language) }}</span>
+                              </div>
+                              <div class="FS2_itemPrice_area">
+                                <ul class="FS2_itemPrice_list">
+                                  <li class="FS2_special_price">
+                                    <span class="FS2_priceLabel">Sale price</span>
+                                    <span class="FS2_priceInCurrentCurrency FS2_priceMain">
+                                      <span class="FS2_priceValue">
+                                        {{ (productskus[defaultSkuNum].price * curRatio)|price_format(decimalPoint) }}
+                                      </span>
+                                      <span class="FS2_currencyLabel">
+                                        {{ #unitBack# }}
+                                      </span>
+                                    </span>
+                                    <span class="FS2_priceInJPY FS2_priceSub">
+                                      (<span class="FS2_priceValue">
+                                      	{{ productskus[defaultSkuNum].price|price_format(decimalPoint) }}
+                                      </span>
+                                      <span class="FS2_currencyLabel">
+                                        {{ baseUnitBack }}
+                                      </span>)
+                                    </span>
+                                  </li>
+                                </ul>
+                              </div>
+                    
+                           <form action="{{ path('ec_client_cart_add', {'product_id': product.id}) }}" method="post">
+          							<input type="hidden" name="product_sku_id" value="{{ productskus[defaultSkuNum].id }}">
+                          
+                                <div class="FS2_figure">
+                                  <table border="0" cellspacing="2" cellpadding="0" class="FS2_figure_table">
+                                    <tbody>                 
+                                      {%- if isExistSku1 or isExistSku2 -%}
+                                      {%- for productsku in productskus -%}
+                                      <tr>
+                                        <td>{% if isExistSku1 %}{%- if productsku.getSkuDetail1.getTransAttribute(lang_id) %}{{ productsku.getSkuDetail1.getTransAttribute(lang_id) }}{% else %}{{ productsku.getSkuDetail1.title }}{% endif -%}{% endif -%}{% if isExistSku2 %}&nbsp;×&nbsp;{%- if productsku.getSkuDetail2.getTransAttribute(lang_id) %}{{ productsku.getSkuDetail2.getTransAttribute(lang_id) }}{% else %}{{ productsku.getSkuDetail2.title }}{% endif -%}{% endif -%}</td>
+                                      <td>  {% set productSkuStock = productsku.stockUnlimited ? 10 : productsku.stock %}
+                                        {%- if (productSkuStock > 0) -%}
+                                          <em>{{ productsku.price|price_format(decimalPoint) }}日圓<br><small>(參考價: NT$ <span class="js-lc--TWD" data-price="{{ productsku.price }}">-</span>)&nbsp;</small></em>
+                                          <div class="lc-selectBox">
+                                            <select class="lc-selectBox__select" name="quantity[{{ productsku.id }}]">
+                                              {%- for i in (productskus|length > 1 ? 0 : 1)..(productSkuStock) -%}
+                                                <option value="{{ i }}">{{ i }}</option>
+                                              {%- endfor -%}
+                                            </select>
+                                          </div> 
+                                        {%- else -%}
+                                          {{ #no_stock# }}
+                                        {%- endif -%} </td>
+                                        {%- endfor -%}
+                                        {%- endif -%}
+                                        
+                                        {% TemplateInclude "select productsku" %} 
+                                        <td style="vertical-align:middle;" nowrap="nowrap" class="FS2_figure_table_td_figure">Quantity</td>
+                                        <td style="vertical-align:middle;" class="FS2_figure_table_td_input_cnt"><input name="cnt" type="text" value="1" size="3" maxlength="10"></td>
+                                     <!--   <td style="vertical-align:middle;" class="FS2_figure_table_td_updn_btn"><input type="image" src="/shop/img/nup.gif" width="15" height="13" onclick="return countUp(this.form.cnt);"><br><input type="image" src="/shop/img/ndown.gif" width="15" height="12" onclick="return countDown(this.form.cnt);"></td>   -->
+                                        <td style="vertical-align:middle;" class="FS2_figure_table_td_cart_btn"><input type="image" onclick="return canSubmit();" src="{{ asset("btn_en/AdditionalImageInCartButton.gif") }}" alt="Add to Cart" class="js-lc--cartin"></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </form>
+
+                              <div id="FS2_note_shippingToJapan">
+                                Consumption tax will be added separately if shipping to Japan.
+                              </div>
+                    
+                              <div class="FS2_TweetButton_area">
+                                <style type="text/css">
+                                  ul.button_page_Twitter{background:black; margin:0; padding:0 0 0 2.5%; color:#ffffff; font-family:Open Sans; text-align:justify; list-style:disc;}
+                            
+                                  ul.button_page_Twitter li{margin:-2% 0 0 0;}
+                                  ul.button_page_Twitter li:nth-child(-n+2){margin-left:0.5%; color:#cc9933; font-size:1.3em;}
+                                  ul.button_page_Twitter li:first-child{margin-top:0;}
+                                  ul.button_page_Twitter li:first-child p{margin:0;}
+                                  ul.button_page_Twitter li p{line-height:1.5em;}
+                            
+                                  ul.button_page_Twitter div.FS2_currencySelectorBlock p{margin:0; float:left;}
+                                  ul.button_page_Twitter div.FS2_currencySelectorBlock form#currencySelectFormOriginal{margin:0.5% 0 0 1%;}
+                                  ul.button_page_Twitter div.FS2_currencySelectorBlock:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+                            
+                                  ul.button_page_Twitter span.underline{text-decoration:underline;}
+                            
+                                  ul.button_page_Twitter a:link{color:#ffffff; text-decoration:none;}
+                                  ul.button_page_Twitter a:visited{color:#ffffff; text-decoration:none;}
+                                  ul.button_page_Twitter a:hover{color:#cc3333; text-decoration:none;}
+                                  ul.button_page_Twitter li:nth-child(-n+2) a:link{color:#cc9933;}
+                                  ul.button_page_Twitter li:nth-child(-n+2) a:visited{color:#cc9933;}
+                                  ul.button_page_Twitter li:nth-child(-n+2) a:hover{color:#cc3333;}
+                                </style>
+                        
+                                <ul class="button_page_Twitter">
+                                  <li>
+                                    <p>
+                                    Please choose your preferred currency.
+                                    </p>
+                                    <div class="FS2_currencySelectorBlock">
+                                      <p style="margin:0;">
+                                      Currency:
+                                      </p>
+                                      <form id="currencySelectFormOriginal">
+                                        <select class=" js-lc--selectCurrency js-lc--changeLangCurrency">
+                                          {%- for key , item in supported_currencies -%}
+                                          {%- set currency = get_entity_manager().find("EcCoreBundle:Currency", item) -%}
+                                          {%- set name = currency.code -%}
+                                          <option value="{{ name }}"{% if name == currentCurrency %} selected{% endif %}>{{ name }}</option>
+                                          {%- endfor -%}
+                                        </select>
+                                      </form>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <p>After your order, we will check the packing size and send you an email about <br>the shipping fee, so please pay according to the guidance. <br>If the destination is Japan,Shipping charges will be added during the order process (<a href="/PostageSettleList.html" target="_blank"><span class="underline">See details</span></a>).
+                                    </p>
+                                  </li>
+                                  <li>
+                                    <p>You can change quantity on the next page.
+                                    </p>
+                                  </li>
+                                  <li>
+                                    <p>Consumption tax will be added to delivery within Japan.
+                                    </p>
+                                  </li>
+                                  <li>
+                                    <p>Please feel free to contact us if you have any questions regarding this item. We will soon get in touch with you from <a href="mailto:global@heiando.com">global@heiando.com</a> (Add us to your address book to ensure our emails will be sent to your inbox.).
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+
+                              <div class="FS2_WishListButton_area">
+                                 {#      {%- if is_authorized() -%}   #}
+                              <a href="{{ path('ec_client_consumer_favorite_add', {'product_id': product.id}) }}" data-delete-href="{{ path('ec_client_consumer_favorite_delete', {'productId': product.id}) }}" data-product-id="{{ product.id }}" class="js-lc--favorite">
+                                <img src="{{ asset("btn_en/WishListButton.gif") }}" alt="Add to Wish List" border="0">
+                              </a>
+                   {#		{%- endif -%}   #}
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                    {%- endfor -%}
+                         {# end Products #}
+                    <br clear="all">
+            <!--  商品詳細  -->
+                      
+                      
+                      
+                  </div>
+                </div>
+                <br clear="all">
+
+                {# page information #}
+                  <p class="pager">
+                   <span class="FS2_pager_text">
+                      {{ #pagingnavi_showing# }}
+                      <em>
+                        {{1}} -  {{ productsTotal }}
+                      </em>
+                      of
+                      <em>{{ productsTotal }}</em>  
+                    </span> 
+                  </p>
+                
+                
+                
+                <div class="user_content FS2_lower_comment">
+                  <div id="ex2_banner">
+
+                    <!-- メイン -->
+                    <div id="ex2_b_main">
+                     <img src="../images/page/banner/banner01.jpg" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                     <div class="ex2_b_main_tl">
+                      <p class="garamond">Can't decide what to buy?<br>Here are our recommendations.
+                      </p>
+                     </div>
+                    </div>
+                   
+                    <!-- 価格・デコ -->
+                    <div id="ex2_b_traditional" class="ex2_b_sub">
+                     <div class="ex2_b_sub_t">
+                      <p>UNIQUE JAPANESE DECOR
+                      </p>
+                     </div>
+                     <div class="ex2_b_sub_n">
+                      <p>Prices below are in approximation. Please check them on item pages for current rate pricing.
+                      </p>
+                     </div>
+                     <ul class="ex2_b_sub_i">
+                      <li>
+                      <a href="/gaku-huurai" target="_top">
+                       <p class="name_l">Wall Art with Gods of Wind &amp; Thunder <span class="yellow">&gt;&gt;</span>
+                       </p>
+                       <img src="../images/page/banner/traditional/banner_traditional06.jpg" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                      </a>
+                      </li>
+                      <li>
+                      <a href="/kazari_syunju" target="_top">
+                       <p>Decorative Plate with Flowers<span class="yellow">&gt;&gt;</span>
+                       </p>
+                       <img src="../images/page/banner/traditional/banner_traditional05.jpg" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                      </a>
+                      </li>
+                      <li>
+                      <a href="/gd1376" target="_top">
+                       <p>Folding Screen with Cranes<span class="yellow">&gt;&gt;</span>
+                       </p>
+                       <img src="../images/page/banner/traditional/banner_traditional07.jpg" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                      </a>
+                      </li>
+                     </ul>
+                    </div>
+                   
+                    <!-- モチーフ -->
+                    <div id="ex2_b_motif" class="ex2_b_sub">
+                     <div class="ex2_b_sub_t">
+                      <p>POPULAR DESIGNS
+                      </p>
+                     </div>
+                     <ul class="ex2_b_sub_i">
+                      <li>
+                      <a href="/kazari_syunju" target="_top">
+                       <p class="name_l">Decorative Plate with Cherry Blossoms <span class="yellow">&gt;&gt;</span>
+                       </p>
+                       <img src="../images/page/banner/motif/banner_motif10.jpg" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                      </a>
+                      </li>
+                      <li>
+                      <a href="/kobako" target="_top">
+                       <p>"National Treasure" Box with Chrysanthemums <span class="yellow">&gt;&gt;</span>
+                       </p>
+                       <img src="../images/page/banner/motif/banner_motif02.jpg" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                      </a>
+                      </li>
+                      <li>
+                      <a href="/nagakobako-sikisoka" target="_top">
+                       <p class="name_l">Luxury Box with Japan's Flowers for 4 Seasons <span class="yellow">&gt;&gt;</span>
+                       </p>
+                       <img src="../images/page/banner/motif/banner_motif03.jpg" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                      </a>
+                      </li>
+                     </ul>
+                    </div>
+                   
+                    <!-- イチ押し -->
+                    <div class="ex2_b_pick">
+                     <div class="ex2_b_pick_t">
+                      <p>TOP PICK
+                      </p>
+                     </div>
+                     <div class="ex2_b_pick_i">
+                     <a href="/marukashiki-edaume" target="_top">
+                      <img src="../images/outline/ex2_index/ex2_index_cat_fav_box01.jpg" alt="Ume Dome Box | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                      <div>
+                       <p>Ume Dome Box is our<br><span class="em">MOST POPULAR CLASSIC SOUVENIR</span> from Japan.
+                       </p>
+                       <p>It conveys the essence of Japanese aesthetics with its UME rose design, traditional flowers which symbolise good luck.<br>
+                       Experienced artisans use ultrafine gold powders to hand-paint petals one by one.
+                       </p>
+                       <p>Available in 2 colours &amp; 2 sizes. <span class="yellow">&gt;&gt;</span>
+                       </p>
+                      </div>
+                     </a>
+                     </div>
+                    </div>
+                   
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+{# end Contents #}
+  
+  <div class="layout_footer">
+  {% TemplateInclude "footer" %}
+  </div>
+  
+</div>
+
+<script>
+
+      $(function () { 
+       
+        // 初期表示の通貨をUSDに設定
+         $(window).load(function () {
+           var changeFlg = window.sessionStorage.getItem('changeFlg');
+           if ($('.js-lc--selectCurrency').val() != 'USD' && changeFlg != 1) {
+
+             // change currency
+             $.ajax({
+               method: 'POST',
+               url: '/currency/change',
+               data: {
+                 currency_unit: 'USD' 
+               }
+             }).done(function(result){
+               location.reload();
+             }).fail(function (jqXHR, textStatus, errorThrown) {
+               console.error(textStatus + ': ' + errorThrown);
+             });
+           }
+       });
+        
+        // change language and currency
+        $('.js-lc--changeLangCurrency').on('change', function () {
+
+          // change currency
+          $.ajax({
+            method: 'POST',
+            url: '/currency/change',
+            data: {
+              currency_unit: $('.js-lc--selectCurrency').val()
+            }
+          }).done(function(result){
+              window.sessionStorage.setItem('changeFlg','1');
+              location.reload();
+          }).fail(function (jqXHR, textStatus, errorThrown) {
+              console.error(textStatus + ': ' + errorThrown);
+          });
+
+        });
+      });
+</script>
+  
+<link type="text/css" href="{{ asset("css_item/ex2_item_page.css")}}" rel="stylesheet" media="all">
+<link type="text/css" href="{{ asset("css_item/ex2_item_page_gaku-kh.css")}}" rel="stylesheet" media="all">
+<link type="text/css" href="{{ asset("css_item/ex2_item_banner.css")}}" rel="stylesheet" media="all">

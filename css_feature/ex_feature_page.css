@@ -1,0 +1,221 @@
+﻿div#ex_Wrap{width:890px; height:auto; margin:0; padding:0;
+background-color:#transparent; color:#ffffff; font-size:11px; line-height:1.8em; letter-spacing:0.1em; text-align:left; text-justify:inter-ideograph;
+font-family:"Meiryo UI",Arial,"Lucida Sans Unicode",sans-serif !important;
+}
+div#ex_Wrap:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex_background{width:850px; margin:0; background-color:#000000;}
+div#ex_container{min-height:1600px; padding:20px 40px 0;}
+
+div#ex_container a:link{text-decoration:underline; color:#ffffff;}
+div#ex_container a:visited{text-decoration:underline; color:#ffffff;}
+div#ex_container a:hover{text-decoration:underline; color:#cc3333; font-weight:600; filter:alpha(opacity=100); opacity:1.0;}
+div#ex_container a img{border-style:none;}
+div#ex_container a img:hover{filter:alpha(opacity=50); opacity:0.5;}
+
+div.clear{width:100%; height:0px; clear:both;}
+
+span.red{color:#cc3333;}
+span.yellow{color:#fc8e23;}
+span.green{color:#99c95d;}
+
+
+/*基本*/
+div#ex_container div.feature_c{margin-bottom:7%; padding:0 3% 3%; background-color:#1a1a1a; text-align:center;}
+div#ex_container div.feature_c img{width:100%; margin:0 -3%;}
+div#ex_container div.feature_c p.title{margin-bottom:3%; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.feature_c p.description{margin:0 15.5%; text-align:justify;}
+div#ex_container div.feature_c .borderdescription{margin:0 15.5%;}
+div#ex_container div.feature_c:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div.feature_r{margin-bottom:7%; padding:0 3% 3%; background-color:#1a1a1a;}
+div#ex_container div.feature_r img{width:106.2%; margin:0 -3%;}
+div#ex_container div.feature_r p.title{width:36.5%; margin-bottom:3%; padding-right:3.5%; display:inline-block; text-align:right; margin-top:2%; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.feature_r p.description{width:60%; float:right; text-align:justify;}
+div#ex_container div.feature_r img.tn{width:14%; float:right; margin:-1% 60% 0 0; padding-right:3.5%;}
+div#ex_container div.feature_r:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div.feature_l{margin-bottom:7%; padding:0 3% 3%; background-color:#1a1a1a;}
+div#ex_container div.feature_l img{width:106.2%; margin:0 -3%;}
+div#ex_container div.feature_l p.title{width:36.5%; margin-bottom:3%; padding-left:3.5%; display:inline-block; text-align:left; margin-top:2%; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.feature_l p.description{width:60%; float:left; text-align:justify;}
+div#ex_container div.feature_l img.tn{width:14%; float:left; margin:-1% 0 0 60%; padding-left:3.5%;}
+div#ex_container div.feature_l:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div.content_c{margin-bottom:7%; text-align:center;}
+div#ex_container div.content_c img{margin:0 -5.25%;}
+div#ex_container div.content_c p.title{margin-bottom:5%; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.content_c p.description{margin:0 15.5%; text-align:justify;}
+div#ex_container div.content_c .borderdescription{margin:0 15.5%;}
+div#ex_container div.content_c:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div.content_r{margin-bottom:7%;}
+div#ex_container div.content_r img{margin:0 -5.25%;}
+div#ex_container div.content_r p.title{width:36.5%; padding-right:3.5%; display:inline-block; text-align:right; margin-top:2%; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.content_r p.description{width:60%; float:right; text-align:justify;}
+div#ex_container div.content_r img.tn{width:14%; float:right; margin:-1% 60% 0 0; padding-right:3.5%;}
+div#ex_container div.content_r:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div.content_l{margin-bottom:7%;}
+div#ex_container div.content_l img{margin:0 -5.25%;}
+div#ex_container div.content_l p.title{width:36.5%; padding-left:3.5%; display:inline-block; text-align:left; margin-top:2%; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.content_l p.description{width:60%; float:left; text-align:justify;}
+div#ex_container div.content_l img.tn{width:14%; float:left; margin:-1% 0 0 60%; padding-left:3.5%;}
+div#ex_container div.content_l:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div.content_li{margin-bottom:7%;}
+div#ex_container div.content_li li{margin-bottom:7%; text-align:justify; list-style:disc;}
+div#ex_container div.content_li p.title{margin-bottom:5%; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.content_li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*TOBボタン*/
+div#ex_container div#ex_mca ul.tob a:hover li{font-weight:500;}
+
+
+/*TOBリボン*/
+div#ex_container div#tob1{position:relative; margin:18% 0 6%;}
+div#ex_container div#tob1 .ribbon:before{content:""; display:block; width:0; height:0; border-top:130px solid #cc3333; border-right:130px solid transparent; position:absolute; top:0; left:-5.2%;}
+div#ex_container div#tob1 .ribbon p.tob{position:absolute; top:-1.75%; left:-2.3%; font-family:"Garamond"; font-weight:600; font-size:5em;}
+div#ex_container div#tob1 p.title{margin:0; padding:5% 0 0;}
+div#ex_container div#tob1:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div#tob2{position:relative; margin:6% 0 8%;}
+div#ex_container div#tob2 .ribbon:before{content:""; display:block; width:0; height:0; border-top:130px solid #cc3333; border-right:130px solid transparent; position:absolute; top:0; left:0;}
+div#ex_container div#tob2 .ribbon p.tob{position:absolute; top:-0.5%; left:3.5%; font-family:"Garamond"; font-weight:600; font-size:5em;}
+div#ex_container div#tob2 p.title{margin:2% 0 6% 0;}
+div#ex_container div#tob2:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div#tob3_a{position:relative; margin:8% 0 3%;}
+div#ex_container div#tob3_a .ribbon:before{content:""; display:block; width:0; height:0; border-top:130px solid #cc3333; border-right:130px solid transparent; position:absolute; top:0; left:-5.2%;}
+div#ex_container div#tob3_a .ribbon p.tob{position:absolute; top:-0.25%; left:-2.3%; font-family:"Garamond"; font-weight:600; font-size:5em;}
+div#ex_container div#tob3_a p.title{margin:0; padding:5% 0 0;}
+div#ex_container div#tob3_a:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div#tob3_b{position:relative; margin:-8% 0 3%;}
+div#ex_container div#tob3_b .ribbon:before{content:""; display:block; width:0; height:0; border-top:130px solid #fc8e23; border-right:130px solid transparent; position:absolute; top:0.5%; left:-5.2%;}
+div#ex_container div#tob3_b .ribbon p.tob{position:absolute; top:-0.25%; left:-2.3%; font-family:"Garamond"; font-weight:600; font-size:5em;}
+div#ex_container div#tob3_b p.title{padding:5% 0 0;}
+div#ex_container div#tob3_b:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div#tob4{position:relative; margin:-4% 0 8%;}
+div#ex_container div#tob4 .ribbon:before{content:""; display:block; width:0; height:0; border-top:130px solid #cc3333; border-right:130px solid transparent; position:absolute; top:0; left:-5.2%;}
+div#ex_container div#tob4 .ribbon p.tob{position:absolute; top:-1.75%; left:-2.3%; font-family:"Garamond"; font-weight:600; font-size:5em;}
+div#ex_container div#tob4 p.title{margin:0; padding:5% 0 0;}
+div#ex_container div#tob4:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*特集ページタイトル*/
+div#ex_container h1#ex_feature p.title{margin:20px 0 40px; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container h1#ex_feature p.title span.jp{font-size:0.55em;}
+
+
+/*イントロ*/
+div#ex_container div#ex_mca p.note{margin:5% 0 8%;}
+div#ex_container div#ex_mca ul{margin:0 15.5%; padding:0;}
+div#ex_container div#ex_mca ul li{text-align:left; width:31.5%; height:57px; margin:0.6% 0.2%; padding:2% 2% 2% 15%; background-color:#1a1a1a; border:1px solid #1a1a1a; display:inline-block; position:relative;}
+div#ex_container div#ex_mca ul li span.large{font-family:"Garamond"; font-weight:600; font-size:5em; position:absolute; left:0; top:0; width:8%; height:55%; padding:12% 7.5% 2% 5%; background-color:#cc3333;}
+div#ex_container div#ex_mca a:link{text-decoration:none;}
+div#ex_container div#ex_mca a:visited{text-decoration:none;}
+div#ex_container div#ex_mca a:hover{text-decoration:none; color:#cc3333; filter:alpha(opacity=100); opacity:1.0;}
+div#ex_container div#ex_mca a:hover li{border:1px solid #ffffff;}
+div#ex_container div#ex_mca a:hover span.red{color:#ffffff;}
+div#ex_container div#ex_mca a:hover span.large{background-color:#ffffff;}
+div#ex_container div#ex_mca:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*材料*/
+div#ex_container div#ex_material p.title{width:58%; padding:0 5.5% 0 0;}
+div#ex_container div#ex_material p.description{width:58%; padding: 0 2% 0 0;}
+div#ex_container div#ex_material .borderdescription{width:36.5%; display:inline-block; margin:-8.5% 0 0 3.5%;}
+div#ex_container div#ex_material .borderdescription img{width:50%; margin:0 -1%;}
+
+
+/*蒔絵*/
+div#ex_container div#ex_makie p.title{width:56.5%; padding:0 0 0 3.5%; text-align:left; float:right;}
+div#ex_container div#ex_makie p.description{width:56.5%;}
+div#ex_container div#ex_makie .borderdescription{width:36.5%; margin:0 3.5% 0 0; padding:2.5% 0 0 0;}
+div#ex_container div#ex_makie .borderdescription img{width:106.2%; margin:0;}
+
+div#ex_container div#tob1:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*技法*/
+div#ex_container div#ex_techniqueintro{margin:0 0 -6% 0; padding:5% 0 0;}
+
+div#ex_container div.ex_technique{margin:-7.5% 0; padding:8% 6%;}
+div#ex_container div.ex_technique .borderdescription2{margin:3% 0; padding:2% 6%; border-right:1px solid rgba(255,255,255,0.25); border-left:1px solid rgba(255,255,255,0.25);}
+div#ex_container div.ex_technique .borderdescription2 p.title{margin:5% 0;}
+div#ex_container div.ex_technique .borderdescription2 p.description{padding:4% 0; border-top:1px solid rgba(255,255,255,0.25);}
+
+div#ex_container div.ex_technique .borderdescription{margin:0;}
+div#ex_container div.ex_technique .borderdescription img{width:33.5%; margin:0 -0.5%;}
+div#ex_container div.ex_technique .borderdescription img.wide{width:67%; margin:0 -0.5%;}
+div#ex_container div.ex_technique .borderdescription img.full{width:100%; margin:0 -0.5%;}
+
+div#ex_container div.ex_technique ul li{list-style:none; width:50%; float:right; text-align:left; margin:0 0 0 60%; position:relative;}
+div#ex_container div.ex_technique ul li img{width:20%; margin:0 0 0 7.5%;}
+div#ex_container div.ex_technique ul li p.itemname{display:inline-block; vertical-align:top; padding: 0 0 0 2%;}
+div#ex_container div.ex_technique ul li span.cta{position:absolute; top:0; left:0; padding:5.9% 2%; background-color:#cc3333;}
+div#ex_container div.ex_technique ul li a:link{text-decoration:none;}
+div#ex_container div.ex_technique ul li a:visited{text-decoration:none;}
+div#ex_container div.ex_technique ul li a:hover{text-decoration:none; filter:alpha(opacity=100); opacity:1.0;}
+div#ex_container div.ex_technique ul li a:hover p.itemname{color:#cc3333;}
+div#ex_container div.ex_technique ul li a:hover span.cta{color:#cc3333; background-color:#ffffff;}
+div#ex_container div.ex_technique ul li a:hover img{filter:alpha(opacity=30); opacity:0.3;}
+
+div#ex_container div#tob2:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*商品リスト モチーフ*/
+div#ex_container div.ex_motif_1 .banner, div#ex_container .ex_motif_2 .banner{position:relative;}
+div#ex_container div.ex_motif_1 p.title{position:absolute; top:20%; left:17%; width:50%; padding:2% 7% 5% !important; text-align:center; color:#1a1a1a; background-color:rgba(255,255,255,0.7); border:1px solid #cc3333; outline:2px solid #ffffff;}
+div#ex_container div.ex_motif_1 span.en{color:#cc3333; font-size:2em; line-height:2em;}
+div#ex_container div.ex_motif_1 p.description{width:75%; margin:3% 0 0 0; padding:0 3.5% 3% 4%; border-bottom:1px solid #1a1a1a; border-left:1px solid #1a1a1a;}
+
+div#ex_container div.ex_motif_1 div#ex_motif_heiannoshi ul{margin:27% 0 5%;}
+div#ex_container div.ex_motif_1 div#ex_motif_ninseiume ul{margin:19% 0 5%;}
+div#ex_container div.ex_motif_1 div#ex_motif_senmen ul{margin:22% 0 5%;}
+div#ex_container div.ex_motif_1 div#ex_motif_vintage ul{margin:35% 0 5%;}
+
+div#ex_container div.ex_motif_1 ul li{list-style:none; margin:0 0 1.5% 0; position:relative;}
+div#ex_container div.ex_motif_1 ul li img{width:20%; margin:0 0 0 13%; padding: 0 3.5% 0 0;}
+div#ex_container div.ex_motif_1 ul li img.extra{margin:0 0 0 -44%;}
+div#ex_container div.ex_motif_1 ul li div.iteminfo{width:63%; float:right; position:absolute; top:-4.5%; right:0;}
+div#ex_container div.ex_motif_1 ul li p.itemname span.en{font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.ex_motif_1 ul li p.itemname span.jp{color:rgba(255,255,255,0.5);}
+div#ex_container div.ex_motif_1 ul li p.copy{padding:1.3% 2% 2.5% 11%; background-color:#1a1a1a; height:35px; border:1px solid #1a1a1a; position:relative;}
+div#ex_container div.ex_motif_1 ul li span.ex_cta{height:45%; background-color:#cc3333; padding:3.2% 2%; position:absolute; top:0; left:0;}
+div#ex_container div.ex_motif_1 ul li span.ch_cta{height:45%; background-color:#fc8e23; padding:3.2% 2%; position:absolute; top:0; left:0;}
+div#ex_container div.ex_motif_1 ul li span.vi_cta{height:45%; background-color:#cc3333; padding:3.2% 2%; position:absolute; top:0; left:0;}
+
+div#ex_container div.ex_motif_1 ul li.high_3 img{margin:2% 0 0 13%;}
+div#ex_container div.ex_motif_1 ul li.high_3 p.copy{height:55px;}
+div#ex_container div.ex_motif_1 ul li.high_3 span.ex_cta{padding:5.5% 2% 3.25%;}
+
+
+div#ex_container div.ex_motif_2 p.title{position:absolute; top:20%; left:17%; width:50%; padding:1.5% 7% 3% !important; text-align:center; color:#1a1a1a; background-color:rgba(255,255,255,0.7); border:1px solid #fc8e23;; outline:2px solid #ffffff;}
+div#ex_container div.ex_motif_2 span.en{color:#fc8e23; font-size:1.4em; line-height:1.4em;}
+
+div#ex_container div#ex_motifintro_b p.description{text-align:center;}
+div#ex_container div#ex_motif_creature_a p.title, div#ex_container div#ex_motif_flower_a p.title{border:1px solid #cc3333;}
+div#ex_container div#ex_motif_creature_a p.title span.en, div#ex_container div#ex_motif_flower_a p.title span.en{color:#cc3333;}
+
+div#ex_container div.ex_motif_2 ul{margin:5% 0; padding:0;}
+div#ex_container div.ex_motif_2 ul li{list-style:none; width:20%; height:220px; float:left; position:relative;}
+div#ex_container div.ex_motif_2 ul li img{width:100%; margin:0;}
+div#ex_container div.ex_motif_2 ul li div.iteminfo{padding:0 5%;}
+div#ex_container div.ex_motif_2 ul li p.itemname_en{display:inline; color:#ffffff; font-size:1em;}
+div#ex_container div.ex_motif_2 ul li p.itemname_jp{display:none;}
+div#ex_container div.ex_motif_2 ul li p.itemprice{margin:0; text-align:left;}
+div#ex_container div.ex_motif_2 ul li p.copy{display:none;}
+
+div#ex_container div.ex_motif_2 ul li a:link{text-decoration:none;}
+div#ex_container div.ex_motif_2 ul li a:visited{text-decoration:none;}
+div#ex_container div.ex_motif_2 ul li a:hover{text-decoration:none;}
+
+div#ex_container div.ex_motif_1:after, div#ex_container .ex_motif_2:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*iframe*/
+div.extended div#mca_tob3 iframe{width:150%; height:8234px; margin:-15% -68px 0;}
+div.extended div#mca_tob4 iframe{width:150%; height:1115px; margin:0 -68px;}

@@ -1,0 +1,216 @@
+{# Reference: https://launchcart.jp/reference/2-%e3%82%a4%e3%83%b3%e3%83%87%e3%83%83%e3%82%af%e3%82%b9%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88/ #}
+
+{% TemplateInclude "html head" %} 
+
+{# Variables Settings #}
+
+{# insert to html head title #}
+{%- set category_name = category.node.getTransAttribute(lang_id) ? category.node.getTransAttribute(lang_id) : category.node.name -%}
+{%- set title = category_name -%}
+{%- set wraped_category = product_api.wrapProductCategory(category.node) -%}
+{%- for ancestor in wraped_category.getAncestors|reverse -%}
+  {%- set ancestor_category_name = ancestor.node.getTransAttribute(lang_id) -%}
+  {%- set title = title ~ ' | ' ~ ancestor_category_name -%}
+{%- endfor -%}
+
+{%- set title = 'product' -%}
+
+{# set current currency #}
+{%- set currentCurrency = app.session.has('currency_unit') ? app.session.get('currency_unit') : is_authorized() ? app.security.token.user.settingCurrency : get_entity_manager().find("EcCoreBundle:Currency", system_config("base_currency")) -%}
+{%- set selectedCurrencyLabel = '' -%}
+{%- for key , item in supported_currencies -%}
+  {%- set currency = get_entity_manager().find("EcCoreBundle:Currency", item) -%}
+  {%- set name = currency.code -%}
+  {%- if name == currentCurrency -%}
+    {%- set selectedCurrencyLabel = name -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if not selectedCurrencyLabel -%}
+  {%- set currency = get_entity_manager().find("EcCoreBundle:Currency", supported_currencies|first) -%}
+  {%- set selectedCurrencyLabel = currency.code -%}
+{%- endif -%}
+
+{# get base currency unit #}
+{%- set baseCurrency = get_entity_manager().find('EcCoreBundle:Currency', system_config('base_currency')) -%}
+{%- set baseUnitFront = baseCurrency.getBeforeUnit() -%}
+{%- set baseUnitBack = baseCurrency.getAfterUnit() -%}
+
+{# end Variables Setting #}
+
+
+<div class="layout_body">
+  
+  <div class="layout_header">
+		{% TemplateInclude "header" %}
+  </div>
+
+{# Contents #}
+ <table border="0" cellspacing="0" cellpadding="0" class="layout_table">
+   <tbody>
+     <tr>
+       <td class="layout_menu">
+			{% TemplateInclude "leftnavi" %}
+       </td>
+
+       <td class="layout_content">
+          <div class="system_content">
+              <p class="pan FS2_breadcrumbs">
+                <a href="..">Top</a>
+              </p> 
+            
+            	<div class="FS2_GroupLayout">
+
+                  {# page information #}
+                  <p class="pager">
+                    <span class="FS2_pager_text">
+                      {{ #pagingnavi_showing# }}
+                      <em>
+                        {{ (_pager.page - 1) * _pager.limit + 1 }} - 
+                        {% if (_pager.page * _pager.limit > _pager.adapter.getTotalResults) %}
+                        {{ _pager.adapter.getTotalResults }}
+                        {% else %}
+                        {{ _pager.page * _pager.limit }}
+                        {% endif %}
+                      </em>
+                      of
+                      <em>{{ _pager.adapter.getTotalResults }}</em>
+                    </span>
+                  </p>
+                  
+                  <div class="groupLayout">
+                  		<div class="alignItem_02">
+                    
+                        {# Products #}
+                          {%- for product in _pager.getResults -%}
+                            {%- set productskus = get_entity_manager().getRepository('EcCoreBundle:ProductSku').createQueryBuilder('ps').innerJoin('ps.product', 'p').where('p.id = :id').setParameter('id', product.id).getQuery().getResult() -%}
+                            {%- set productAvailable = false -%}
+                            {%- set isMultiplePrices = false -%}
+
+                            {# confirm the stock and the min price in sku #}
+                            {%- set minPrice = 0 -%}
+                            {%- for productsku in productskus -%}
+                              {%- if (productsku.getStockUnlimited or (productsku.getStock > 0)) -%}
+                                {%- set productAvailable = true -%}
+                                {%- if minPrice == 0 -%}
+                                  {%- set minPrice = productsku.price -%}
+                                {%- else -%}
+                                  {%- if (productsku.price != minPrice) -%}
+                                    {%- set isMultiplePrices = true -%}
+                                    {%- if (productsku.price < minPrice) -%}
+                                      {%- set minPrice = productsku.price -%}
+                                    {%- endif -%}
+                                  {%- endif -%}
+                                {%- endif -%}
+                              {%- endif -%}
+                            {%- endfor -%}
+                            {%- set productName = product.attribute('product name') ? product.attribute('product name') : product.name -%}
+
+                                <div class="gl_Item" id="FS2_itemlayout_A">
+                                  <table border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                      <tr>
+                                        <td class="FS2_itemlayout_td_Left">
+                                          <div class="FS2_thumbnail_container">
+                                            <a href="{{ path('ec_product_detail', {'id': product.id}) }}" onclick="return canSubmit();">
+                                              <img src="{% if product.attribute('image1') %}{{ ('/uploads/media/'~get_entity_manager().find('MediaCoreBundle:Media', product.attribute('image1')).path) }}{% else %}{{ asset('assets/img/no-image.png') }}{% endif %}" alt="{{ productName|striptags }}" class="thumbnail" border="0">
+                                            </a>
+                                          </div>
+                                        </td>
+                                        <td class="FS2_itemlayout_td_Right">
+                                          <h2 class="itemGroup">
+                                            <a href="{{ path('ec_product_detail', {'id': product.id}) }}" onclick="return canSubmit();">
+                                              {{ productName }}
+                                            </a>
+                                          </h2>
+                                          <div class="FS2_itemPrice_area">
+                                            <ul class="FS2_itemPrice_list">
+                                              <li class="FS2_special_price">
+                                                <span class="FS2_priceLabel">Sale price</span><br>
+                                                <span class="FS2_priceInCurrentCurrency FS2_priceMain">
+                                                   <span class="FS2_priceValue">
+                                                      {{ (minPrice * curRatio)|price_format(decimalPoint) }}
+                                                    </span>
+                                                    <span class="FS2_currencyLabel">
+                                                      {{ #unitBack# }}
+                                                    </span>
+                                                  </span>
+
+                                                <span class="FS2_priceInJPY FS2_priceSub">
+                                                   (<span class="FS2_priceValue">
+                                                     {{ minPrice|price_format(decimalPoint) }}
+                                                  </span>
+                                                  <span class="FS2_currencyLabel">
+                                                    {{ baseUnitBack }}
+                                                  </span>)
+
+                                              </span>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                          <p class="FS2_ItemShortComment">{{ product.attribute('product name' , language) }}</p>
+                                          <div class="itemRight">
+                                            <a href="{{ path('ec_product_detail', {'id': product.id}) }}" onclick="return canSubmit();">
+                                              <img type="image" src="{{ asset("btn_en/DetailButton.gif") }}" value="詳しく見る" border="0" alt="View Details">
+                                            </a>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                    
+                         {%- endfor -%}
+                         {# end Products #}
+
+                    </div>
+                </div>
+                <br clear="all">
+
+            {# page information #}
+            <p class="pager">
+              <span class="FS2_pager_text">
+                {{ #pagingnavi_showing# }}
+                <em>
+                  {{ (_pager.page - 1) * _pager.limit + 1 }} - 
+                  {% if (_pager.page * _pager.limit > _pager.adapter.getTotalResults) %}
+                  {{ _pager.adapter.getTotalResults }}
+                  {% else %}
+                  {{ _pager.page * _pager.limit }}
+                  {% endif %}
+                </em>
+                of
+                <em>{{ _pager.adapter.getTotalResults }}</em>
+              </span>
+            </p>
+
+         	</div>
+   			</div>
+   		</td>
+  
+   </tr>
+  </tbody>
+ </table>
+{# end Contents #}
+
+  <div class="layout_footer">
+    {% TemplateInclude "footer" %}
+  </div>
+
+</div>
+
+<script>
+  $(function () { 
+    // change currency
+    $.ajax({
+      method: 'POST',
+      url: '/currency/change',
+      data: {
+        currency_unit: 'USD' 
+      }
+    }).done(function(result){
+		//location.reload();
+    }).fail(function (jqXHR, textStatus, errorThrown) {
+      console.error(textStatus + ': ' + errorThrown);
+    });
+  });
+</script>

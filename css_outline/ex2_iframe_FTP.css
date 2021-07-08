@@ -1,0 +1,59 @@
+﻿/*共通*/
+body{background:#000000;}
+
+#iframe_header{width:100vw; height:320px; margin:0;}
+#iframe_footer{width:100vw; height:1660px; margin:0 0 -4% 0;}
+
+body:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+#iframe_header:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+#iframe_footer:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+#iframe_leftnavi:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*インデックス*/
+div#ex2_position_PC{width:1200px; margin:3.7% auto 0;}
+div#ex2_position_PC #iframe_leftnavi{float:left; width:26%; height:690vw;}
+div#ex2_position_PC div#ex2_index div#ex2_index_PC{float:left; width:73.5%; margin-left:0.5%;}
+
+div#ex2_index:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_index div#ex2_index_PC:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_position_PC:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*分類ページ*/
+.iframe_header_c{margin:-1% 0% 0 -1% !important; padding:0.4% 0 0 0.4%;}
+div#ex2_position_PC div#ex2_Wrap{float:left; width:73.5%; margin-left:0.5%;}
+.iframe_footer_c{width:101vw; margin:0 0 -4% -0.5% !important;}
+
+.iframe_header_c:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.iframe_footer_c:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.iframe_leftnavi_c:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*特集ページ　寿司*/
+.iframe_header_f{width:102.5% !important; height:120px !important; margin:-2.5% 0 0.5% -1% !important;}
+.iframe_footer_f{width:102.5% !important; margin:0 0 -2% -1% !important;}
+
+.iframe_header_f:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.iframe_footer_f:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	.iframe_header_f{margin:-0.7% 0 0.5% -1% !important;}
+}
+/*IEハック*/
+@media all and (-ms-high-contrast:none){
+	.iframe_header_f{width:102.1% !important; margin:-0.7% 0 0.2% -1% !important;}
+}
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto) {
+	.iframe_header_f{width:102.1% !important; margin:-0.7% 0 0.2% -1% !important;}
+}
+
+
+
+
+
+
+
+

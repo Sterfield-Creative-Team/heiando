@@ -1,0 +1,56 @@
+﻿/*基本*/
+div#ex2_container div.ex2_info_descp{font-size:1.3em; line-height:1.5em;}
+div#ex2_container div.ex2_info_descp p a{text-decoration:none;}
+
+
+/*イントロ*/
+div#ex2_container ul.ex2_faq_intro{margin-bottom:2%; padding-left:2%; font-size:1.3em; line-height:1.5em;}
+div#ex2_container ul.ex2_faq_intro li:first-child{list-style:none; margin-left:-1.8%;}
+
+div#ex2_container ul.ex2_faq_intro li a{text-decoration:none;}
+
+div#ex2_container ul.ex2_faq_intro:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*ジャンル*/
+div#ex2_container div.ex2_faq_genre div.ex2_info_catch{margin:15% 0 8%; color:#cc9933; font-size:2.8em; font-weight:600;}
+
+
+/*店舗*/
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l{list-style:none; margin:7% 0 0 -1.8%;}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li{margin:0 0 6% 0;}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li:first-child{margin-left:0;}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li:last-child{font-size:0.8em;}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li p{margin:0; color:#cc9933;}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li ul.ex2_faq_store_s{list-style:none; padding:0; font-size:0.8em;}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li ul.ex2_faq_store_s li{margin:0; padding:0;}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li ul.ex2_faq_store_s li:first-child{margin:1.5% 0 1%; padding:0; font-size:1.3em;}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li ul.ex2_faq_store_s li:nth-child(3){padding-left:3%;}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li ul.ex2_faq_store_s li:last-child{font-size:1em;}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li ul.ex2_faq_store_s li span.memo{color:rgba(254,254,254,0.4); font-size:0.7em;}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li ul.ex2_faq_store_s li img{width:2.6%; vertical-align:middle;}
+
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*店舗　番号*/
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li:before{width:1%; float:left; margin:-0.5% 1% 0 0; padding:0.5% 1.2%; border-radius:50%; background:#cc3333; color:#000000; font-size:0.9em; text-align:center;}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li:first-child:before{content:"A";}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li:nth-child(2):before{content:"B";}
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li:nth-child(3):before{content:"C";}
+
+div#ex2_container div#ex2_faq_store ul.ex2_faq_store_l li ul.ex2_faq_store_s li:before{display:none;}
+
+
+/*店舗　Googleマップ*/
+div#ex2_container div#ex2_faq_store div#map_canvas div.gm-style-iw{text-align:center;}
+div#ex2_container div#ex2_faq_store div#map_canvas div.gm-style-iw div{padding:3% 3% 3% 0; color:#cc3333; font-weight:600;}
+
+div#ex2_container div#ex2_faq_store div#map_canvas div.gm-style-iw div div{width:100%;}
+
+div#ex2_container div#ex2_faq_store:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+
+

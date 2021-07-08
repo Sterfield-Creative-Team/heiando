@@ -1,0 +1,467 @@
+/* Compiled Less CSS File */
+/* Generated from "system_DesignSettings.css" */
+
+/* for system_DesignSettings.css */
+/* orange */
+/*=========================================================
+CSS��{�ݒ�
+FutureShop2 system_DesignSettings.css
+=========================================================*/
+/*�@���[�U�[���j���[�G���A�F��������Ⴂ�܂��Q�X�g����@*/
+.FS2_welcome_area {
+  border-bottom-color: #dddddd;
+}
+.login {
+  border-bottom-color: #dddddd;
+}
+/*�@���[�U�[���j���[�G���A�F�����E�l���E�����@*/
+.item {
+  border-bottom-color: #dddddd;
+}
+/*=========================================================
+�V�X�e���R���e���c
+=========================================================*/
+/*�@�V�X�e���R���e���c�F�p�������i�r�@*/
+.pan {
+  background-color: #f0f0f0;
+}
+/*�@�V�X�e���R���e���c�F�y�[�W�؂�ւ��i�����������\���j�@*/
+.pager {border-bottom-color: #dddddd;
+}
+/*�@�V�X�e���R���e���c�F���ёւ��F�R���e�i�@*/
+.FS2_sort_menu_bg  {visibility:hidden;display:none;float:left;padding:0;margin:0}
+.FS2_sort_menu_bg ul li {visibility:hidden;display:none;float:left;padding:0;margin:0}
+
+
+/*=========================================================
+�y�[�W���ʐݒ�F���o��
+=========================================================*/
+.pageTitle {
+  border-bottom-color: #dddddd;
+}
+.CrossHead {
+  border-bottom-color: #dddddd;
+}
+.Definition {
+  border-bottom-color: #dddddd;
+}
+/*=========================================================
+�y�[�W���ʐݒ�F�e�[�u��
+=========================================================*/
+.userTable_01 {
+  border-top-color: #dddddd;
+  border-left-color: #dddddd;
+}
+.userTable_01 caption {
+  background-color: #dddddd;
+}
+.userTable_01 th {
+  background-color: #f0f0f0;
+  border-bottom-color: #dddddd;
+}
+.userTable_01 td {
+  border-bottom-color: #dddddd;
+  border-right-color: #dddddd;
+}
+.userTable_02 {
+  border-top-color: #dddddd;
+  border-left-color: #dddddd;
+}
+.userTable_02 caption {
+  background-color: #dddddd;
+}
+.userTable_02 th {
+  background-color: #f0f0f0;
+}
+.userTable_02 th,
+.userTable_02 td {
+  border-bottom-color: #dddddd;
+  border-right-color: #dddddd;
+}
+/*=========================================================
+�y�[�W���ʐݒ�F�l���ی���j
+=========================================================*/
+.FS2_privacyPageLink_container {
+  border-color: #dddddd;
+}
+/*=========================================================
+���i��ʁF���i�ڍ�
+=========================================================*/
+/*�@���i��ʁF���i�ڍׁF���i�ԍ��@*/
+.itemNumber {
+  color: #999999;
+}
+/*�@���i��ʁF���i�ڍׁF���i�@*/
+.FS2_GroupLayout .FS2_special_price .FS2_priceMain .FS2_priceValue,
+.FS2_GroupLayout .FS2_special_members_price .FS2_priceMain .FS2_priceValue {
+  color: #000099;
+}
+/*�@���i��ʁF���i�ڍׁF���ʉ�����i�@*/
+.FS2_special_members_price .FS2_priceMain .FS2_priceValue {
+  color: #ff0000;
+}
+/*�@���i��ʁF���i�ڍׁF�|�C���g�@*/
+.FS2_point {
+  color: #ff3300;
+  border-bottom-color: #dddddd;
+}
+/*�@���i��ʁF���i�ڍׁF�̔��J�n�O�ł��B�@*/
+/*�@���i��ʁF���i�ڍׁF�̔����I���������܂����B�@*/
+.error_item {
+  border-color: #ff3300;
+  color: #ff3300;
+  background: #fff0ee;
+}
+/*�@���i��ʁF���i�ڍׁF�̔����ԁ@*/
+.sellTerms {
+  border-color: #dddddd;
+  background: #f0f0f0;
+}
+/*�@���i��ʁF���i�ڍׁF���ڑI�����R���e�i�@*/
+.FS2_inputSelection_table th,
+.FS2_inputSelection_table td {
+  border-bottom-color: #dddddd;
+}
+.FS2_inputSelection_table th {
+  background: #f0f0f0;
+}
+/*�@���i��ʁF���i�ڍׁF�o���G�[�V�����̃e�[�u���@*/
+.GoodsSelectionTable th,
+.GoodsSelectionTable td {
+  border-bottom-color: #dddddd;
+  border-right-color: #dddddd;
+}
+.GoodsSelectionTable th {
+  background: #f0f0f0;
+}
+/*�@���i��ʁF���i�ڍׁF�\���󂲂����܂���B�������܍݌ɂ��������܂���B�@*/
+.itemStock {
+  border-color: #ff3300;
+  color: #ff3300;
+}
+/*�@���i��ʁF���i�ڍׁF���F�c��킸���@*/
+.FS2_ItemStockSample_area .itemStock {
+  color: #000000;
+}
+#FS2_body_Goods .userTable_01 {
+  border-bottom-color: #dddddd;
+  border-top-color: #dddddd;
+}
+/*�@���i��ʁF���i�ڍׁF���r���[�ꗗ�F�w�i�F�@*/
+.FS2_Review_Detail_td {
+  background-color: #f0f0f0;
+}
+/*�@���i��ʁF���i�ڍׁF���r���[�ꗗ�F�w���ҁ@*/
+.FS2_Review_User_Status {
+  background-color: #ff6600;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+/*�@���i��ʁF���i�ڍׁF���r���[�ꗗ�F�������ߓx�@*/
+.FS2_MyReviewStatus {
+  color: #5ba633;
+}
+.FS2_MyReviewStatus_text {
+  color: #000000;
+}
+/*�@���i�ڍׁF�ԕi����F�e�L�X�g�@*/
+.FS2_ReturnedSpecialContract_text {
+  border-color: #f0f0f0;
+}
+
+
+
+/*���C�y�[�W�d�l*/
+/*�������J�S*/
+/* td.layout_content{background-color:#ffffff; text-align:left;} */
+td.layout_content{background-color:#000000; text-align:left;}
+
+
+
+
+/*=========================================================
+���r���[�ꗗ���
+=========================================================*/
+#FS2_body_Review .userTable_01 {
+  border-bottom-color: #dddddd;
+  border-top-color: #dddddd;
+}
+.FS2_body_ReviewList {
+  /*�@���r���[�ꗗ��ʁF���e���ꂽ�S�Ẵ��r���[�ꗗ�F���e���e�@*/
+
+}
+.FS2_body_ReviewList td.FS2_Review_Detail_td {
+  border-bottom-color: #dddddd;
+}
+/*=========================================================
+�J�[�g���
+=========================================================*/
+/*�@�J�[�g��ʃe�[�u���@*/
+.cartTable {
+  border-left-color: #dddddd;
+  border-top-color: #dddddd;
+}
+.cartTable caption {
+  background-color: #dddddd;
+}
+.cartTable th,
+.cartTable td {
+  border-right-color: #dddddd;
+  border-bottom-color: #dddddd;
+}
+.cartTable th {
+  background-color: #f0f0f0;
+}
+/*�@�����ʁF���������y�[�W�F���������ׁF���͂���e�L�X�g�@*/
+.ODTable {
+  border-left-color: #dddddd;
+  border-top-color: #dddddd;
+}
+.ODTable th {
+  background-color: #f0f0f0;
+}
+.ODTable th,
+.ODTable td {
+  border-bottom-color: #dddddd;
+  border-right-color: #dddddd;
+}
+.ODTable2 {
+  border-left-color: #dddddd;
+  border-top-color: #dddddd;
+}
+.ODTable2 th {
+  background-color: #f0f0f0;
+}
+.ODTable2 th,
+.ODTable2 td {
+  border-bottom-color: #dddddd;
+  border-right-color: #dddddd;
+}
+/*�@�����ʁF���r���[�y�[�W�F�w���������i�̃��r���[�ꗗ�@*/
+.FS2_body_ItemReviewList .FS2_MyReviewList_Text {
+  background-color: #ffffff;
+}
+.FS2_MyReviewList_Detail_td {
+  background-color: #f0f0f0;
+}
+/*�@�����ʁF���r���[�y�[�W�F���r���[�����ꗗ�@*/
+.FS2_body_MyReviewList .cartTable {
+  border-top-color: #dddddd;
+}
+.FS2_body_MyReviewList .FS2_MyReviewList_Text {
+  background-color: #ffffff;
+}
+/*�@=================================================================
+�@�ԕi����
+=================================================================�@*/
+.FS2_ReturnedSpecialContract_text {
+  border-color: #f0f0f0;
+}
+/* �ԕi����F�V���b�s���O�J�[�g */
+.FS2_body_Cart_OrderConfirm .FS2_ReturnedSpecialContract {
+  border-color: #f0f0f0;
+}
+/*�@=================================================================
+�@�摜�z�X�e�B���O�I�v�V����
+=================================================================�@*/
+/*�@���i��ʁF���i�ڍׁF�摜�z�X�e�B���O�I�v�V�����F���i�ꗗ�FIHL1�@*/
+#FS2_itemlayout_IHL1 {
+  border-color: #dddddd;
+  /*�@IHL1�F���i�ꌾ�R�����g�@*/
+
+}
+#FS2_itemlayout_IHL1 .FS2_ItemShortComment {
+  color: #666666;
+}
+/*�@���i��ʁF���i�ڍׁF�摜�z�X�e�B���O�I�v�V�����F���i�ꗗ�FIHL2�@*/
+#FS2_itemlayout_IHL2 {
+  border-color: #dddddd;
+  /*�@IHL2�F���i�ꌾ�R�����g�@*/
+
+}
+#FS2_itemlayout_IHL2 .FS2_ItemShortComment {
+  color: #666666;
+}
+/*�@���i��ʁF���i�ڍׁF�摜�z�X�e�B���O�I�v�V�����F���i�ꗗ�FIHL3�@*/
+#FS2_itemlayout_IHL3 {
+  border-color: #dddddd;
+  /*�@IHL3�F���i�ꌾ�R�����g�@*/
+
+}
+#FS2_itemlayout_IHL3 .FS2_ItemShortComment {
+  color: #666666;
+}
+/*�@���i��ʁF���i�ڍׁF�I�v�V�������i�R���e�i�@*/
+.FS2_OptionPrice th,
+.FS2_OptionPrice td {
+  border-bottom-color: #dddddd;
+}
+.FS2_OptionPrice th {
+  background-color: #f0f0f0;
+}
+/*�@�I�v�V�������i�i�J�[�g��ʌr���j�@*/
+.FS2_option_price_rule {
+  color: #dddddd;
+}
+/*���i�ڍ׉��------------------------------------------------------------------*/
+/*�@�e���C�A�E�g���ʁ@*/
+/*�@���i��ʁF���i�ڍׁF�摜�z�X�e�B���O�I�v�V�����F�T���l�C���R���e�i�@*/
+.FS2_additional_image_btn_thumbnail_container .FS2_thumbnail_container {
+  border-color: #dddddd;
+}
+/*�@���i��ʁF���i�ڍׁF�摜�z�X�e�B���O�I�v�V�����F���C���摜�Q�T���l�C���R���e�i�@*/
+.FS2_additional_image_container_main img {
+  border-color: #ffffff;
+}
+/*�@���i��ʁF���i�ڍׁF�摜�z�X�e�B���O�I�v�V�����F���C���E�T�u�摜�Q�T���l�C���R���e�i�@*/
+.FS2_additional_image_container_sub img {
+  border-color: #ffffff;
+}
+/*�@���i��ʁF���i�ڍׁF�摜�z�X�e�B���O�I�v�V�����F���C���E�T�u�摜�Q���́@*/
+.FS2_additional_image_container_title {
+  border-bottom-color: #666666;
+}
+.FS2_additional_image_tableVariation_table td span {
+  color: #666666;
+}
+.FS2_additional_image_tableVariation_border th,
+.FS2_additional_image_tableVariation_border td {
+  border-top-color: #999999;
+}
+.FS2_additional_image_tableVariation_bg {
+  background-color: #f0f0f0;
+}
+/*�@���i��ʁF���i�ڍׁF�摜�z�X�e�B���O�I�v�V�����F�g��ipopup window�j�F
+�y�[�W�]���@*/
+#FS2_additional_image_popup .FS2_additional_image_popup_footer {
+  background-color: #f0f0f0;
+}
+#FS2_additional_image_popup .FS2_additional_image_popup_footer a {
+  color: #ffffff;
+  background-color: #000000;
+}
+#FS2_additional_image_popup .FS2_additional_image_popup_footer a:hover {
+  color: #ffffff;
+  background-color: #666666;
+}
+/*�@���i��ʁF���i�ꗗ�F�摜�z�X�e�B���O�I�v�V�����F�o���[���`�b�v�F�R���e�i�@*/
+.FS2_AdditionalImage_Balloon_Tip {
+  color: #999999;
+  background-color: #ffffff;
+  border-color: #dddddd;
+}
+#FS2_AdditionalImage_Balloon_Tip_container {
+  border-color: #dddddd;
+}
+/*�@���i��ʁF���i�ꗗ�F�摜�z�X�e�B���O�I�v�V�����F�o���[���`�b�v�F
+�����ɕ\�����@*/
+.FS2_AdditionalImage_Balloon_Tip_left {
+  border-right-color: #dddddd;
+  border-bottom-color: #dddddd;
+}
+/*�@���i��ʁF���i�ꗗ�F�摜�z�X�e�B���O�I�v�V�����F�o���[���`�b�v�F
+�E���ɕ\�����@*/
+.FS2_AdditionalImage_Balloon_Tip_right {
+  border-left-color: #dddddd;
+  border-bottom-color: #dddddd;
+}
+/*�@���i��ʁF���i�ꗗ�F�摜�z�X�e�B���O�I�v�V�����F�o���[���`�b�v�F
+���[���I�[�o�[���w�i�F�@*/
+.FS2_AdditionalImage_Balloon_Tip_RollOver {
+  background-color-color: #f0f0f0;
+}
+/*�@���i��ʁF���i�ڍׁF�摜�z�X�e�B���O�I�v�V�����F�摜�؂�ւ��F
+���C���摜�Q�T���l�C���@*/
+.FS2_AdditionalImage_switcher_thumbs_color img {
+  border-color: #ffffff;
+}
+/*�@���i��ʁF���i�ڍׁF�摜�z�X�e�B���O�I�v�V�����F�摜�؂�ւ��F
+�T�u�摜�Q�T���l�C���@*/
+.FS2_AdditionalImage_switcher_thumbs_item img {
+  border-color: #ffffff;
+}
+/*�@���i��ʁF���i�ڍׁF�摜�z�X�e�B���O�I�v�V�����F�摜�؂�ւ��F
+�T�u�摜�Q�T���l�C���@*/
+.FS2_additional_image_container_main .FS2_AdditionalImage_switcher_thumbnail_selected {
+  border-color-color: #dddddd;
+}
+/*�@���ׂ��m�点���[�����\�����݁F�摜�z�X�e�B���O�I�v�V�����p�F�R���{�{�b�N�X�@*/
+.FS2_AdditionalImage_ArrivalInformation_Entry_Container {
+  background-color: #dddddd;
+}
+/* �E�B�b�V�����X�g */
+.FS2_WishList_table {
+  border-top-color: #dddddd;
+}
+.FS2_WishList_table td {
+  border-bottom-color: #dddddd;
+}
+/*=========================================================
+�G���[
+=========================================================*/
+/*�@���쎸�s���̃G���[�@*/
+.error_content {
+  border-color: #ff0000;
+  background-color: #ff3300;
+  color: #ffffff;
+}
+/*=========================================================
+���ʎg�p�Z���N�^
+=========================================================*/
+.caution {
+  color: #ff0000;
+}
+/*========================================================================
+�@�N�[�|���֌W�X�^�C������������
+========================================================================�@*/
+/* �x�������@�I����ʁi�N�[�|���j�� */
+.FS2_CouponTable li {
+  border-bottom-color: #dddddd;
+}
+.FS2_CouponTable li strong {
+  color: #cc0000;
+}
+/* �N�[�|���ꗗ�ł̊e�N�[�|���̋��E�� */
+.FS2_CouponBlock {
+  border-bottom-color: #999999;
+}
+/* �u�N�[�|���擾�E�g�p�v�Ȃǂ̃{�^�����܂ރu���b�N */
+.FS2_Coupon_container,
+.FS2_UseCoupon_container,
+.FS2_InputCouponCode_container,
+.FS2_MoveToCouponCode_container {
+  border-color: #dddddd;
+}
+/* �u�N�[�|���擾�E�g�p�v�Ȃǂ̃{�^���̏�̃R�����g */
+.FS2_Coupon_container strong,
+.FS2_UseCoupon_container strong {
+  color: #cc0000;
+}
+/* �u�N�[�|���Ώۏ��i�v�̃T���l�[���Ƀ}�E�X�I�[�o�[�����Ƃ��̔w�i�F */
+.FS2_CouponTargetItems a:hover {
+  background-color: #f5f5f5;
+}
+/* �N�[�|�����ʕ\���u���b�N */
+.FS2_CouponInfo {
+  border-color: #999999;
+  background-color: #f0f0f0;
+}
+/* �N�[�|�����ʕ����� */
+.FS2_CouponInfo .FS2_CouponEffect {
+  color: #ff0033;
+}
+/* �u�N�[�|�����l�����܂����v���� */
+.FS2_GetCoupon {
+  color: #ffffff;
+  background-color: #cc0000;
+}
+/* �N�[�|����(�g)�����w�� */
+.FS2_CouponDescriptionTable .FS2_CouponDescriptionCell h3 {
+  border-left-color: #333333;
+}
+.FS2_CouponDescriptionTable .FS2_CouponDescriptionCell h3 span {
+  color: #333333;
+}
+/*========================================================================
+�@�N�[�|���֌W�X�^�C������������
+========================================================================�@*/

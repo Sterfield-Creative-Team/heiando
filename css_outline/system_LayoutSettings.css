@@ -1,0 +1,16 @@
+/*ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆè¨­å®š*/
+
+/*ãƒšãƒ¼ã‚¸å¹…æŒ‡å®š*/
+.layout_body{width: 100%; margin:0px auto!important;}
+.layout_table{width: 100%;}
+/*ãƒšãƒ¼ã‚¸å¹…æŒ‡å®š*/
+
+/*ãƒ¡ãƒ‹ãƒ¥ãƒ¼å¹…æŒ‡å®š*/
+.layout_menu{width: 25%;}
+/*ãƒ¡ãƒ‹ãƒ¥ãƒ¼å¹…æŒ‡å®š*/
+
+
+
+.layout_menu{vertical-align:top;}
+.layout_content{vertical-align:top;}
+.layout_right{vertical-align:top;}

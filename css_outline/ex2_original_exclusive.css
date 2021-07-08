@@ -1,0 +1,107 @@
+﻿/*買物カゴに【ボタン】を使用に以下を適用*/
+
+/*商品ページ　買物カゴ　ボタン　右　テキスト*/
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_additional_image_tableVariation table.FS2_additional_image_tableVariation_table{width:100%; margin-top:-4%; border:none;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_additional_image_tableVariation table.FS2_additional_image_tableVariation_table tr{width:auto; background:transparent;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_additional_image_tableVariation table.FS2_additional_image_tableVariation_table tr th{width:100%; padding:2% 0 2% 3%; background:#fff0d1; border:none; color:#cc9933; font-size:1.15em; font-weight:600;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_additional_image_tableVariation table.FS2_additional_image_tableVariation_table tr td{width:18%; padding:0; background:#fff0d1; border:none; color:#cc3333; font-size:0.8em; font-weight:600;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_additional_image_tableVariation table.FS2_additional_image_tableVariation_table tr td:last-child{width:26%; padding-right:2%;}
+
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_additional_image_tableVariation table.FS2_additional_image_tableVariation_table tr:first-child th:first-child{border-top-left-radius:0.3em;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_additional_image_tableVariation table.FS2_additional_image_tableVariation_table tr:first-child td:last-child{border-top-right-radius:0.3em;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_additional_image_tableVariation table.FS2_additional_image_tableVariation_table tr:last-child th:first-child{border-bottom-left-radius:0.3em;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_additional_image_tableVariation table.FS2_additional_image_tableVariation_table tr:last-child td:last-child{border-bottom-right-radius:0.3em;}
+
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right p.itemStock{width:auto; padding:2% 0 2% 3%; background:#fff0d1; border:none; border-radius:0.5em; color:#cc3333; font-size:0.8em; font-weight:600;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right p.FS2_FewText{margin-bottom:3.5%; position:relative;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right p.FS2_FewText:before{content:""; border:12px solid transparent; border-top:17px solid #fff0d1; position:absolute; bottom:-60%; left:32.5%;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right p.FS2_FewText:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right p.FS2_noStockText{width:auto; margin-top:-1.6%; background:#cc3333; color:#ffffff; font-weight:100; position:relative;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right p.FS2_noStockText:before{content:""; border:12px solid transparent; border-bottom:17px solid #cc3333; position:absolute; top:-60%; left:32.5%;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right p.FS2_noStockText:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*IEハック*/
+@media all and (-ms-high-contrast:none){
+	div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_additional_image_tableVariation table.FS2_additional_image_tableVariation_table tbody{background:#fff0d1;}
+}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto) {
+	div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_additional_image_tableVariation table.FS2_additional_image_tableVariation_table tbody{background:#fff0d1;}
+}
+
+
+/*買物カゴに【表】を使用する場合に以下を適用*/
+
+/*商品ページ　買物カゴ　表　右　テキスト*/
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right table.GoodsSelectionTable{margin:2% 0 1.5%; padding:0; border:none; text-align:left;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right table.GoodsSelectionTable tr th.thStrong{text-align:center;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right table.GoodsSelectionTable tr:first-child th:last-child{border-right:none;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right table.GoodsSelectionTable tr td{background:#fff0d1;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right table.GoodsSelectionTable tr td:last-child{border-right:none;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right table.GoodsSelectionTable tr:last-child th{border-bottom:none;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right table.GoodsSelectionTable tr:last-child td{border-bottom:none;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right table.GoodsSelectionTable tr td span.FS2_LowStockNote{padding:6% 0 5%; color:#cc3333; font-size:0.7em; font-weight:600;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right table.GoodsSelectionTable tr td span.FS2_SoldOutNote{color:rgba(0,0,0,0.7);}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right table.GoodsSelectionTable p.FS2_noStockText{border-color:rgba(204,51,51,0.7) !important; color:#cc3333 !important;}
+
+/*商品ページ　買物カゴ　表　右　テキスト　項目選択肢【名入れ】*/
+body.FS2_body_Goods_wa-etokowan div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_inputSelection table.FS2_inputSelection_table{padding:0; border:none;}
+body.FS2_body_Goods_wa-etokowan div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_inputSelection table.FS2_inputSelection_table tr th{display:block; border:none;}
+body.FS2_body_Goods_wa-etokowan div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_inputSelection table.FS2_inputSelection_table tr td{width:100%; float:left; padding:0; border:none;}
+body.FS2_body_Goods_wa-etokowan div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_inputSelection table.FS2_inputSelection_table tr td input[type="text"]{width:99.35%;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	body.FS2_body_Goods_wa-etokowan div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_inputSelection table.FS2_inputSelection_table tr td input[type="text"]{width:99%;}
+}
+
+
+/*商品ページ　買物カゴ　共通　右　登録情報*/
+div.layout_body table.layout_table td.layout_content div.gl_Item table{margin:0; padding:6% 0 4%; border-top:3px double rgba(204, 153, 51, 0.7);}
+
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right{width:100%; padding:0 0 0 1.5%; color:#ffffff; font-family:Open Sans; font-size:16px; letter-spacing:0.02em;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right h1.itemTitle{visibility:hidden; margin:0; color:#cc9933; font-family:Garamond; font-size:1.6em; font-weight:100;} 
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right h1.itemTitle span.itemCatchCopy{visibility:visible; display:block;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right p.itemNumber{color:rgba(255,255,255,0.4); font-size:0.8em;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_itemWeight span.FS2_itemWeightLabel{margin-right:2%;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_itemCountryofOrigin{margin:0.5% 0;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_itemCountryofOrigin span.FS2_itemCountryofOriginLabel{margin-right:2%;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_itemPrice_area{margin-bottom:8%;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_itemPrice_area ul.FS2_itemPrice_list li.FS2_special_price span.FS2_priceLabel{margin-right:1.5%;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_itemPrice_area ul.FS2_itemPrice_list li.FS2_special_price span.FS2_priceMain{color:#cc3333; font-size:0.8em; font-weight:600;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_itemPrice_area ul.FS2_itemPrice_list li.FS2_special_price span.FS2_priceSub{padding-left:1%; color:rgba(254,254,254,0.4); font-size:0.8em; font-weight:100;}
+
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right p.FS2_postage{display:none;}
+
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div#FS2_note_shippingToJapan{display:none; font-size:0.8em; color:rgba(254,254,254,0.75);}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_TweetButton_area{margin-top:6.5%;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_figure table.FS2_figure_table{margin:0; padding:0; border:none; font-size:1.1em;}
+
+/*商品ページ　買物カゴ　共通　右　SNS*/
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_TweetButton_area{color:rgba(254,254,254,0.75); font-size:0.8em;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_TweetButton_area ul.button_page_Twitter{margin:6.5% 0 7% 3%; padding-left:0;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_TweetButton_area ul.button_page_Twitter li{list-style:disc;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_TweetButton_area ul.button_page_Twitter li:first-child{color:#cc9933;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_InquiryButton_area{width:auto; float:left; margin:0 1.5% 0 1%; padding:0.5% 1%; background:#ffffff; border:1px solid rgba(0,0,0,0.3); outline:4px solid #ffffff;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_InquiryButton_area a:hover{filter:alpha(opacity=50); opacity:0.5;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_InquiryButton_area:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_MailRecommendButton_area{width:auto; float:left; margin:0 1.5%; padding:0.5% 1%; background:#ffffff; border:1px solid rgba(0,0,0,0.3); outline:4px solid #ffffff;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_MailRecommendButton_area a:hover{filter:alpha(opacity=50); opacity:0.5;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_MailRecommendButton_area:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_WishListButton_area{width:auto; float:left; margin:0 1.5%; padding:0.5% 1%; background:#ffffff; border:1px solid rgba(0,0,0,0.3); outline:4px solid #ffffff;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_WishListButton_area a:hover{filter:alpha(opacity=50); opacity:0.5;}
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_WishListButton_area:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_InquiryButton_area{margin:0 1%; border:none; outline:none;}
+	div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_MailRecommendButton_area{margin:0 1%; border:none; outline:none;}
+	div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Right div.FS2_WishListButton_area{margin:0 1%; border:none; outline:none;}
+}
+
+/*商品ページ　買物カゴ　共通左　画像*/
+div.layout_body table.layout_table td.layout_content div.gl_Item table td.FS2_itemlayout_td_Left div.FS2_thumbnail_container img.thumbnail{width:300px; height:auto; image-rendering:-webkit-optimize-contrast;}
+
+
+

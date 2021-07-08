@@ -1,0 +1,5 @@
+﻿/*基本*/
+div#ex2_container div.ex2_info_descp{font-size:1.3em; line-height:1.5em;}
+div#ex2_container div.ex2_info_descp ul li{margin-left:0.5%;}
+
+div#ex2_container div.ex2_info_descp p a{text-decoration:none;}

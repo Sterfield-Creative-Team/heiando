@@ -1,0 +1,152 @@
+﻿/*基本　本体*/
+div#ex2_container div.ex2_content_r div.ex2_catch{margin-top:-5%;}
+div#ex2_container div.ex2_content_l div.ex2_catch{margin-top:-5%;}
+div#ex2_container div.ex2_feature div.ex2_feature_title p{line-height:1em;}
+
+
+/*天皇*/
+div#ex2_container div#ex2_imperial div.ex2_catch{margin-top:-2.5%;}
+div#ex2_container div#ex2_imperial div.ex2_descp ul{list-style:disc; margin:-2% -20% 0 0; padding-left:2.5%;}
+div#ex2_container div#ex2_imperial div.ex2_descp ul li{float:left; width:50%;}
+div#ex2_container div#ex2_imperial div.ex2_descp ul li:first-child{color:#cc9933;}
+div#ex2_container div#ex2_imperial:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_imperial div.ex2_descp ul li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*宮内庁御用達*/
+div#ex2_container div#ex2_royalwarrant{position:relative;}
+div#ex2_container div#ex2_royalwarrant div.ex2_royalwarrant_t{width:32%; height:100%; text-shadow:1px 1px 1px rgba(0,0,0,0.8); padding:10% 5% 0; background:rgba(0,0,0,0.6); position:absolute; top:0; right:0;}
+div#ex2_container div#ex2_royalwarrant div.ex2_royalwarrant_t div.ex2_catch{width:100%; margin:0 0 15% 0;}
+div#ex2_container div#ex2_royalwarrant div.ex2_royalwarrant_t div.ex2_descp{width:100%; margin:0;}
+div#ex2_container div#ex2_royalwarrant:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*お気に入り*/
+div#ex2_container div#ex2_favorite{margin-top:9%; position:relative;}
+div#ex2_container div#ex2_favorite div.ex2_favorite_t{width:42%; text-shadow:1px 1px 1px rgba(0,0,0,0.8); position:absolute; top:-7%; left:0;}
+div#ex2_container div#ex2_favorite div.ex2_favorite_t div.ex2_catch{width:200%; margin:0 0 15% 0;}
+div#ex2_container div#ex2_favorite div.ex2_favorite_t div.ex2_descp{width:100%; margin:0;}
+div#ex2_container div#ex2_favorite:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*創業者*/
+div#ex2_container div#ex2_founder{margin-top:0; position:relative;}
+div#ex2_container div#ex2_founder div.ex2_founder_t{width:60%; position:absolute; top:12%; right:0;}
+div#ex2_container div#ex2_founder div.ex2_founder_t div.ex2_catch{margin-bottom:7%; font-size:2em;}
+div#ex2_container div#ex2_founder div.ex2_founder_t div.ex2_descp{font-size:1.1em;}
+div#ex2_container div#ex2_founder:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*当主*/
+div#ex2_container div#ex2_ceo{margin-top:3.5%; padding:1% 0 0; background:rgba(254,254,254,0.1);}
+div#ex2_container div#ex2_ceo div.ex2_catch{margin:6% 0 0; font-family:Qwigley; font-size:2.8em;}
+div#ex2_container div#ex2_ceo div.ex2_descp{font-family:Josefin Slab;}
+div#ex2_container div#ex2_ceo div.ex2_descp p{text-align:justify;}
+div#ex2_container div#ex2_ceo div.ex2_descp p:last-child{font-size:0.85em; text-align:right;}
+div#ex2_container div#ex2_ceo div.ex2_descp span.ceo_name{font-family:Qwigley; font-size:2.3em; letter-spacing:0.04em;}
+div#ex2_container div#ex2_ceo:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*数字*/
+div#ex2_container div#ex2_number{margin-top:12%;}
+div#ex2_container div#ex2_number div.ex2_catch p.ex2_catch_s{margin:-2% 0 6% 0; color:#cc9933; font-size:0.67em; text-align:center;}
+div#ex2_container div#ex2_number:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*コラボレーション*/
+div#ex2_container div#ex2_collab{margin-top:10%;}
+div#ex2_container div#ex2_collab p.ex2_catch_s{color:#cc9933; font-size:2.8em; text-align:center;}
+div#ex2_container div#ex2_collab:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*コラボレーション　画像*/
+div#ex2_container div#ex2_collab div.ex2_collab_img ul#ex2_info_img{list-style:none; margin:0; padding:0;}
+div#ex2_container div#ex2_collab div.ex2_collab_img:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*コラボレーション　テキスト*/
+div#ex2_container div#ex2_collab div.ex2_collab_txt ul#ex2_info_btn{list-style:none; margin:0; padding:0;}
+div#ex2_container div#ex2_collab div.ex2_collab_txt ul#ex2_info_btn li{width:16%; float:left; margin:0 2%;}
+div#ex2_container div#ex2_collab div.ex2_collab_txt ul#ex2_info_btn li.ex2_info_btn_m{color:rgba(255,255,255,0.4); font-size:0.8em; line-height:1.25em; text-align:center;}
+div#ex2_container div#ex2_collab div.ex2_collab_txt ul#ex2_info_btn li.ex2_info_btn_m img{width:85%; margin:0 7.5% -4%;}
+div#ex2_container div#ex2_collab div.ex2_collab_txt ul#ex2_info_btn li.ex2_info_btn_s{margin:4% 2%; font-size:1.4em; text-align:center;}
+
+div#ex2_container div#ex2_collab div.ex2_collab_txt ul#ex2_info_btn li:nth-child(n+6):nth-child(-n+10){height:150px;}
+div#ex2_container div#ex2_collab div.ex2_collab_txt ul#ex2_info_btn li:nth-child(8) img{width:100%; margin:0 0 -4% 0;}
+
+div#ex2_container div#ex2_collab div.ex2_collab_txt:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*メディア掲載*/
+div#ex2_container div#ex2_media{margin-top:11%;}
+div#ex2_container div#ex2_media p.ex2_catch_s{color:#cc9933; font-size:2.8em; text-align:center;}
+div#ex2_container div#ex2_media:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*メディア掲載　画像*/
+div#ex2_container div#ex2_media div.ex2_media_img{width:30%; float:right; margin:-2% 0 0;}
+div#ex2_container div#ex2_media div.ex2_media_img ul{list-style:none; margin:0; padding:0;}
+div#ex2_container div#ex2_media div.ex2_media_img:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*メディア掲載　テキスト*/
+div#ex2_container div#ex2_media div.ex2_media_txt{width:70%; display:inline-block; margin:-5% 0 0;}
+div#ex2_container div#ex2_media div.ex2_media_txt ul{list-style:none;}
+div#ex2_container div#ex2_media div.ex2_media_txt ul li{width:20%; float:left; margin:0 2%;}
+div#ex2_container div#ex2_media div.ex2_media_txt ul li:first-child{width:91%; margin:0 0 1% 9%; color:rgba(255,255,255,0.4); font-size:1em;}
+div#ex2_container div#ex2_media div.ex2_media_txt ul li:nth-child(even){margin-left:4.5%;}
+div#ex2_container div#ex2_media div.ex2_media_txt ul li.wo{width:auto; margin:4% 0 0; color:#cc9933; font-family:Qwigley; font-size:2.8em;}
+div#ex2_container div#ex2_media div.ex2_media_txt ul#ex2_info_btn{list-style:disc;}
+div#ex2_container div#ex2_media div.ex2_media_txt ul#ex2_info_btn li{width:50%; float:left; margin:0.6% 0; font-size:1.3em;}
+div#ex2_container div#ex2_media div.ex2_media_txt ul#ex2_info_btn li:first-child{list-style:none; width:91%; margin:0 0 1% 9%; color:rgba(255,255,255,0.4); font-size:1em;}
+div#ex2_container div#ex2_media div.ex2_media_txt ul#ex2_info_btn li:nth-child(even){width:41%; margin-left:9%;}
+div#ex2_container div#ex2_media div.ex2_media_txt ul#ex2_info_btn li:last-child{margin-bottom:6.5%;}
+div#ex2_container div#ex2_media div.ex2_media_txt:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_media div.ex2_media_txt ul:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_media div.ex2_media_txt ul li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*レビュー*/
+div#ex2_container div#ex2_review{margin-top:8%;}
+div#ex2_container div#ex2_review ul{list-style:none; width:47.25%; display:inline-block; padding:0;}
+div#ex2_container div#ex2_review ul:first-child{margin:0 2.5% 0 0;}
+div#ex2_container div#ex2_review ul:nth-child(2){margin:0 0 0 2.5%;}
+div#ex2_container div#ex2_review ul li p{font-size:1.1em;}
+div#ex2_container div#ex2_review:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_review ul:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_review ul li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*レビュー　お問い合わせ*/
+div#ex2_container div#ex2_review ul:first-child li:first-child{margin:5% 0; padding:2.7% 5%; background:rgba(254,254,254,0.1); position:relative;}
+div#ex2_container div#ex2_review ul:first-child li:first-child:before{content:""; border:20px solid transparent; border-left:25px solid rgba(254,254,254,0.1); position:absolute; top:40%; right:-10.8%;}
+div#ex2_container div#ex2_review ul:first-child li:first-child p:first-child{margin-bottom:0; color:#cc9933; font-size:1.6em;}
+div#ex2_container div#ex2_review ul:first-child li:first-child img{width:10%; float:left; margin:2.2% 3% 0 0;}
+
+/*レビュー　FB*/
+div#ex2_container div#ex2_review ul li.ex2_review_fb{margin:5% 0; padding:5%; background:rgba(254,254,254,0.1); position:relative;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb p.ex2_review_s{color:#cc9933;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb p.ex2_review_t{margin-bottom:4%; font-family:Qwigley; font-size:2.2em; letter-spacing:0.05em; line-height:0.85em;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb p.ex2_review_sns{margin:0;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb p.ex2_review_sns img.ex2_review_sns_s{width:12%;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb p.ex2_review_sns a:link img.ex2_review_sns_s{filter:alpha(opacity=86); opacity:0.86;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb p.ex2_review_sns a:visited img.ex2_review_sns_s{filter:alpha(opacity=86); opacity:0.86;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb p.ex2_review_sns a:hover img.ex2_review_sns_s{filter:alpha(opacity=50); opacity:0.50;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb p.ex2_review_sns img.ex2_review_sns_l{width:20%; margin:0 0 2% 0; display:none;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb p.ex2_review_sns a:link img.ex2_review_sns_l{filter:alpha(opacity=55); opacity:0.55;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb p.ex2_review_sns a:visited img.ex2_review_sns_l{filter:alpha(opacity=55); opacity:0.55;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb p.ex2_review_sns a:hover img.ex2_review_sns_l{filter:alpha(opacity=50); opacity:0.50;}
+
+div#ex2_container div#ex2_review ul:first-child li.ex2_review_fb:before{content:""; border:20px solid transparent; border-left:25px solid rgba(254,254,254,0.1); position:absolute; right:-10.8%;}
+div#ex2_container div#ex2_review ul:nth-child(2) li.ex2_review_fb:before{content:""; border:20px solid transparent; border-right:25px solid rgba(254,254,254,0.1); position:absolute; left:-10.8%;}
+
+/*レビュー　FB　個別*/
+div#ex2_container div#ex2_review ul li.ex2_review_fb_01:before{top:42%;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb_02:before{top:42%;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb_03{margin-bottom:0;}
+div#ex2_container div#ex2_review ul li.ex2_review_fb_03:before{top:41.7%;}
+
+/*レビュー　Instagram*/
+div#ex2_container div#ex2_review ul:first-child li:nth-child(3) img{width:50%; float:left;}
+
+
+/*公平*/
+div#ex2_container div#ex2_fair{margin-top:11%;}
+div#ex2_container div#ex2_fair:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+

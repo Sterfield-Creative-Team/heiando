@@ -1,0 +1,200 @@
+﻿/*基本　本体*/
+div#ex2_container div.ex2_content_r div.ex2_catch{margin-top:-5%;}
+div#ex2_container div.ex2_content_l div.ex2_catch{margin-top:-5%;}
+div#ex2_container div.ex2_feature div.ex2_feature_title p{line-height:1em;}
+
+
+/*漆器*/
+div#ex2_container div#ex2_lacquerware{position:relative; margin-bottom:-15%;}
+div#ex2_container div#ex2_lacquerware div.ex2_feature_title{position:absolute; top:0; left:3%;}
+
+div#ex2_container div#ex2_lacquerware:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*制作工程*/
+div#ex2_container div#ex2_making div.ex2_catch p{font-family:Qwigley; font-size:2.5em; letter-spacing:0.01em; line-height:0.85em;}
+
+div#ex2_container div#ex2_making:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*制作工程　動画*/
+div#ex2_container div#ex2_making iframe#ex2_video{width:100%; height:495px;}
+
+div#ex2_container div#ex2_making iframe#ex2_video:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*制作工程　まとめ*/
+div#ex2_container div#ex2_making ul#ex2_making_l{list-style:none; margin:0; padding:0;}
+div#ex2_container div#ex2_making ul#ex2_making_l li{float:left; width:25%; height:auto; overflow:hidden; position:relative;}
+div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask{width:100%; height:100%; padding-top:29%; background:rgba(204,51,51,0.55); filter:alpha(opacity=0); opacity:0; position:absolute; top:0; left:0; transition:all 0.2s ease; -webkit-transition:all 0.2s ease;}
+div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask p{font-size:1.5em;}
+div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask p:nth-child(2){width:12%; margin:0 auto; padding:1% 0; border:1px solid rgba(254,254,254,0.4);}
+div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask p.ex2_making_no2{width:24%;}
+div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask p.ex2_making_no3{width:29%;}
+div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask p.ex2_making_no4{width:34%;}
+div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask2{padding-top:23%;}
+div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask3{padding-top:19%;}
+
+div#ex2_container div#ex2_making ul#ex2_making_l li:first-child p{margin:4%; padding:20% 0; background:rgba(204,153,51,0.3); border:3px double #cc9933; outline:8px solid rgba(204,153,51,0.3); font-size:1.5em; line-height:1.5em;}
+
+div#ex2_container div#ex2_making ul#ex2_making_l li:link div.ex2_making_mask{color:#ffffff; font-weight:100;}
+div#ex2_container div#ex2_making ul#ex2_making_l li:link div.ex2_making_mask p{color:#ffffff; font-weight:100;}
+div#ex2_container div#ex2_making ul#ex2_making_l li:visited div.ex2_making_mask{color:#ffffff; font-weight:100;}
+div#ex2_container div#ex2_making ul#ex2_making_l li:visited div.ex2_making_mask p{color:#ffffff; font-weight:100;}
+div#ex2_container div#ex2_making ul#ex2_making_l li:hover div.ex2_making_mask{color:#ffffff; font-weight:100; filter:alpha(opacity=100); opacity:1;}
+div#ex2_container div#ex2_making ul#ex2_making_l li:hover div.ex2_making_mask p{color:#ffffff; font-weight:100;}
+
+div#ex2_container div#ex2_making ul#ex2_making_l:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_making ul#ex2_making_l li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_container div#ex2_making ul#ex2_making_l li{margin-bottom:-0.7%;}
+	div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask{height:69%;}
+	div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask2{height:75%;}
+	div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask3{height:78.5%;}
+}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto) {
+	div#ex2_container div#ex2_making ul#ex2_making_l li{margin-bottom:-0.7%;}
+	div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask{height:69%;}
+	div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask2{height:75%;}
+	div#ex2_container div#ex2_making ul#ex2_making_l li div.ex2_making_mask3{height:78.7%;}
+}
+
+
+/*制作工程　詳細*/
+div#ex2_container div#ex2_making div.ex2_making_s img{margin-bottom:0.8%;}
+
+div#ex2_container div#ex2_making div.ex2_making_s:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*薄さ*/
+div#ex2_container div#ex2_thin{position:relative; margin-top:3%;}
+div#ex2_container div#ex2_thin div.ex2_surface_t{width:39%; height:100%; padding:0 5%; text-align:left; text-shadow:1px 1px 1px rgba(0,0,0,0.8); position:absolute; top:14%; right:0;}
+div#ex2_container div#ex2_thin div.ex2_surface_t div.ex2_catch{width:100%; margin:0 0 15% 0; text-align:center;}
+div#ex2_container div#ex2_thin div.ex2_surface_t div.ex2_descp{width:100%; margin:0;}
+
+div#ex2_container div#ex2_thin:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*技法*/
+div#ex2_container ul#ex2_technique{list-style:none; margin:6% 0 -4% 0; padding:0;}
+div#ex2_container ul#ex2_technique li{float:left; width:33.3%;}
+div#ex2_container ul#ex2_technique li p{margin:0 0 0 5%; font-weight:100; position:relative;}
+div#ex2_container ul#ex2_technique li p:before{content:""; border:5px solid transparent; border-left:7px solid #cc9933; position:absolute; top:25%; left:-5%;}
+
+div#ex2_container ul#ex2_technique:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container ul#ex2_technique li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container ul#ex2_technique li p:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*天皇*/
+div#ex2_container div#ex2_imperial div.ex2_descp ul{list-style:disc; margin:-2.5% -20% 3% 0; padding:3%;}
+div#ex2_container div#ex2_imperial div.ex2_descp ul li{float:left; width:50%;}
+div#ex2_container div#ex2_imperial div.ex2_descp ul li:first-child{float:none; width:100%; list-style:none; margin-left:-2.5%;}
+div#ex2_container div#ex2_imperial div.ex2_descp ul li:nth-child(2){color:#cc9933;}
+
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i{list-style:none; width:80%; margin:0 0 0 20%; padding:0;}
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li img{display:inline-block; width:50%;}
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li:nth-child(odd) p{float:right; width:30%; margin:7% 5%; padding:12% 5%; background:rgba(254,254,254,0.1); position:relative;}
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li:nth-child(odd) p:before{content:""; border:20px solid transparent; border-right:25px solid rgba(254,254,254,0.1); position:absolute;}
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li:nth-child(even) p{float:left; width:30%; margin:7% 5%; padding:12% 5%; background:rgba(254,254,254,0.1); position:relative;}
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li:nth-child(even) p:before{content:""; border:20px solid transparent; border-left:25px solid rgba(254,254,254,0.1); position:absolute;}
+
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li:first-child p:before{top:42%; left:-16%;}
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li:nth-child(2) p{padding:5% 5% 3%;}
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li:nth-child(2) p:before{top:42%; right:-16%;}
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li:nth-child(2) p img{margin:2% 25%;}
+
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li p a:link{text-decoration:underline;}
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li p a:visited{text-decoration:underline;}
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li p a:hover{text-decoration:none;}
+
+div#ex2_container div#ex2_imperial:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_imperial div.ex2_descp ul:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_imperial div.ex2_descp ul li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_imperial ul.ex2_imperial_i li p:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*漆*/
+div#ex2_container div#ex2_urushi{margin-top:8%;}
+
+div#ex2_container div#ex2_urushi:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*螺鈿*/
+div#ex2_container div#ex2_raden{margin-top:9%;}
+
+div#ex2_container div#ex2_raden:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*絵柄*/
+div#ex2_container div#ex2_motif{margin-top:8%;}
+div#ex2_container div#ex2_motif ul{list-style:none; margin:0; padding:0;}
+div#ex2_container div#ex2_motif ul li{float:left; width:33.3%;}
+div#ex2_container div#ex2_motif div.ex2_catch{margin-top:-2.5%;}
+
+div#ex2_container div#ex2_motif:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_motif ul:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_motif ul li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_container div#ex2_motif ul li{margin-bottom:-0.75%;}
+}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto) {
+	div#ex2_container div#ex2_motif ul li{margin-bottom:-0.7%;}
+}
+
+
+/*おすすめ*/
+div#ex2_container div#ex2_rec{margin-top:4%;}
+div#ex2_container div#ex2_rec div.ex2_rec_t{width:20%; margin:0 auto; padding:2% 2% 1.5%; background:rgba(254,254,254,0.1); font-family:Josefin Slab; font-size:2.6em; line-height:1em; text-align:center; position:relative;}
+div#ex2_container div#ex2_rec div.ex2_rec_t:before{content:""; border:20px solid transparent; border-top:25px solid rgba(254,254,254,0.1); position:absolute; bottom:-81%; left:39%;}
+div#ex2_container div#ex2_rec div.ex2_rec_t p{margin:0;}
+
+div#ex2_container div#ex2_rec ul{list-style:none; margin:0; padding:0;}
+div#ex2_container div#ex2_rec ul li{width:60%;}
+div#ex2_container div#ex2_rec ul li p{margin:18% 0 0; font-size:1.4em; position:relative;}
+div#ex2_container div#ex2_rec ul li img{width:40%;}
+div#ex2_container div#ex2_rec ul li:nth-child(odd){margin:0 25% -25% 15%;}
+div#ex2_container div#ex2_rec ul li:nth-child(odd) p{float:left;}
+div#ex2_container div#ex2_rec ul li:nth-child(odd) p:before{content:""; border:8px solid transparent; border-right:11px solid #cc9933; position:absolute; top:20%; left:-13%;}
+div#ex2_container div#ex2_rec ul li:nth-child(odd) img{float:left;}
+div#ex2_container div#ex2_rec ul li:nth-child(even){margin:0 0 -25% 40%;}
+div#ex2_container div#ex2_rec ul li:nth-child(even) p{float:right;}
+div#ex2_container div#ex2_rec ul li:nth-child(even) p:before{content:""; border:8px solid transparent; border-left:11px solid #cc9933; position:absolute; top:20%; right:-13%;}
+div#ex2_container div#ex2_rec ul li:nth-child(even) img{float:right; margin-top:23%;}
+div#ex2_container div#ex2_rec ul li:last-child{margin-bottom:0;}
+div#ex2_container div#ex2_rec ul li:last-child img{margin-top:4%;}
+
+div#ex2_container div#ex2_rec ul li:nth-child(3) p{margin-left:5%;}
+
+div#ex2_container div#ex2_rec:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_rec div.ex2_rec_t:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_rec ul li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_rec ul li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_rec ul li p:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_container div#ex2_rec div.ex2_rec_t:before{bottom:-80%;}
+}
+
+
+/*切り替え画像*/
+div#ex2_container div#ex2_marker{margin:0 0 -10%;}
+
+div#ex2_container div#ex2_marker:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+
+
+
+

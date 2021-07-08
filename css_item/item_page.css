@@ -1,0 +1,119 @@
+﻿body{margin:0; padding:0; color:#000000; font-size:11px; line-height:1.8em; letter-spacing:0.1em; text-align:left; text-justify:inter-ideograph;
+font-family:"Meiryo UI",Arial,"Lucida Sans Unicode",sans-serif !important;
+}
+
+
+div#Wrap{width:890px; height:auto; margin:0; padding:0;}
+div#Wrap:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#background{width:850px; margin:0 3%; background-color:#ffffff;}
+div#container{min-height:1600px; padding:20px 40px;}
+
+div#container a:link{text-decoration:underline; color:#000000;}
+div#container a:visited{text-decoration:underline; color:#000000;}
+div#container a:hover{text-decoration:underline; color:#cc3333; font-weight:600; filter:alpha(opacity=100); opacity:1.0;}
+div#container a img{border-style:none;}
+div#container a img:hover{filter:alpha(opacity=50); opacity:0.5;}
+
+.title{color:#831111; font-family:"Garamond"; font-weight:600; font-size:26px; line-height:1.6em; margin:50px 0;}
+
+div.clear{width:100%; height:0px; clear:both;}
+
+
+
+/*商品名*/
+div#container h1.product p.name span.en{color:#831111; font-family:"Garamond"; font-weight:600; font-size:45px;}
+div#container h1.product p.name span.jp{color:#831111; font-family:"Garamond"; font-weight:600; font-size:26px; line-height:3.0em;}
+
+div#container h1.product p.name span.jp a:link{text-decoration:underline; color:#831111;}
+div#container h1.product p.name span.jp a:visited{text-decoration:underline; color:#831111;}
+div#container h1.product p.name span.jp a:hover{text-decoration:underline; color:#cc3333; font-weight:600; filter:alpha(opacity=100); opacity:1.0;}
+
+
+/*メイン画像*/
+div#container div.main img{margin:0 -40px;}
+
+
+/*商品名バナー*/
+div#container div.namebanner img{margin:0 -40px;}
+
+
+/*コンセプト*/
+div#container div.concept{position:relative;}
+div#container div.concept img.full{margin:0 -40px -50px;}
+div#container div.concept img.halfright{margin:-50px -40px 0 0; float:right;}
+div#container div.concept:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*バリエーションコード*/
+div#container div.variation{position:relative;}
+div#container div.variation ol{padding:0; list-style:none; counter-reset:number;}
+div#container div.variation ol li{width:24%; height:165px; text-align:center; vertical-align:top; display:inline-block; font-size:11px; line-height:1.55em; margin-bottom:20px;}
+div#container div.variation ol li p:before{counter-increment:number; content:counter(number); background-color:#eaeaea; border-radius:10%; padding:2% 4%; margin:5px;}
+div#container div.variation ol li img{with:100px; height:100px; margin-bottom:-10px;}
+div#container div.variation:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*切り替え線*/
+div#container div.borderleft75{border-top:1px double #831111; width:75%; margin:5px 0;}
+div#container div.borderleft88{border-top:1px double #831111; width:88%; margin:5px 0;}
+div#container div.borderright75{border-top:1px double #831111; width:75%; margin:5px 0 5px 25%;}
+div#container div.borderright88{border-top:1px double #831111; width:88%; margin:5px 0 5px 12%;}
+div#container div.border100{border-top:1px double #831111; width:100%; margin:5px 0;}
+
+
+/*スペック*/
+div#container div.spec a:link{text-decoration:underline; color:#000000;}
+div#container div.spec a:visited{text-decoration:underline; color:#000000;}
+div#container div.spec a:hover{text-decoration:underline; color:#cc3333; font-weight:600; filter:alpha(opacity=100); opacity:1.0;}
+
+div#container div.spec{margin:40px 0 20px;}
+div#container div.spec div.column1left{width:130px; height:45px; float:left; background-color:#eaeaea; border-right:1px solid #818181; border-bottom:1px solid #818181; padding-left:15px; font-size:11px;}
+div#container div.spec div.column2left{width:130px; height:65px; float:left; background-color:#eaeaea; border-right:1px solid #818181; border-bottom:1px solid #818181; padding-left:15px; font-size:11px;}
+div#container div.spec div.column2leftlast{width:130px; height:65px; float:left; background-color:#eaeaea; border-right:1px solid #818181; padding-left:15px; font-size:11px;}
+div#container div.spec div.column3left{width:130px; height:85px; float:left; background-color:#eaeaea; border-right:1px solid #818181; border-bottom:1px solid #818181; padding-left:15px; font-size:11px;}
+div#container div.spec div.column1right{width:605px; height:45px; float:left; border-bottom:1px solid #818181; padding-left:15px; font-size:11px;}
+div#container div.spec div.column2right{width:605px; height:65px; float:left; border-bottom:1px solid #818181; padding-left:15px; font-size:11px;}
+div#container div.spec div.column2rightlast{width:605px; height:65px; float:left; padding-left:15px; font-size:11px;}
+div#container div.spec div.column3right{width:605px; height:85px; float:left; border-bottom:1px solid #818181; padding-left:15px; font-size:11px;}
+div#container div.spec:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+
+/*共通バナー*/
+
+/*山田平安堂*/
+div#container div#aboutusintro{position:relative;}
+div#container div#aboutusintro p.description{position:absolute; top:0; right:0; background-color:rgba(131,17,17,0.85); color:#ffffff; margin-top:0; padding:0 50px 210px; width:40%; height:375px; line-height:1.7em;}
+div#container div#aboutusintro p.description span.title{font-size:17px; color:#ffffff; line-height:1.5em; display:block; margin:40px 0 30px;}
+div#container div#aboutusintro img{margin:0 -40px;}
+
+
+/*漆：概要*/
+div#container div#urushiintro{position:relative;}
+div#container div#urushiintro p.description{position:absolute; top:0; right:0; background-color:rgba(255,255,255,0.6); color:#831111; margin-top:0; padding:0 50px 260px; width:40%; height:325px; line-height:1.7em;}
+div#container div#urushiintro p.description span.title{font-size:17px; color:#831111; line-height:1.5em; display:block; margin:50px 0 40px;}
+div#container div#urushiintro img{margin:0 -40px;}
+
+
+/*漆：蒔絵*/
+div#container div#makieintro{position:relative;}
+div#container div#makieintro p.description{position:absolute; top:0; left:0; color:#000000; margin:0 -20px; padding:0 50px 260px; width:50%; height:325px; line-height:1.7em;}
+div#container div#makieintro p.description span.title{font-size:17px; color:#831111; line-height:1.5em; display:block; margin:50px 0 40px;}
+div#container div#makieintro img{margin:0 -40px;}
+
+
+/*ギフトラッピング*/
+div#container div#wrappingintro{position:relative;}
+div#container div#wrappingintro p.title{position:absolute; top:0; left:0;}
+div#container div#wrappingintro p.description1{position:absolute; top:0; right:0; background-color:rgba(255,255,255,0.6); color:#000000; margin:0 -40px 0 0; padding:110px 50px 40px; width:40%; line-height:1.7em;}
+div#container div#wrappingintro p.description2{position:absolute; bottom:0; left:0; color:#000000; width:70%; line-height:1.7em;}
+div#container div#wrappingintro p.description2 span.title{font-size:17px; color:#831111; line-height:1.5em; display:block; margin:50px 0 40px;}
+div#container div#wrappingintro img{margin:0 -40px;}
+
+
+/*ギフトラッピング：上*/
+div#container div#wrappingtop{position:relative; margin:0 0 50px; border:3px double #831111;}
+div#container div#wrappingtop p.title{width:55%; position:absolute; right:0; top:0; margin:25px 0; padding:0 30px; line-height:1.25em;}
+div#container div#wrappingtop p.description{width:55%; position:absolute; right:0; top:110px; padding:0 30px;}
+
+

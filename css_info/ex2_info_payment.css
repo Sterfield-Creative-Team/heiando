@@ -1,0 +1,11 @@
+﻿/*基本*/
+div#ex2_container div.ex2_info_descp{font-size:1.3em; line-height:1.5em;}
+
+/*クレジット　画像*/
+div#ex2_container div#ex2_payment_credit ol li{margin-bottom:2%; color:#cc9933;}
+div#ex2_container div#ex2_payment_credit ol li:first-child{color:#ffffff;}
+div#ex2_container div#ex2_payment_credit ol li div.ex2_payment_i{padding:1% 0;}
+div#ex2_container div#ex2_payment_credit ol li div.ex2_payment_i img{width:5.5%; border:1px solid #ffffff; border-radius:0.2rem; vertical-align:middle}
+div#ex2_container div#ex2_payment_credit ol li ul li{margin-bottom:0; color:#ffffff;}
+
+div#ex2_container div#ex2_payment_credit:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}

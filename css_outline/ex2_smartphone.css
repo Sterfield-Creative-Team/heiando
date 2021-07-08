@@ -1,0 +1,88 @@
+﻿/*TB　画像きれい*/
+div#ex2_index img{image-rendering:-webkit-optimize-contrast; width:100%;}
+div#ex2_header img{image-rendering:-webkit-optimize-contrast;}
+div#ex2_leftnavi img{image-rendering:-webkit-optimize-contrast;}
+div#ex2_footer img{image-rendering:-webkit-optimize-contrast;}
+
+
+
+/*【非SSL】SP　基本枠組み*/
+@media (max-device-width:599px){
+	div#ex2_position_PC{width:400vw;}
+}
+
+
+
+/*【非SSL】SP　ヘッダー*/
+@media (max-device-width:599px){
+	#iframe_header{width:400vw; height:80vh;}
+	.iframe_header_f{width:364vw !important;}
+
+	div#ex2_header_PC{width:100% !important;}
+
+	div#ex2_header_PC ul.ex2_h_menu_t li.ex2_h_menu_ts{padding-bottom:3%; font-size:2.2em;}
+	div#ex2_header_PC div#ex2_h_4 p{font-size:1.6em;}
+	div#ex2_header_PC div#ex2_h_5 ul.ex2_h_cat li:nth-child(even){margin:0 25% 0 4%;}
+	div#ex2_header_PC div#ex2_h_5 ul.ex2_h_cat li:nth-child(2){margin-left:-3%;}
+	div#ex2_header_PC div#ex2_h_5 ul.ex2_h_cat li:nth-child(even):before{border:16px solid transparent; border-right:20px solid rgba(254,254,254,0.1);}
+	div#ex2_header_PC div#ex2_h_5 ul.ex2_h_cat li:nth-child(2):before{left:-9.6%;}
+	div#ex2_header_PC div#ex2_h_5 ul.ex2_h_cat li:nth-child(4):before{left:-10.2%;}
+	div#ex2_header_PC div#ex2_h_5 p{font-size:1.6em;}
+}
+
+
+
+/*【非SSL】SP　インデックス*/
+@media (max-device-width:599px){
+	div#ex2_index_PC div.bx-wrapper{margin:0 auto;}
+	div#ex2_index_PC div.bx-wrapper div.bx-controls-direction a.bx-prev:link{top:40%; bottom:auto; left:-10%;}
+	div#ex2_index_PC div.bx-wrapper div.bx-controls-direction a.bx-next:link{top:40%; bottom:auto; right:-10%;}
+	div#ex2_index_PC div#ex2_lacquer ul#ex2_lacquer_h li:first-child p{padding:36% 0;}
+	div#ex2_index_PC div#ex2_fav div.ex2_fav_cta{margin-right:12%;}
+	div#ex2_index_PC div#ex2_lacquer div.ex2_lacquer_urushi div.ex2_lacquer_review:before{bottom:-17.5%;}
+	div#ex2_index_PC div#ex2_lacquer div.ex2_lacquer_makie div.ex2_lacquer_review:before{bottom:-21%;}
+	div#ex2_index_PC div#ex2_collab div.ex2_collab_txt ul#ex2_info_btn li.ex2_info_btn_s{margin:-10% 2% 0;}
+	div#ex2_index_PC div#ex2_collab div.ex2_collab_txt ul#ex2_info_btn li:nth-last-child(2){margin-left:23%;}
+	div#ex2_index_PC div#ex2_collab div.ex2_collab_txt ul#ex2_info_btn li:nth-last-child(1){margin-left:42.5%;}
+}
+
+/*【非SSL】SP　特集　漆器*/
+@media (max-device-width:599px){
+	body.FS2_body_Goods_lacquerware div#ex2_container div.ex2_catch{font-size:3em;}
+}
+
+
+
+/*【非SSL】SP　レフトナビ*/
+@media (max-device-width:599px){
+	div#ex2_leftnavi_PC{width:85%; margin:0 auto;}
+
+	div#ex2_position_PC #iframe_leftnavi{height:3100vw;}
+
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex ul.ex2_l_4_flex_more{height:170px;}
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex ul.ex2_l_4_flex_more li:first-child:before{top:-38%;}
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02:before{top:-43%;}
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02a:before{top:-43%;}
+
+	div#ex2_leftnavi_PC div#ex2_l_pick div.ex2_l_pick_h div.ex2_l_pick_ht:after{border-right:82.5px solid #ff1111; border-left:82.5px solid #ff1111;}
+}
+
+
+
+/*【非SSL】SP　フッター*/
+@media (max-device-width:599px){
+	#iframe_footer{width:400vw; height:290vh;}
+	.iframe_footer_f{width:364vw !important;}
+
+	div#ex2_footer_PC{width:100%; padding:0 1%;}
+	div#ex2_footer_PC div#ex2_f_1 div.ex2_f_info_t ul{margin-top:1%; margin-right:10%;}
+	div#ex2_footer_PC div#ex2_f_1 div.ex2_f_info_t p.ex2_f_info_t_s{display:block;}
+	div#ex2_footer_PC div#ex2_f_2a p.ex2_f_mth_t_l{font-size:11.5em; top:20%;}
+	div#ex2_footer_PC div#ex2_f_2a p.ex2_f_mth_t_s{font-size:8em; top:55%; left:31%;}
+}
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+﻿/*メダル*/
+div#ex2_container div#ex2_medal div.ex2_descp{margin:-16% 0 6%;}
+div#ex2_container div#ex2_medal:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*メイン画像　商品名*/
+div#ex2_container h1#ex2_main div.ex2_catch{margin:-21% 5% 0;}
+div#ex2_container h1#ex2_main div.ex2_descp{margin:-3.5% 5% 7%;}
+
+
+/*コンセプト*/
+div#ex2_container h2#ex2_concept div.ex2_catch{margin:8% 0 5.5%;}
+
+
+/*セーラー万年筆*/
+div#ex2_container div#ex2_sailor{margin-bottom:3%;}
+
+div#ex2_container div#ex2_sailor div.ex2_catch{font-size:2.4em; text-align:center;}
+div#ex2_container div#ex2_sailor div.ex2_catch p span.ex2_sailor_l{font-size:2.2em; line-height:1em;}
+div#ex2_container div#ex2_sailor div.ex2_descp{font-size:1.3em;}
+
+div#ex2_container div#ex2_sailor div.ex2_sailor_1 img{float:left; width:35%; margin:-10% 7% -10% 0;}
+div#ex2_container div#ex2_sailor div.ex2_sailor_1 div.ex2_descp{margin:5% 0 5% 42%;}
+
+div#ex2_container div#ex2_sailor div.ex2_sailor_2{position:relative;}
+div#ex2_container div#ex2_sailor div.ex2_sailor_2 div.ex2_sailor_2t{width:50%; position:absolute; bottom:0; left:0;}
+div#ex2_container div#ex2_sailor div.ex2_sailor_2 div.ex2_sailor_2t div.ex2_catch{margin:0 0 0 5%; text-align:left;}
+div#ex2_container div#ex2_sailor div.ex2_sailor_2 div.ex2_sailor_2t div.ex2_descp{margin:5% 0 5% 5%;}
+div#ex2_container div#ex2_sailor div.ex2_sailor_2 div.ex2_sailor_2t div.ex2_hr{background-color:rgba(204, 153, 51, 0.45); width:100%; height:1px; margin:5% 0;}
+div#ex2_container div#ex2_sailor div.ex2_sailor_2 div.ex2_sailor_2t div.ex2_sailor_note{padding:2% 5%; background:rgba(254,254,254,0.1); color:rgba(254,254,254,0.6); font-size:0.8em;}
+
+div#ex2_container div#ex2_sailor:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_sailor div.ex2_sailor_1:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_sailor div.ex2_sailor_1 img:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_sailor div.ex2_sailor_2:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_sailor div.ex2_sailor_2 div.ex2_sailor_2t:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_sailor div.ex2_sailor_3:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+
+/*蒔絵*/
+div#ex2_container div#ex2_makie div.ex2_catch{margin-top:9%;}
+
+/*蒔絵　スライダー*/
+div#ex2_container div#ex2_makie div.bx-wrapper div.bx-viewport ul.ex2_bxslider li div.bx-caption{text-align:center;}
+
+
+
+/*漆　画像追加*/
+div#ex2_container div#ex2_urushi ul.ex2_img_plus div.ex2_text_plus{padding:5% 5% 3%;}
+
+
+
+/*iframe*/
+div#ex2_container div.extended div.fountain-pen iframe{width:101%; height:5950px; margin:3.5% 0 0 -0.9%;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_container div.extended div.fountain-pen iframe{height:6000px;}
+}
+
+/*IEハック*/
+@media all and (-ms-high-contrast:none){
+	div#ex2_container div.extended div.fountain-pen iframe{height:6040px;}
+}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto) {
+	div#ex2_container div.extended div.fountain-pen iframe{height:6010px;}
+}
+
+
+
+/*商品ページ　回遊バナー　イチ押し*/
+div#ex2_banner div.ex2_b_pick div.ex2_b_pick_i img{margin:3% 0;}
+div#ex2_banner div.ex2_b_pick div.ex2_b_pick_i div p{margin:5% 0;}
+
+
+
+

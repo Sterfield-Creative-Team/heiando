@@ -1,0 +1,155 @@
+﻿﻿/*全体　サイト周りなし*/
+div.layout_body table.layout_table{width:100% !important;}
+div.layout_body table.layout_table div.system_content{margin:0 -0.6% !important;}
+
+
+/*全体*/
+div#ex2_container a:link{text-decoration:none; color:#ffffff;}
+div#ex2_container a:visited{text-decoration:none; color:#ffffff;}
+div#ex2_container a:hover{text-decoration:none; color:#cc3333; font-weight:600;}
+div#ex2_container a img{border-style:none;}
+div#ex2_container a img:hover{filter:alpha(opacity=100); opacity:1.0;}
+
+div#ex2_container img{width:100%; height:auto; image-rendering:-webkit-optimize-contrast;}
+div#ex2_container p.garamond{font-family:"Garamond";}
+div#ex2_container span.yellow{color:#cc9933;}
+div#ex2_container span.red{color:#cc3333;}
+div#ex2_container span.white{color:#ffffff;}
+div#ex2_container span.gray{color:rgba(254,254,254,0.7);}
+div#ex2_container span.underline{text-decoration:underline;}
+div#ex2_container span.italic{font-style:italic;}
+
+div.clear{width:100%; height:0px; clear:both;}
+
+
+/*クリスマス　全体*/
+div.ex2_xmas{width:112%; margin:0 -6%; background:#000000; color:#ffffff; text-align:center;}
+div.ex2_xmas p.ex2_catch{margin:0 0 6%; color:#cc9933; font-family:Qwigley; font-size:5.5em; letter-spacing:0.04em; line-height:0.8em;}
+div.ex2_xmas div.ex2_xmas_l{width:100%; margin:0; padding:6% 0;}
+div.ex2_xmas div.ex2_xmas_l div.ex2_xmas_m{width:88%; margin:0 auto 5%;}
+div.ex2_xmas div.ex2_xmas_l div.ex2_xmas_m:last-child{margin-bottom:0;}
+div.ex2_xmas div.ex2_xmas_l div.ex2_xmas_m div.ex2_xmas_s{background:#000000;}
+
+div.ex2_xmas:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas div.ex2_xmas_l:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas div.ex2_xmas_l div.ex2_xmas_m:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas div.ex2_xmas_l div.ex2_xmas_m div.ex2_xmas_s:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*クリスマス　全体　カゴボタン*/
+div.ex2_xmas ul.ex2_xmas_c{list-style:none; margin:0; padding:0;}
+div.ex2_xmas ul.ex2_xmas_c li{margin:0; font-size:0.8em;}
+
+div.ex2_xmas ul.ex2_xmas_c:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*クリスマス　プロローグ*/
+div.ex2_xmas div#ex2_xmas_pro{margin:-1% 0 -4%;}
+div.ex2_xmas div#ex2_xmas_pro p.ex2_title{width:fit-content; width:-moz-fit-content; margin:6% auto; padding:0; border-bottom:1px solid #cc9933; color:#cc9933; font-family:Josefin Slab; font-size:2em;}
+
+div.ex2_xmas div#ex2_xmas_pro:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*クリスマス　メニュー*/
+div.ex2_xmas ul#ex2_xmas_menu{list-style:none; margin:0 -0.05% 0 0; padding:0;}
+div.ex2_xmas ul#ex2_xmas_menu li{float:left; width:25%; padding:2% 1%; background:#cc9933;}
+div.ex2_xmas ul#ex2_xmas_menu li:before{content:"★"; color:#cc3333; padding:0 2% 0 0;}
+div.ex2_xmas ul#ex2_xmas_menu li:last-child{width:17%;}
+
+div.ex2_xmas ul#ex2_xmas_menu li a:link{text-decoration:none; color:#ffffff; font-weight:100;}
+div.ex2_xmas ul#ex2_xmas_menu li a:visited{text-decoration:none; color:#ffffff; font-weight:100;}
+div.ex2_xmas ul#ex2_xmas_menu li a:hover{text-decoration:none; color:#cc3333; font-weight:600;}
+
+div.ex2_xmas ul#ex2_xmas_menu:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas ul#ex2_xmas_menu li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*クリスマス　おすすめ*/
+div.ex2_xmas div#ex2_xmas_rec{background:url(http://heiando1919.e01.future-shop.jp/images/page/feature/christmas/christmas01.jpg) center fixed; background-size:100%;}
+
+div.ex2_xmas div#ex2_xmas_rec p.ex2_catch{color:#ffffff; text-shadow:1px 1px 1px rgba(0,0,0,0.8);}
+
+div.ex2_xmas div#ex2_xmas_rec div.ex2_xmas_m div.ex2_xmas_s{padding:3%;}
+div.ex2_xmas div#ex2_xmas_rec div.ex2_xmas_m div.ex2_xmas_s p.ex2_name_s{margin:1% 0 5%; font-family:Josefin Slab; font-size:3em;}
+
+div.ex2_xmas div#ex2_xmas_rec ul.ex2_xmas_c li{float:left; width:50%; margin:0 0 1% -6%;}
+div.ex2_xmas div#ex2_xmas_rec ul.ex2_xmas_c li form{margin:-5% 0 0 67%;}
+div.ex2_xmas div#ex2_xmas_rec ul.ex2_xmas_c li p{margin:-3.8% 0 0 70%;}
+
+div.ex2_xmas div#ex2_xmas_rec:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas div#ex2_xmas_rec div.ex2_xmas_m:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas div#ex2_xmas_rec ul.ex2_xmas_c:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas div#ex2_xmas_rec ul.ex2_xmas_c li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*クリスマス　ディナー*/
+div.ex2_xmas div#ex2_xmas_dinner{background:url(http://heiando1919.e01.future-shop.jp/images/page/feature/christmas/christmas02.jpg) center fixed; background-size:100%;}
+
+div.ex2_xmas div#ex2_xmas_dinner p.ex2_catch{color:#ffffff; text-shadow:1px 1px 1px rgba(0,0,0,0.8);}
+
+div.ex2_xmas div#ex2_xmas_dinner div.ex2_xmas_m{position:relative;}
+div.ex2_xmas div#ex2_xmas_dinner ul.ex2_xmas_c{list-style:none; margin:0; padding:0;}
+div.ex2_xmas div#ex2_xmas_dinner ul.ex2_xmas_c li form{margin-top:3%;}
+
+div.ex2_xmas div#ex2_xmas_dinner ul.ex2_xmas_c li:first-child{position:absolute; top:13%; left:3%;}
+div.ex2_xmas div#ex2_xmas_dinner ul.ex2_xmas_c li:nth-child(2){position:absolute; top:43%; left:38%;}
+div.ex2_xmas div#ex2_xmas_dinner ul.ex2_xmas_c li:nth-child(3){position:absolute; top:46%; left:52%;}
+div.ex2_xmas div#ex2_xmas_dinner ul.ex2_xmas_c li:nth-child(4){position:absolute; top:40%; left:51%; text-align:right;}
+div.ex2_xmas div#ex2_xmas_dinner ul.ex2_xmas_c li:nth-child(5){position:absolute; top:89%; left:28%;}
+div.ex2_xmas div#ex2_xmas_dinner ul.ex2_xmas_c li:nth-child(6){position:absolute; top:87%; left:7%;}
+
+div.ex2_xmas div#ex2_xmas_dinner:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas div#ex2_xmas_dinner div.ex2_xmas_m:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas div#ex2_xmas_dinner ul.ex2_xmas_c:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas div#ex2_xmas_dinner ul.ex2_xmas_c li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*クリスマス　プチ*/
+div.ex2_xmas div#ex2_xmas_little{background:url(http://heiando1919.e01.future-shop.jp/images/page/feature/christmas/christmas03.jpg) center fixed; background-size:100%;}
+
+div.ex2_xmas div#ex2_xmas_little p.ex2_catch{color:#ffffff; text-shadow:1px 1px 1px rgba(0,0,0,0.8);}
+
+div.ex2_xmas div#ex2_xmas_little ul{list-style:none; width:88%; margin:0 auto; padding:0;}
+div.ex2_xmas div#ex2_xmas_little ul li{float:left; width:25%; height:365px; background:#000000;}
+div.ex2_xmas div#ex2_xmas_little ul li p{margin:5% 0; font-size:0.8em;}
+div.ex2_xmas div#ex2_xmas_little ul li p.ex2_variation_s{margin:0; font-size:0.6em; letter-spacing:0.06em;}
+div.ex2_xmas div#ex2_xmas_little ul li p.ex2_variation_s a:link{color:rgba(254,254,254,0.7); font-weight:100; text-decoration:none;}
+div.ex2_xmas div#ex2_xmas_little ul li p.ex2_variation_s a:visited{color:rgba(254,254,254,0.7); font-weight:100; text-decoration:none;}
+div.ex2_xmas div#ex2_xmas_little ul li p.ex2_variation_s a:hover{color:#cc3333; font-weight:600;}
+
+div.ex2_xmas div#ex2_xmas_little:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas div#ex2_xmas_little ul:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas div#ex2_xmas_little ul li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*クリスマス　カタログ*/
+div.ex2_xmas div#ex2_xmas_catalogue{display:none;
+background:url(http://heiando1919.e01.future-shop.jp/images/page/feature/item/item_store01.jpg) no-repeat center; background-size:100%; padding:9.5% 0;}
+
+div.ex2_xmas div#ex2_xmas_catalogue div.ex2_xmas_cta{width:50%; margin:0 auto; padding:2% 0 4%; background:rgba(0,0,0,0.7);}
+div.ex2_xmas div#ex2_xmas_catalogue div.ex2_xmas_cta p:first-child{font-family:Josefin Slab; font-size:3em;}
+
+div.ex2_xmas div#ex2_xmas_catalogue:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas div#ex2_xmas_catalogue div.ex2_xmas_cta:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*クリスマス　情報*/
+div.ex2_xmas div#ex2_xmas_info{background:url(http://heiando1919.e01.future-shop.jp/images/page/feature/christmas/christmas01.jpg) center fixed; background-size:100%;}
+
+div.ex2_xmas div#ex2_xmas_info div.ex2_xmas_m{position:relative;}
+div.ex2_xmas div#ex2_xmas_info div.ex2_xmas_m p{padding:5%; position:absolute;}
+
+div.ex2_xmas div#ex2_xmas_info div#ex2_xmas_wrapping p{bottom:21%; right:8%; border:1px solid rgba(254,254,254,0.2);}
+div.ex2_xmas div#ex2_xmas_info div#ex2_xmas_handcraft p{top:6.5%; left:5%; background:rgba(0,0,0,0.7);}
+
+div.ex2_xmas div#ex2_xmas_info:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div.ex2_xmas div#ex2_xmas_info div.ex2_xmas_m:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*クリスマス　エピローグ*/
+div.ex2_xmas div#ex2_xmas_epi{padding-bottom:0;}
+div.ex2_xmas div#ex2_xmas_epi p.ex2_note{margin:0 6% 1%; color:rgba(254,254,254,0.5); font-size:0.6em; letter-spacing:0.06em; line-height:1.4em;}
+
+div.ex2_xmas div#ex2_xmas_epi:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+

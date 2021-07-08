@@ -1,0 +1,205 @@
+﻿.FS2_body_Config_PostageSettleList .FS2_Config_Settle_tax_jpn{
+display:none;
+}
+
+input:hover {filter: alpha(opacity=80);-ms-filter: alpha(opacity=80);
+opacity: 0.8;}
+
+#title a {background-color:#831111;}
+#form {padding:0 0 0 5px;}
+#entryForm {padding:0 0 0 5px;}
+#stopForm {padding:0 0 0 5px;}
+.FS2_Config_DeliveryMethod {padding:0 0 0 5px;}
+.FS2_Config_Settle_about {padding:0 0 0 5px;}
+
+.FS2_arrival_information_table {padding:0 0 0 5px;}
+
+.utility {background-color:#831111;color:#FFFFFF;margin:0;padding:0;border:none;}
+.utility img {margin:0;padding:0 0 0 15px;float:left;}
+.pan {background-color:#831111;margin:0;padding:0px 0 3px 5px;width:885px;color:#FFFFFF;}
+.pan a:visited {color:#FFFFFF;}
+.pan a:link {color:#FFFFFF;}
+.pan a:hover {color:#949494}
+.login {margin:0 ;padding:5px 0;}
+.login li {color:#FFFFFF;}
+.login li a {color:#FFFFFF;}
+.login li a:hover {color:#949494}
+.item {width:795px;background-color:#831111;color:#FFFFFF;margin:0;padding:5px 95px 5px 0;}
+.item li {margin:0;padding:0 5px 0 13px;color:#FFFFFF}
+.item li a {color:#FFFFFF}
+.item li a:hover {color:#949494}
+
+.thumbnail {width:240px;height:240px;}
+
+.FS2_figure_table_td_cart_btn input:hover{filter: alpha(opacity=80);-ms-filter: alpha(opacity=80);
+opacity: 0.8;}
+.itemRight input:hover{filter: alpha(opacity=80);-ms-filter: alpha(opacity=80);
+opacity: 0.8;}
+.FS2_bottom_btn_right_and_left_2 input:hover{filter: alpha(opacity=80);-ms-filter: alpha(opacity=80);
+opacity: 0.8;}
+
+
+
+.pageTitle {border-color:#831111;margin:30px 0 10px 5px;}
+.CrossHead {border-color:#831111;}
+.cartTable caption {background:#831111;}
+.userTable_01 caption {background:#831111;color:#FFFFFF;}
+.userTable_02 caption {background:#831111;}
+.Definition {border-color:#831111;}
+.userTable_02 caption {color:#FFFFFF;}
+.cartTable caption {color:#FFFFFF;}
+
+.orderFlow {margin:15px 0 20px 5px;}
+.CrossHead {margin:30px 0px 5px 5px;}
+
+.GoodsSelectionTable {text-align:left;}
+
+
+
+
+
+/*改修ページ仕様*/
+
+/*　ページ全体の横幅を100%に変更 */
+.layout_body{
+width:100%;
+}
+
+/*　左右メニューとコンテンツエリアの横幅を1100pxに設定　*/
+.layout_table{
+width:1100px;
+margin-right:auto!important;
+margin-left:auto!important;
+margin-top:20px;
+}
+
+
+
+/*　ヘッダー　*/
+.layout_header:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*　レフトナビ　*/
+.layout_menu{padding-top:8px;}
+
+/*　フッター　*/
+div.layout_footer{margin-right:30px;}
+
+
+
+/*　パンくずリスト　*/
+div.system_content p.pan{width:100%; color:#000000; margin:0 -40px; padding:5px 40px; background-color:#831111;}
+div.system_content p.pan a:link{text-decoration:none; color:#000000;}
+div.system_content p.pan a:visited{text-decoration:none; color:#000000;}
+div.system_content p.pan a:hover{text-decoration:none; color:#ffffff; font-weight:600;}
+div.FS2_GroupLayout p.pager{display:none;}
+
+
+
+/*　商品ページ　レイアウト　*/
+.user_inner_content{margin:0;}
+.layout_content{border-bottom:40px solid #831111; color:#000000; font-size:11px; line-height:2em; letter-spacing:0.1em; text-align:left; text-justify:inter-ideograph;
+font-family:"Meiryo UI",Arial,"Lucida Sans Unicode",sans-serif;}
+div.FS2_GroupLayout{background-color:#831111; margin:0 -50px -50px;}
+div#background{background-color:#ffffff;}
+
+/*　商品ページ　テキスト　*/
+div#text ul li p a:link{text-decoration:underline; color:#831111;}
+div#text ul li p a:visited{text-decoration:underline; color:#831111;}
+div#text ul li p a:hover{text-decoration:none; color:#818181;}
+
+div#text a:link{text-decoration:underline; color:#000000;}
+div#text a:visited{text-decoration:underline; color:#000000;}
+div#text a:hover{text-decoration:none; color:#831111;}
+
+div#column5 p a:link{text-decoration:underline; color:#ffffff;}
+div#column5 p a:visited{text-decoration:underline; color:#ffffff;}
+div#column5 p a:hover{text-decoration:none; color:#818181;}
+
+div#more-info ul li p a:link{text-decoration:underline; color:#ffffff;}
+div#more-info ul li p a:visited{text-decoration:underline; color:#ffffff;}
+div#more-info ul li p a:hover{text-decoration:none; color:#818181;}
+
+/*　商品ページ　買物カゴ　*/
+div#FS2_itemlayout_I{margin:3% 0 -3%; padding-right:15px; background-color:#831111;}
+.FS2_itemlayout_td_Left{width:320px; background-color: #ffffff; border-left:20px solid #831111; padding:30px;}
+.FS2_itemlayout_td_Left h2.itemTitle{font-family:"Garamond"; font-size:20px; font-weight:600;}
+.FS2_itemlayout_td_Left img{margin:10px 0;}
+.FS2_itemlayout_td_Right{width:530px; max-width:530px; height:auto; background-color: #ffffff; border-right:25px solid #831111; padding:40px 70px 40px 0; font-size:11px;}
+
+
+<!--
+.FS2_itemlayout_td_Right h2.itemTitle{font-family:"Garamond"; font-size:16px; font-weight:600; line-height:1.4em; margin:-2% 0 7%; padding:3% 0; border-top:1px dotted #cc3333; border-bottom:1px dotted #cc3333;}
+.FS2_itemlayout_td_Right h2.itemTitle span.itemCatchCopy{display:block;}
+--!>
+▼商品名の英語のみ大きく黒、日本語は小さく灰色▼商品名の変更が終わったら反映▼
+.FS2_itemlayout_td_Right h2.itemTitle{color:#999999; font-size:0.9em; font-weight:500; margin:-2% 0 7%; padding:3% 0; border-top:1px dotted #cc3333; border-bottom:1px dotted #cc3333;}
+.FS2_itemlayout_td_Right h2.itemTitle span.itemCatchCopy{display:block; color:#000000; font-family:"Garamond"; font-size:1.8em; font-weight:600; line-height:1.4em;}
+
+
+.FS2_itemlayout_td_Right div.FS2_itemPrice_area ul.FS2_itemPrice_list li.FS2_special_price span.FS2_priceInCurrentCurrency span.FS2_priceValue{font-size:16px; line-height:1.2em;}
+.FS2_itemlayout_td_Right form .GoodsSelectionTable{margin-top:40px;}
+.FS2_itemlayout_td_Right form div.FS2_figure table{margin-bottom:15px;}
+.FS2_itemlayout_td_Right div.FS2_TweetButton_area{margin-top:5px;}
+.FS2_itemlayout_td_Right div#FS2_note_shippingToJapan{display:none;}
+iframe#twitter-widget-0{margin:40px 0 -10px;}
+iframe#twitter-widget-1{margin:40px 0 -10px;}
+iframe#twitter-widget-2{margin:40px 0 -10px;}
+iframe#twitter-widget-3{margin:40px 0 -10px;}
+
+
+
+/*　特集ページ　レイアウト　*/
+div.user_content{margin:0 -50px -50px;}
+
+
+
+/*　情報ページ　レイアウト　*/
+h2.pageTitle{font-family:"Garamond"; font-size:26px; color:#831111; border-color:#ffffff; margin:50px 40px;}
+h3.CrossHead{margin:50px 0 15px; padding-bottom:5px; border-bottom:3px double rgba(131,17,17,0.75);}
+#form{background-color:#ffffff; margin:0 40px; padding:0;}
+#form h2.pageTitle{margin:40px 0;}
+div.system_content{background-color:#ffffff; margin:0 20px; padding:0 40px 50px;}
+div.system_content h2.pageTitle{margin:40px 0;}
+div.system_content #form{margin:0;}
+
+/*　情報ページ　テキスト　*/
+h3.CrossHead a:link{text-decoration:none; color:#000000;}
+h3.CrossHead a:visited{text-decoration:none; color:#000000;}
+h3.CrossHead a:hover{text-decoration:none; color:#831111;}
+div.FS2_mypagetop_list .FS2_mypage_top_table div{margin-bottom:35px;}
+
+/*　情報ページ　エラー　*/
+div.error_content{margin:0;}
+
+
+
+/*　ショッピングカート（あり）　*/
+div#FS2_selectCurrencyInCart{margin:-65px 0 80px;}
+.cartTable a:link{text-decoration:underline; color:#000000;}
+.cartTable a:visited{text-decoration:underline; color:#000000;}
+.cartTable a:hover{text-decoration:none; color:#831111; font-weight:500;}
+.cartTable .FS2_GoodsName_td a:link{text-decoration:underline; color:#000000;}
+.cartTable .FS2_GoodsName_td a:visited{text-decoration:underline; color:#000000;}
+.cartTable .FS2_GoodsName_td a:hover{text-decoration:none; color:#831111; font-weight:500;}
+
+/*　ログイン（購入途中）　*/
+div.FS2_Login_btn_position img{margin:20px 0 10px;}
+div.FS2_Login_btn_position
+
+/*　お届け先指定　*/
+div.orderFlow{margin:0 -40px;}
+
+/*　支払方法　*/
+a.securityCodeLink:link{text-decoration:underline; color:#000000;}
+a.securityCodeLink:visited{text-decoration:underline; color:#000000;}
+a.securityCodeLink:hover{text-decoration:none; color:#831111; font-weight:500;}
+
+/*　メルマガ　*/
+div.FS_mailFilter_container{display:none;}
+
+/*　送料　*/
+div.FS2_Config_Postage h2.CrossHead{display:none;}
+div.FS2_Config_Settle{display:none;}
+div.FS2_Config_DeliveryMethod{display:none;}
+
+

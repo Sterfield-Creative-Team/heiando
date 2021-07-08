@@ -1,0 +1,105 @@
+﻿body{margin:0; padding:0; color:#000000; font-size:11px; line-height:1.8em; letter-spacing:0.1em; text-align:left; text-justify:inter-ideograph;
+font-family:"Meiryo UI",Arial,"Lucida Sans Unicode",sans-serif !important;
+}
+
+
+div#Wrap{width:890px; height:auto; margin:0; padding:0;}
+div#Wrap:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#background{width:850px; margin:1.8% 0 0; background-color:#ffffff;}
+div#container{padding:20px 40px;}
+
+div#container a:link{text-decoration:underline; color:#000000;}
+div#container a:visited{text-decoration:underline; color:#000000;}
+div#container a:hover{text-decoration:underline; color:#cc3333; font-weight:600; filter:alpha(opacity=100); opacity:1.0;}
+div#container a img{border-style:none;}
+div#container a img:hover{filter:alpha(opacity=50); opacity:0.5;}
+
+.title{color:#831111; font-family:"Garamond"; font-weight:600; font-size:26px; line-height:1.6em; margin:50px 0;}
+
+div.clear{width:100%; height:0px; clear:both;}
+
+
+
+/*特集ページタイトル*/
+div#container h1.feature{margin-bottom:-45px;}
+div#container h1.feature p.name span.large{color:#831111; font-family:"Garamond"; font-weight:600; font-size:45px; line-height:1.75em; font-weight:600;}
+div#container h1.feature p.name span.small{color:#831111; font-family:"Garamond"; font-weight:600; font-size:26px; line-height:1.25em; font-weight:600;}
+
+
+/*特集ページ段落*/
+div#container div.paragraph{margin:125px 0px;}
+div#container div.paragraph p.title{width:75%;}
+div#container div.paragraph p.description{margin:50px 0px; width:75%;}
+div#container div.paragraph img{margin:0px -40px;}
+
+
+/*特集ページ段落*山田平安堂*歴史*/
+div#container div.paragraph div.history{position:relative;}
+div#container div.paragraph div.history p.title{position:absolute; top:225px; left:0px;}
+div#container div.paragraph div.history p.description{width:58%; position:absolute; top:310px; left:0px;}
+div#container div.paragraph div.history img{margin:0px -40px;}
+
+/*特集ページ段落*山田平安堂*モダニズム*/
+div#container div.paragraph div.modernism{position:relative;}
+div#container div.paragraph div.modernism p.title{position:absolute; top:500px; left:0px;}
+div#container div.paragraph div.modernism p.description{width:58%; position:absolute; top:640px; left:0px;}
+div#container div.paragraph div.modernism img{margin:0px -40px;}
+
+/*特集ページ段落*漆*日本の美学*/
+div#container div.paragraph div.aesthetics{position:relative;}
+div#container div.paragraph div.aesthetics p.title{position:absolute; top:500px; left:0px;}
+div#container div.paragraph div.aesthetics p.description{width:58%; position:absolute; top:595px; left:0px;}
+div#container div.paragraph div.aesthetics img{margin:0px -40px;}
+
+/*特集ページ段落*ギフトラッピング*包装紙*/
+div#container div.paragraph div.boxsize{position:relative;}
+div#container div.paragraph div.boxsize p.title{position:absolute; top:500px; left:0px;}
+div#container div.paragraph div.boxsize p.description{width:58%; position:absolute; top:630px; left:0px;}
+div#container div.paragraph div.boxsize img{margin:0px -40px;}
+
+
+
+/*ギフト：リスト　共通部分*/
+div#container div.list a:link{text-decoration:none; color:#000000;}
+div#container div.list a:visited{text-decoration:none; color:#000000;}
+div#container div.list a:hover{text-decoration:none; color:#831111; font-weight:600; filter:alpha(opacity=100); opacity:1.0;}
+
+div#container div.list{margin:50px 0;}
+div#container div.list p.title{margin:50px 0;}
+
+div#container div.list ul{list-style:none; margin-bottom:20px; padding:5px 0 0; border-top:1px solid #831111; border-bottom:1px solid #831111;}
+div#container div.list ul li{width:20%; height:165px; float:left; text-align:center;}
+div#container div.list ul li img{width:65%;}
+div#container div.list ul li.topic{margin:-5px 0 5px;}
+div#container div.list ul li.topic p.button{background-color:rgba(131,17,17,0.7); width:100%; height:93px; margin:0; padding-top:50%; font-family:"Garamond"; font-size:15px; color:#ffffff;}
+
+div#container div.list ul:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*ギフト：ブラウズメニュー*/
+div#container div#category ul.browse{border:none; margin:25px 0 50px;}
+div#container div#category ul.browse li{list-style:disc; width:auto; height:auto; float:none; text-align:left; margin-left:15px;}
+
+
+/*ギフト：受け手*/
+div#container div#gift ul.gift li.topic{height:220px;}
+div#container div#gift ul.gift li.topic p.button{height:127px; padding-top:61%;}
+div#container div#gift ul.gift li.gift{width:143px; height:210px; border-right:1px solid #cccccc; border-bottom:1px solid #cccccc; margin:-5px 0 5px; padding:5px;}
+div#container div#gift ul.gift li.gift p.occasion{height:35px;color:#831111; font-family:"Garamond"; font-weight:600; font-size:14px; text-decoration:underline;} 
+div#container div#gift ul.gift li.giftright{width:143px; height:210px; border-bottom:1px solid #cccccc; margin:-5px 0 5px; padding:5px;}
+div#container div#gift ul.gift li.giftright p.occasion{height:35px; color:#831111; font-family:"Garamond"; font-weight:600; font-size:14px; text-decoration:underline;} 
+div#container div#gift ul.gift li.giftlast{width:143px; height:210px; border-right:1px solid #cccccc; margin:-5px 0 0; padding:5px;}
+div#container div#gift ul.gift li.giftlast p.occasion{height:35px;color:#831111; font-family:"Garamond"; font-weight:600; font-size:14px; text-decoration:underline;} 
+div#container div#gift ul.gift li.giftlastright{width:143px; height:210px; margin:-5px 0 0; padding:5px;}
+div#container div#gift ul.gift li.giftlastright p.occasion{height:35px;color:#831111; font-family:"Garamond"; font-weight:600; font-size:14px; text-decoration:underline;} 
+
+div#container div#gift ul.gift a:hover p.name{color:#ffffff; font-weight:500; background-color:#cc3333; padding:5px;}
+
+
+/*切り替え線*/
+div#container div.borderleft75{border-top:1px double #831111; width:75%; margin:5px 0;}
+div#container div.borderleft88{border-top:1px double #831111; width:88%; margin:5px 0;}
+div#container div.borderright75{border-top:1px double #831111; width:75%; margin:5px 0 5px 25%;}
+div#container div.borderright88{border-top:1px double #831111; width:88%; margin:5px 0 5px 12%;}
+div#container div.border100{border-top:1px double #831111; width:100%; margin:5px 0;}
+

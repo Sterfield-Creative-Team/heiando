@@ -1,0 +1,49 @@
+﻿/*基本　本体*/
+div#ex2_container{margin-bottom:15%;}
+div#ex2_container div.ex2_content_r div.ex2_catch{margin-top:-5%;}
+div#ex2_container div.ex2_content_l div.ex2_catch{margin-top:-5%;}
+
+
+/*まとめ*/
+div#ex2_container div#ex2_summary div.ex2_summary_t{width:80%; background:rgba(254,254,254,0.1); border-radius:0.5rem; position:relative;}
+div#ex2_container div#ex2_summary div.ex2_summary_t:before{content:""; border:20px solid transparent; border-top:25px solid rgba(254,254,254,0.1); position:absolute; bottom:-17%; left:56%;}
+div#ex2_container div#ex2_summary div.ex2_summary_t div.ex2_summary_l{width:50%; float:left; font-family:Josefin Slab; font-size:2.8em; line-height:1em; text-align:right;}
+div#ex2_container div#ex2_summary div.ex2_summary_t div.ex2_summary_l p{line-height:1em;}
+div#ex2_container div#ex2_summary div.ex2_summary_t div.ex2_summary_l span.yellow{color:rgba(204, 153, 51, 0.8);}
+div#ex2_container div#ex2_summary div.ex2_summary_t ul.ex2_summary_r{width:45%; float:right; margin:2.5% 0 2.5% 2%; padding-left:3%; font-size:1.3em; line-height:2.9em;}
+div#ex2_container div#ex2_summary img.ex2_summary_s{width:15%; margin:1% 0 0 49%;}
+
+div#ex2_container div#ex2_summary:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_summary div.ex2_summary_t:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_container div#ex2_summary div.ex2_summary_t:before{bottom:-16.7%;}
+}
+
+/*IEハック*/
+@media all and (-ms-high-contrast:none){
+	div#ex2_container div#ex2_summary div.ex2_summary_t:before{bottom:-16.5%;}
+}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto) {
+	div#ex2_container div#ex2_summary div.ex2_summary_t:before{bottom:-16.5%;}
+}
+
+
+/*ロゴ*/
+div#ex2_container div#ex2_logo img.ex2_logo_s{width:18%; float:left; margin:-3% 0 0 0.5%;}
+
+
+/*在庫*/
+div#ex2_container div#ex2_stock div.ex2_catch{margin-top:-6%;}
+div#ex2_container div#ex2_stock div.ex2_descp ul.ex2_stock_l{list-style:disc; margin:2.5% -20% 3% 0; padding-left:3%;}
+div#ex2_container div#ex2_stock div.ex2_descp ul.ex2_stock_l li{float:left; width:50%;}
+div#ex2_container div#ex2_stock div.ex2_descp ul.ex2_stock_l li:first-child{float:none; width:100%; list-style:none; margin-left:-2.5%;}
+div#ex2_container div#ex2_stock div.ex2_descp ul.ex2_stock_l li:nth-child(2){color:#cc9933;}
+
+div#ex2_container div#ex2_stock:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_stock div.ex2_descp ul.ex2_stock_l:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_stock div.ex2_descp ul.ex2_stock_l li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+

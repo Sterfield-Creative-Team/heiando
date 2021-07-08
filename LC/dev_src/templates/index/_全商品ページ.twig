@@ -1,0 +1,410 @@
+{# Reference: https://launchcart.jp/reference/2-%e3%82%a4%e3%83%b3%e3%83%87%e3%83%83%e3%82%af%e3%82%b9%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88/ #}
+
+{% TemplateInclude "html head" %} 
+
+{# Variables Settings #}
+
+{# initialize language from url paramater; example) example.com?lang=<language id> #}
+{% set set_lang = app.request.get('lang') %}
+{% if set_lang %}
+{{ init_language(set_lang) }}
+{% endif %}
+
+{# insert to html head title #}
+{% set title = "allitems" %}
+  
+{# set current currency #}
+{%- set currentCurrency = app.session.has('currency_unit') ? app.session.get('currency_unit') : is_authorized() ? app.security.token.user.settingCurrency : get_entity_manager().find("EcCoreBundle:Currency", system_config("base_currency")) -%}
+{%- set selectedCurrencyLabel = '' -%}
+{%- for key , item in supported_currencies -%}
+  {%- set currency = get_entity_manager().find("EcCoreBundle:Currency", item) -%}
+  {%- set name = currency.code -%}
+  {%- if name == currentCurrency -%}
+    {%- set selectedCurrencyLabel = name -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if not selectedCurrencyLabel -%}
+  {%- set currency = get_entity_manager().find("EcCoreBundle:Currency", supported_currencies|first) -%}
+  {%- set selectedCurrencyLabel = currency.code -%}
+{%- endif -%}
+
+{# get base currency unit #}
+{%- set baseCurrency = get_entity_manager().find('EcCoreBundle:Currency', system_config('base_currency')) -%}
+{%- set baseUnitFront = baseCurrency.getBeforeUnit() -%}
+{%- set baseUnitBack = baseCurrency.getAfterUnit() -%}
+
+{# end Variables Setting #}
+  
+<div class="layout_body">
+  <div class="layout_header">
+  {% TemplateInclude "header" %}
+  </div>
+
+{# Contents #}
+  <table border="0" cellspacing="0" cellpadding="0" class="layout_table">
+    <tbody>
+      <tr>
+        <td class="layout_menu">
+          {% TemplateInclude "leftnavi" %}
+        </td>
+        <td class="layout_content">
+          <div class="system_content">
+              <p class="pan FS2_breadcrumbs">
+                <a href="http://www.heiando1919.com">Top</a> &gt; shop
+              </p>  
+              <div class="user_content FS2_upper_comment">
+                <div id="ex2_Wrap">
+                  <div id="centerling_background">
+                    <div id="ex2_background">
+                      <div id="ex2_container">
+                
+                        <!-- 全商品一覧 -->
+                        <div id="ex2_shop">
+                          <div class="ex2_shop_title">
+                            <p class="garamond">View ALL ITEMS
+                            </p>
+                          </div>     
+                        </div>
+                
+                
+                        <!-- おすすめ -->
+                        <div id="ex2_shop_fav">
+                        <a href="/door" target="_top">
+                          <p class="garamond">
+                          &#9654; UME DOME BOX
+                          </p>
+                          <img src="../images/outline/ex2_index/ex2_index_cat_fav_box01.jpg" alt="Ume Dome Box | YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                        </a>
+                        </div>
+                
+                
+                        <!-- カテゴリー　一覧 -->
+                        <div id="ex2_shop_cat">
+                          <div class="ex2_shop_cat_t">
+                            <p>Over 90 years course of serving the Japanese Emperor and His Imperial Family, our item lineup has expanded to more than 400.
+                            </p>
+                          </div>
+                
+                          <ul class="ex2_shop_cat_i">
+                            <li>
+                            <a href="ec/product/category/15" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_acce01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>BOXES
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="ec/product/category/15" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_fountain-pen01a.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>STATIONERY
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="ec/product/category/15" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_bw01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>JEWELRY
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="ec/product/category/15" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_iphonecase01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>FASHION ACCESSORIES
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="ec/product/category/15" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_gd137601.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>FOLDING SCREENS
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="ec/product/category/15" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_gaku-kh01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>WALL ARTS
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/decor.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_ksara-houou01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>DECORATIVE PLATES
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/decor.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_photo-kikusakura01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>PICTURE FRAMES
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/foodbox.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_ju-1jutakara01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>FOOD BOXES
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/bowl.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_kiku-kobachi01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>BOWLS
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/bowl.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_wa-mesiwankeyaki01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>RICE BOWLS
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/bowl.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_wa-ninseiumemakiesuimonowan01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>SOUP BOWLS
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/bowl.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_ha-diningbowlkodaishul01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>SALAD BOWLS
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/serveware.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_bon-mathakeme01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>PLACEMATS
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/serveware.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_marubon-sakura01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>SERVING TRAYS
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/plate.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_sara-platekin01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>PLATES
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/cutlery.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_cho-tenso01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>CHOPSTICKS
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/cutlery.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_kokusan-spoon01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>CUTLERY
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/drinkware.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_gr61201.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>"SAKE" DRINKWARE
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/drinkware.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_keyakicup01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>CUPS
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/drinkware.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_cha-hira501.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>TEA CUP SAUCERS
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/category/drinkware.html" target="_top">
+                            <img src="../images/outline/ex2_index/ex2_index_cat_pick_oshibori-bya01.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>TABLETOP ACCESSORIES
+                            </p>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="http://www.heiando1919.com/page/feature/sushi.html" target="_top">
+                            <img class="ex2_shop_cat_h" src="../images/outline/ex2_index/ex2_index_cat_pick_sushi01a.png" alt="YAMADA HEIANDO Lacquerware: Hand-Crafted Imperial Luxury for Japanese Emperor">
+                            <p>SUSHI SETS
+                            </p>
+                            </a>
+                            </li>
+                          </ul>
+                
+                        </div>
+                
+                
+                        <!-- 登録　一覧 -->
+                        <div id="ex2_shop_stock">
+                          <div class="ex2_shop_title">
+                            <p class="garamond">Back in Stock
+                            </p>
+                          </div> 
+                          <div class="ex2_shop_stock_t">
+                            <p>Because our lacquerware are thoroughly hand-crafted by our artisans, stocks may be limited at times.
+                            </p>
+                          </div>
+                        </div>
+                
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+         <div class="FS2_GroupLayout">
+                  
+          {%- set qb = get_entity_manager().getRepository('EcCoreBundle:Product').createQueryBuilder('p').leftJoin('p.categories', 'c') -%}
+          {%- set products = qb.where('c.id = :id').setParameter('id', 16).getQuery().getResult() -%}
+      			{%- set productsTotal = products | length -%}
+                  
+						{# page information #}
+                  <p class="pager">
+                   <span class="FS2_pager_text">
+                      {{ #pagingnavi_showing# }}
+                      <em>
+                        {{1}} -  {{ productsTotal }}
+                      </em>
+                      of
+                      <em>{{ productsTotal }}</em>  
+                    </span>  
+                  </p>
+               <!--   <span class="FS2_pager_stay">1</span>
+                  <a href="http://www.heiando1919.com/fs/heiando1919/c/shop/1/2" class="FS2_pager_link">2</a>
+                  <a href="http://www.heiando1919.com/fs/heiando1919/c/shop/1/2" class="FS2_pager_link_next"><img src="../btn_en/pager_next.gif" alt="Go to next page" border="0"></a><a href="http://www.heiando1919.com/fs/heiando1919/c/shop/1/2" class="FS2_pager_link_last"><img src="../btn_en/pager_last.gif" alt="Go to last page" border="0"></a>  -->
+
+                  <div class="groupLayout">
+                    <div class="alignItem_08">
+          
+                   {# Products #}
+                  {%- for product in products -%}
+                    {%- set productskus = get_entity_manager().getRepository('EcCoreBundle:ProductSku').createQueryBuilder('ps').innerJoin('ps.product', 'p').where(' p.id = :id').setParameter('id', product.id).getQuery().getResult() -%}
+                      {%- set productAvailable = false -%}
+                      {%- set isMultiplePrices = false -%}
+
+                            {# confirm the stock and the min price in sku #}
+                            {%- set minPrice = 0 -%}
+                            {%- for productsku in productskus -%}
+                              {%- if (productsku.getStockUnlimited or (productsku.getStock > 0)) -%}
+                                {%- set productAvailable = true -%}
+                                {%- if minPrice == 0 -%}
+                                  {%- set minPrice = productsku.price -%}
+                                {%- else -%}
+                                  {%- if (productsku.price != minPrice) -%}
+                                    {%- set isMultiplePrices = true -%}
+                                    {%- if (productsku.price < minPrice) -%}
+                                      {%- set minPrice = productsku.price -%}
+                                    {%- endif -%}
+                                  {%- endif -%}
+                                {%- endif -%}
+                              {%- endif -%}
+                            {%- endfor -%}
+                            {%- set productName = product.attribute('product name') ? product.attribute('product name') : product.name -%}
+
+                    <div class="gl_Item" id="FS2_itemlayout_C">
+                    <div class="itemCenter">
+
+                    <div class="FS2_thumbnail_container">
+                      <a href="{{ path('ec_product_detail', {'id': product.id}) }}" onclick="return canSubmit();">
+                        <img src="{% if product.attribute('image1') %}{{ ('/uploads/media/'~get_entity_manager().find('MediaCoreBundle:Media', product.attribute('image1')).path) }}{% else %}{{ asset('assets/img/no-image.png') }}{% endif %}" alt="{{ productName|striptags }}" class="thumbnail" border="0">
+                      </a>
+                    </div>
+
+                    <div class="FS2_itemPrice_area">
+                    <ul class="FS2_itemPrice_list">
+                      <li class="FS2_special_price">
+                        <span class="FS2_priceLabel">Sale price</span>
+                        <span class="FS2_priceInCurrentCurrency FS2_priceMain">
+                          <span class="FS2_priceValue">
+                            {{ (minPrice * curRatio)|price_format(decimalPoint) }}
+                          </span>
+                          <span class="FS2_currencyLabel">
+                            {{ #unitBack# }}
+                          </span>
+                        </span>
+
+                      </li>
+                    </ul>
+						</div>
+                    <p class="FS2_ItemShortComment"></p>	
+
+                    </div>
+                    </div>
+
+                     {%- endfor -%}
+                    {# end Products #}
+                  </div>
+                  <br clear="all">
+
+                  {# page information #}
+                  <p class="pager">
+                   <span class="FS2_pager_text">
+                      {{ #pagingnavi_showing# }}
+                      <em>
+                        {{1}} -  {{ productsTotal }}
+                      </em>
+                      of
+                      <em>{{ productsTotal }}</em>  
+                    </span>  
+                  </p>
+                <!--  <span class="FS2_pager_stay">1</span>
+                  <a href="http://www.heiando1919.com/fs/heiando1919/c/shop/1/2" class="FS2_pager_link">2</a>
+                  <a href="http://www.heiando1919.com/fs/heiando1919/c/shop/1/2" class="FS2_pager_link_next"><img src="../btn_en/pager_next.gif" alt="Go to next page" border="0"></a><a href="http://www.heiando1919.com/fs/heiando1919/c/shop/1/2" class="FS2_pager_link_last"><img src="../btn_en/pager_last.gif" alt="Go to last page" border="0"></a>   -->
+                  
+                </div>
+              </div>
+            </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+{# end Contents #}
+  
+  <div class="layout_footer">
+  {% TemplateInclude "footer" %}
+  </div>
+  
+</div>
+  
+<script>
+
+      $(function () { 
+
+             // change currency
+             $.ajax({
+               method: 'POST',
+               url: '/currency/change',
+               data: {
+                 currency_unit: 'USD' 
+               }
+             }).done(function(result){
+               //location.reload();
+             }).fail(function (jqXHR, textStatus, errorThrown) {
+               console.error(textStatus + ': ' + errorThrown);
+             });
+
+      });
+</script>
+  
+<link type="text/css" href="{{ asset("css_category/ex2_category_shop.css")}}" rel="stylesheet" media="all">
+<link type="text/css" href="{{ asset("css_outline/original.css")}}" rel="stylesheet" media="all">

@@ -1,0 +1,207 @@
+﻿/*メダル*/
+div#ex2_container div#ex2_medal{margin-bottom:0;}
+div#ex2_container div#ex2_medal div.ex2_descp{margin:-11% 0 4% !important;}
+div#ex2_container div#ex2_medal:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*メダル*/
+div#ex2_container div.ex2_medal02{margin-bottom:2.5% !important;}
+
+
+/*メイン画像　商品名*/
+div#ex2_container h1#ex2_main{margin-top:0;}
+div#ex2_container h1#ex2_main div.ex2_catch{margin:-23% 5% 0;}
+div#ex2_container h1#ex2_main div.ex2_descp{margin:-3.5% 5% 8%;}
+div#ex2_container h1#ex2_main div.ex2_vr{display:none;}
+
+
+/*コンセプト*/
+div#ex2_container h2#ex2_concept div.ex2_catch{margin:8% 0 5.5%;}
+
+
+/*尾形光琳*/
+div#ex2_container div#ex2_korin div.ex2_catch{font-size:2.4em; text-align:center;}
+div#ex2_container div#ex2_korin div.ex2_catch span.ex2_korin_l{font-size:2.2em; line-height:1em;}
+div#ex2_container div#ex2_korin div.ex2_descp{font-size:1.3em;}
+
+div#ex2_container div#ex2_korin div.ex2_korin_1{position:relative;}
+div#ex2_container div#ex2_korin div.ex2_korin_1 div.ex2_catch{width:47%; margin:0; font-size:3em; position:absolute; top:4%; right:0;}
+div#ex2_container div#ex2_korin div.ex2_korin_1 div.ex2_descp{width:47%; margin:0; position:absolute; top:18.5%; right:0;}
+div#ex2_container div#ex2_korin div.ex2_korin_1 ul.ex2_korin_2{width:39%; margin:0; padding:3% 3% 3% 5%; background:rgba(254,254,254,0.1); text-align:left; position:absolute; top:39%; right:0;}
+div#ex2_container div#ex2_korin div.ex2_korin_1 ul.ex2_korin_2 li{margin:1.8% 0; font-size:1.3em;}
+div#ex2_container div#ex2_korin div.ex2_korin_1 ul.ex2_korin_2 li:first-child{list-style:none; margin:2% 0 6% -4%; color:#cc9933; font-family:Josefin Slab; font-size:1.8em; letter-spacing:0.02em; line-height:1.25em;}
+
+div#ex2_container div#ex2_korin ul.ex2_korin_3{margin:-4.9% 0 5% 2%; padding:0;}
+div#ex2_container div#ex2_korin ul.ex2_korin_3 li{list-style:disc; float:left; width:25%;}
+div#ex2_container div#ex2_korin ul.ex2_korin_3 li:first-child{list-style:none; width:102%; margin:5% 0 3% -2%; padding:5% 0; border-top:1px solid rgba(254,254,254,0.15); border-bottom:1px solid rgba(254,254,254,0.15); color:#cc9933; font-family:Josefin Slab; font-size:2em; text-align:center;}
+
+div#ex2_container div#ex2_korin div.ex2_korin_4{margin-bottom:5%;}
+div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_descp{width:47.5%; margin:2.5% 0 0 0; padding:0.5% 2.5%; background:rgba(254,254,254,0.1); font-size:0.5em; text-align:center; position:relative;}
+div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_descp:before{content:""; border:20px solid transparent; border-bottom:25px solid rgba(254,254,254,0.1); position:absolute; left:46.4%;}
+div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_korin_4org:before{top:-43%;}
+div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_korin_4re{width:40.7%; margin:-10.4% 0 0 53.5%;}
+div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_korin_4re:before{top:-57%;}
+
+div#ex2_container div#ex2_korin:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_korin div.ex2_korin_1:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_korin div.ex2_korin_1 ul.ex2_korin_2:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_korin ul.ex2_korin_3:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_korin ul.ex2_korin_3 li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_korin div.ex2_korin_4:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_descp:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_descp{font-size:0.8em;}
+	div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_korin_4org:before{top:-44%;}
+	div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_korin_4re:before{top:-58%;}
+}
+
+/*IEハック*/
+@media all and (-ms-high-contrast:none){
+	div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_descp{font-size:0.8em;}
+	div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_korin_4org:before{top:-44%;}
+	div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_korin_4re:before{top:-58%;}
+}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto) {
+	div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_descp{font-size:0.8em;}
+	div#ex2_container div#ex2_korin div.ex2_korin_4 div.ex2_korin_4org:before{top:-44%;}
+}
+
+
+
+/*飾り方*/
+div#ex2_container div#ex2_style{margin-bottom:3%; position:relative;}
+
+div#ex2_container div#ex2_style ol.ex2_style_1{counter-reset:number; list-style:none; margin:0; padding:0; position:absolute; top:45.5%; right:7%;}
+div#ex2_container div#ex2_style ol.ex2_style_1 li{margin:15.5% 0 15.5% 13%; font-size:1.3em;}
+div#ex2_container div#ex2_style ol.ex2_style_1 li:before{counter-increment:number; content:counter(number); padding:0 6% 0 0; color:#cc9933; font-family:Qwigley; font-style:italic; font-size:10em; vertical-align:middle;}
+div#ex2_container div#ex2_style ol.ex2_style_1 li:first-child{margin-left:0; color:#cc9933; font-family:Josefin Slab; font-size:3em;}
+div#ex2_container div#ex2_style ol.ex2_style_1 li:first-child:before{counter-increment:none; content:""; padding:5% 0; color:#cc9933; font-family:Josefin Slab; font-size:2em;}
+div#ex2_container div#ex2_style ol.ex2_style_1 li:nth-child(2):before{padding-left:9%; padding-right:10%;}
+
+div#ex2_container div#ex2_style div.ex2_style_2{width:58%; padding:2% 5% 4% 37%; background:linear-gradient(90deg,transparent,rgba(254,254,254,0.2));; font-size:1.5em; position:absolute; top:60.9%; right:0;}
+div#ex2_container div#ex2_style div.ex2_style_2 div.ex2_style_2t div.ex2_catch{width:100%; margin:0; font-family:Josefin Slab;}
+div#ex2_container div#ex2_style div.ex2_style_2 div.ex2_style_2t div.ex2_catch p span.italic{font-family:Qwigley; font-size:3em;}
+div#ex2_container div#ex2_style div.ex2_style_2 div.ex2_style_2t div.ex2_descp{width:100%; margin:-2% 0 0 0; padding:1% 0 0 0;}
+
+div#ex2_container div#ex2_style div.ex2_style_3{margin-top:9%;}
+div#ex2_container div#ex2_style div.ex2_style_3 img{width:30%; margin:-2.5% 0 0 2%; transform:rotate(10deg);}
+div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_3t{float:left; width:53%; padding:1% 4% 3%; background:rgba(254,254,254,0.1); position:relative;}
+div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_3t:before{content:""; border:20px solid transparent; border-left:25px solid rgba(254,254,254,0.1); position:absolute; top:43%; right:-8.3%;}
+div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_3t div.ex2_catch{width:100%; margin:0; font-family:Josefin Slab; color:#d84949;}
+div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_3t div.ex2_descp{width:100%; margin:0;}
+div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_3t div.ex2_descp p{margin:0;}
+div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_sns{margin:6% 0 0;}
+div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_sns img{width:10%; transform:none;}
+div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_sns a:link{color:transparent;}
+div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_sns a:visited{color:transparent;}
+div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_sns a:hover{color:transparent;}
+
+div#ex2_container div#ex2_style:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_style ol.ex2_style_1:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_style ol.ex2_style_1 li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_style div.ex2_style_2:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_style div.ex2_style_2 div.ex2_style_2t:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_style div.ex2_style_3:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_3t:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_sns:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_3t:before{right:-8.5%;}
+}
+
+/*IEハック*/
+@media all and (-ms-high-contrast:none){
+	div#ex2_container div#ex2_style div.ex2_style_2 div.ex2_style_2t div.ex2_catch{letter-spacing:0.01em;}
+	div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_3t:before{right:-8.5%;}
+}
+
+
+
+/*金箔*/
+div#ex2_container div#ex2_kinpaku div.ex2_kinpaku_1{float:left; width:61%; margin:-12% 3% 1% 0; background:url("http://heiando1919.e01.future-shop.jp/images/page/interiors/gaku-kh/gaku-kh_kinpaku01a.jpg") no-repeat; background-size:100%;}
+div#ex2_container div#ex2_kinpaku div.ex2_kinpaku_1:hover{background-color:transparent;}
+div#ex2_container div#ex2_kinpaku div.ex2_kinpaku_1:hover img{visibility:hidden;}
+
+div#ex2_container div#ex2_kinpaku div.ex2_catch{margin:12% 0 4% 0; font-size:2.4em; letter-spacing:0.01em; text-align:left;}
+div#ex2_container div#ex2_kinpaku div.ex2_descp{margin:0; font-size:1.3em;}
+div#ex2_container div#ex2_kinpaku p.ex2_note{margin:9% 0 0 0; color:rgba(254,254,254,0.5);}
+
+div#ex2_container div#ex2_kinpaku:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_kinpaku div.ex2_kinpaku_1:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*モチーフ*/
+div#ex2_container div#ex2_motif_1{position:relative;}
+div#ex2_container div#ex2_motif_1 div.ex2_motif_t{width:100%; margin:0; font-size:1.6em; text-align:center; position:absolute; top:0; left:0;}
+
+div#ex2_container div#ex2_motif_1 div.ex2_motif_1t{width:80%; padding-left:20%; background:rgba(0,0,0,0.5); position:absolute; bottom:0; right:0;}
+div#ex2_container div#ex2_motif_1 div.ex2_motif_1t div.ex2_catch{margin-top:-7%;}
+div#ex2_container div#ex2_motif_1 div.ex2_motif_1t ul.ex2_info li img.ex2_info_icon{margin:-1% 2% 0 2%; transform:rotate(-15deg);}
+div#ex2_container div#ex2_motif_1 div.ex2_motif_1t ul.ex2_info li div{color:rgba(254,254,254,0.8);}
+
+div#ex2_container div#ex2_motif_1:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_motif_1 div.ex2_motif_t:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_motif_1 div.ex2_motif_1t:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container div#ex2_motif_1 div.ex2_motif_1t ul.ex2_info:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*技法*/
+div#ex2_container div#ex2_technique{margin:3% 0;}
+
+
+/*蒔絵*/
+div#ex2_container div#ex2_makie div.ex2_catch{margin-top:9%;}
+
+/*蒔絵　スライダー*/
+div#ex2_container div#ex2_makie div.bx-wrapper div.bx-viewport ul.ex2_bxslider li div.bx-caption{text-align:center;}
+
+
+
+/*漆　画像追加*/
+div#ex2_container div#ex2_urushi ul.ex2_img_plus div.ex2_text_plus{padding:5% 5% 3%;}
+
+
+/*詳細*/
+div#ex2_container div#ex2_angle div.ex2_descp_more{color:#1d0d02; font-weight: 600; text-shadow:1px 1px 1px rgba(254,254,254,0.1);}
+div#ex2_container div#ex2_design div.ex2_descp_more{color:#1d0d02; font-weight:600; text-shadow:1px 1px 1px rgba(254,254,254,0.1);}
+
+
+/*バリエーション*/
+div#ex2_container div#ex2_variation div.ex2_h_r ol li:first-child{margin:40% 0 5%;}
+div#ex2_container div#ex2_variation div.ex2_h_r ol li:nth-child(3){margin:65% 0 5%; color:#cc9933; text-decoration:underline;}
+div#ex2_container div#ex2_variation div.ex2_h_r ol li:nth-child(3):before{content:""; margin-left:4%;}
+
+
+/*iframe*/
+div#ex2_container div.extended div.gaku-kh01 .iframe{width:101%; height:4507px; margin:3.5% 0 0 -0.9%;}
+div#ex2_container div.extended div.gaku-kh02 .iframe{width:101%; height:5630px; margin:-1.5% 0 0 -0.9%;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_container div.extended div.gaku-kh02 .iframe{height:5680px;}
+}
+
+/*IEハック*/
+@media all and (-ms-high-contrast:none){
+	div#ex2_container div.extended div.gaku-kh02 .iframe{height:5700px;}
+}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto) {
+	div#ex2_container div.extended div.gaku-kh02 .iframe{height:5675px;}
+}
+
+
+
+/*商品ページ　回遊バナー　イチ押し*/
+div#ex2_banner div.ex2_b_pick div.ex2_b_pick_i img{margin:3% 0;}
+div#ex2_banner div.ex2_b_pick div.ex2_b_pick_i div p{margin:5% 0;}
+
+
+
+

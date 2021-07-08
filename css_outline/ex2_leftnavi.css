@@ -1,0 +1,298 @@
+﻿div#ex2_leftnavi_PC{width:250px; height:auto; margin:0 auto; padding:0;
+background-color:#000000; color:#ffffff; font-size:12px; font-weight:300; line-height:1.8em; letter-spacing:0.06em; text-align:justify; text-justify:inter-ideograph;
+font-family:"Open Sans", sans-serif;
+}
+
+div#ex2_leftnavi{width:100%; height:auto; background-color:#000000;}
+div#ex2_leftnavi:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex2_leftnavi a:link{text-decoration:none; color:#ffffff;}
+div#ex2_leftnavi a:visited{text-decoration:none; color:#ffffff;}
+div#ex2_leftnavi a:hover{text-decoration:none; color:#cc3333; font-weight:600; filter:alpha(opacity=100); opacity:1.0;}
+div#ex2_leftnavi a img{border-style:none;}
+div#ex2_leftnavi a img:hover{filter:alpha(opacity=50); opacity:0.5;}
+
+div#ex2_leftnavi img{width:100%; height:auto; image-rendering:-webkit-optimize-contrast;}
+div#ex2_leftnavi p.garamond{font-family:"Garamond";}
+div#ex2_leftnavi span.underline{text-decoration:underline;}
+div#ex2_leftnavi span.red{color:#cc3333;}
+div#ex2_leftnavi span.yellow{color:#cc9933;}
+
+body{margin:0;}
+
+div.clear{width:100%; height:0px; clear:both;}
+
+
+
+/*形態 1*/
+div#ex2_leftnavi_PC div.ex2_l_1{margin-bottom:15%;}
+div#ex2_leftnavi_PC div.ex2_l_1 div.ex2_l_1_t{margin:8px; background:rgba(204,153,51,0.3); outline:8px solid rgba(204,153,51,0.3); border:3px double #cc9933; font-size:1.5em; text-align:center;}
+div#ex2_leftnavi_PC div.ex2_l_1 div.ex2_l_1_t img.ex2_l_1_i{width:16.5%; margin:-3% 0 7%;}
+div#ex2_leftnavi_PC div.ex2_l_1 ul{padding:3% 0 0 7%;}
+div#ex2_leftnavi_PC div.ex2_l_1 ul li{text-align:left;}
+div#ex2_leftnavi_PC div.ex2_l_1 a:link p.ex2_l_1_s{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_1 a:visited p.ex2_l_1_s{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_1 a:hover p.ex2_l_1_s{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_1:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+
+/*形態 2*/
+div#ex2_leftnavi_PC div.ex2_l_2{margin-bottom:15%;}
+div#ex2_leftnavi_PC div.ex2_l_2 p.ex2_l_2_l{color:#cc9933; border-bottom:1px solid rgba(214,197,121,0.3); font-size:1.5em; text-align:center;}
+div#ex2_leftnavi_PC div.ex2_l_2 p.ex2_l_2_m{background:rgba(254,254,254,0.1); margin-top:0; padding:5%;}
+div#ex2_leftnavi_PC div.ex2_l_2 a:link p.ex2_l_2_m{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_2 a:visited p.ex2_l_2_m{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_2 a:hover p.ex2_l_2_m{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_2:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_leftnavi_PC div.ex2_l_2 p.ex2_l_2_m{margin-top:-2.5%;}
+}
+
+/*形態 2　リボン　縦*/
+div#ex2_leftnavi_PC div#ex2_l_pick div.ex2_l_pick_h{position:relative;}
+div#ex2_leftnavi_PC div#ex2_l_pick div.ex2_l_pick_h div.ex2_l_pick_ht{width:40%; padding:0 5%; background:linear-gradient(#cc3333 0%, #ff1111 100%); border-radius:0.1em 0 0 0; text-align:center; position:absolute; top:-0.5%; left:5%;}
+div#ex2_leftnavi_PC div#ex2_l_pick div.ex2_l_pick_h div.ex2_l_pick_ht:before{content:""; border-bottom:4px solid #841f1f; border-right:4px solid transparent; position:absolute; top:0; right:-3%;}
+div#ex2_leftnavi_PC div#ex2_l_pick div.ex2_l_pick_h div.ex2_l_pick_ht:after{content:""; width:0; height:0; border-bottom:15px solid transparent; border-right:62.5px solid #ff1111; border-left:62.5px solid #ff1111; position:absolute; top:100%; left:0;}
+
+div#ex2_leftnavi_PC div#ex2_l_pick div.ex2_l_pick_h a:link div.ex2_l_pick_ht p{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC div#ex2_l_pick div.ex2_l_pick_h a:visited div.ex2_l_pick_ht p{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC div#ex2_l_pick div.ex2_l_pick_h a:hover div.ex2_l_pick_ht p{color:#ffffff; font-weight:100;}
+
+div#ex2_leftnavi_PC div#ex2_l_pick div.ex2_l_pick_h:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_leftnavi_PC div#ex2_l_pick div.ex2_l_pick_h div.ex2_l_pick_ht:after{border-right:63px solid #ff1111;}
+}
+
+/*IEハック*/
+@media all and (-ms-high-contrast:none){
+	div#ex2_leftnavi_PC div#ex2_l_pick div.ex2_l_pick_h div.ex2_l_pick_ht:after{top:99%;}
+}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto) {
+	div#ex2_leftnavi_PC div#ex2_l_pick div.ex2_l_pick_h div.ex2_l_pick_ht:after{top:99%;}
+}
+
+
+
+/*形態 3*/
+div#ex2_leftnavi_PC div.ex2_l_3{margin-bottom:15%;}
+div#ex2_leftnavi_PC div.ex2_l_3 p.ex2_l_3_l{color:#cc9933; border-bottom:1px solid rgba(214,197,121,0.3); font-size:1.5em; text-align:center;}
+div#ex2_leftnavi_PC div.ex2_l_3 a:link p.ex2_l_3_l{color:#cc9933; font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_3 a:visited p.ex2_l_3_l{color:#cc9933; font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_3 a:hover p.ex2_l_3_l{color:#cc3333; font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_3 a:link p.ex2_l_3_s{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_3 a:visited p.ex2_l_3_s{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_3 a:hover p.ex2_l_3_s{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_3:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*形態 3　メディア*/
+div#ex2_leftnavi_PC div#ex2_l_media{margin-bottom:11%;}
+div#ex2_leftnavi_PC div#ex2_l_media img{width:57%; margin:0 0 0 -7%;}
+div#ex2_leftnavi_PC div#ex2_l_media img.ex2_l_media_a{width:32%; margin:0 0 0 50%;}
+div#ex2_leftnavi_PC div#ex2_l_media p.ex2_l_3_s{width:50%; margin:-55% 0 0 50%; text-align:left;}
+div#ex2_leftnavi_PC a:link div#ex2_l_media p.ex2_l_3_s{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC a:visited div#ex2_l_media p.ex2_l_3_s{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC a:hover div#ex2_l_media p.ex2_l_3_s{color:#cc3333; font-weight:100;}
+div#ex2_leftnavi_PC div#ex2_l_media:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto) {
+	div#ex2_leftnavi_PC div#ex2_l_media img.ex2_l_media_a{margin-top:-30%;}
+}
+
+/*形態 3　コラボレーション*/
+div#ex2_leftnavi_PC div#ex2_l_collab{margin-top:20%;}
+div#ex2_leftnavi_PC div#ex2_l_collab p.ex2_l_3_m{text-align:center;}
+div#ex2_leftnavi_PC div#ex2_l_collab ul{list-style:none; padding:0;}
+div#ex2_leftnavi_PC div#ex2_l_collab ul li{width:30%; float:left; margin:0 1.5%;}
+div#ex2_leftnavi_PC div#ex2_l_collab ul li:last-child{float:right;}
+div#ex2_leftnavi_PC div#ex2_l_collab ul li:last-child div{margin:10% 0 0 -10%; text-align:center;}
+div#ex2_leftnavi_PC div#ex2_l_collab a:link ul li:last-child{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC div#ex2_l_collab a:visited ul li:last-child{color:#ffffff; font-weight:100;}
+div#ex2_leftnavi_PC div#ex2_l_collab a:hover ul li:last-child{color:#cc3333; font-weight:100;}
+div#ex2_leftnavi_PC div#ex2_l_collab ul:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_leftnavi_PC div#ex2_l_collab:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+
+/*形態 4*/
+div#ex2_leftnavi_PC div.ex2_l_4{margin-bottom:23%;}
+div#ex2_leftnavi_PC div.ex2_l_4 p.ex2_l_4_l{color:#cc9933; font-size:1.5em; text-align:center;}
+div#ex2_leftnavi_PC div.ex2_l_4 p.ex2_l_4_lb{margin:8px; padding:6% 5%; background:rgba(204,153,51,0.3); outline:7px solid rgba(204,153,51,0.3); border:3px double #cc9933; font-size:1.5em; text-align:center;}
+div#ex2_leftnavi_PC div.ex2_l_4 p.ex2_l_4_m{margin:10% 0 0; padding:5%; text-align:center; background:rgba(254,254,254,0.1); border-top:1px solid rgba(214,197,121,0.3); border-bottom:1px solid rgba(214,197,121,0.3); color:#cc9933;}
+div#ex2_leftnavi_PC div.ex2_l_4 ul{padding:0;}
+div#ex2_leftnavi_PC div.ex2_l_4 ul li{list-style:disc; margin-left:7%; padding-left:2%; color:rgba(254,254,254,0.7);}
+div#ex2_leftnavi_PC div.ex2_l_4:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*形態 4　モチーフ*/
+div#ex2_leftnavi_PC div#ex2_l_motif ul{list-style:none;}
+div#ex2_leftnavi_PC div#ex2_l_motif ul li{list-style:none; margin:0 0 -2.5% 0; padding-left:0;}
+
+/*IEハック*/
+@media all and (-ms-high-contrast:none){
+	div#ex2_leftnavi_PC div#ex2_l_motif ul li{margin-bottom:0;}
+}
+
+/*形態 4　色*/
+div#ex2_leftnavi_PC div#ex2_l_color ul{list-style:none;}
+div#ex2_leftnavi_PC div#ex2_l_color ul li{list-style:none; margin:0 0 -2.5% 0; padding-left:0;}
+
+/*IEハック*/
+@media all and (-ms-high-contrast:none){
+	div#ex2_leftnavi_PC div#ex2_l_color ul li{margin-bottom:0;}
+}
+
+/*形態 4　カテゴリー*/
+div#ex2_leftnavi_PC div#ex2_l_cat{margin-top:10%;}
+
+/*形態4　フレックス　高さ*/
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex{display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-orient:vertical; -webkit-box-direction:reverse; -ms-flex-direction:column-reverse; flex-direction:column-reverse; margin-top:-12%;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex ul.ex2_l_4_flex_more li{display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-align:center; -ms-flex-align:center; margin-left:12%;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex ul.ex2_l_4_flex_more{height:134px; overflow:hidden;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more{height:auto;}
+
+/*形態4　フレックス　ボタン*/
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input{filter:alpha(opacity=0); opacity:0;cursor:pointer; display:block; text-align:center; width:100%;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*形態4　フレックス　ボタン　個別*/
+div#ex2_leftnavi_PC div#ex2_l_shop div#ex2_l_cat{position:relative;}
+div#ex2_leftnavi_PC div#ex2_l_shop div#ex2_l_cat div.ex2_l_4_flex input{z-index:999; position:absolute; top:41%; left:0;}
+div#ex2_leftnavi_PC div#ex2_l_shop div#ex2_l_cat div.ex2_l_4_flex input:checked{z-index:999; top:22%;}
+div#ex2_leftnavi_PC div#ex2_l_shop div#ex2_l_cat div.ex2_l_4_flex02 a:link p{color:rgba(254,254,254,0.7); font-weight:100;}
+div#ex2_leftnavi_PC div#ex2_l_shop div#ex2_l_cat div.ex2_l_4_flex02 a:visited p{color:rgba(254,254,254,0.7); font-weight:100;}
+div#ex2_leftnavi_PC div#ex2_l_shop div#ex2_l_cat div.ex2_l_4_flex02 a:hover p{color:rgba(254,254,254,0.7); font-weight:100;}
+
+div#ex2_leftnavi_PC div#ex2_l_ac{position:relative;}
+div#ex2_leftnavi_PC div#ex2_l_ac div.ex2_l_4_flex input{z-index:999; position:absolute; top:76%; left:0;}
+div#ex2_leftnavi_PC div#ex2_l_ac div.ex2_l_4_flex input:checked{z-index:999; top:52%;}
+
+/*形態4　フレックス　吹き出し　押す前*/
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex ul.ex2_l_4_flex_more li:first-child{list-style:none; margin:15% 0 5%; padding:15% 5%; background-color:rgba(254,254,254,0.1); border-radius:0.2rem; font-family:Josefin Slab; font-size:1.3em; text-align:center; position:relative;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex ul.ex2_l_4_flex_more li:first-child:before{content:""; border:20px solid transparent; border-bottom:25px solid rgba(254,254,254,0.1); position:absolute; top:-47%; left:42%;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex ul.ex2_l_4_flex_more li:first-child:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex ul.ex2_l_4_flex_more:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex ul.ex2_l_4_flex_more li:first-child:before{top:-46.5%;}
+}
+
+/*IEハック*/
+@media all and (-ms-high-contrast:none){
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex ul.ex2_l_4_flex_more li:first-child:before{top:-46.5%;}
+}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto){
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex ul.ex2_l_4_flex_more li:first-child:before{top:-46.5%;}
+}
+
+/*形態4　フレックス　吹き出し　押した後*/
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li{background:rgba(254,254,254,0.2)}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li:before{content:"●"; font-size:0.4em; margin:0 2.5% 0 -17%; padding:0 2.5% 0 7%; background:rgba(254,254,254,0.2);}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li:first-child{margin-bottom:0; border-bottom-right-radius:0; border-bottom-left-radius:0; color:#cc9933;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li:first-child:before{content:""; margin:0; padding:0; background:transparent; border-bottom:25px solid rgba(254,254,254,0.2);}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li:last-child{border-bottom-right-radius:0.2rem;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li:last-child:before{padding-bottom:15px; border-bottom-left-radius:0.5rem;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li:before{margin-right:0%; padding-right:5%;}
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li:last-child:before{border-bottom-left-radius:0.45rem;}
+}
+
+/*IEハック*/
+@media all and (-ms-high-contrast:none){
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li:before{margin-right:1%; padding-right:2.5%; padding-left:10.5%;}
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li:first-child{margin-bottom:-0.1%; padding-right:0;}
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li:last-child{margin-top:-0.2%;}
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li:last-child:before{padding-right:2.7%;}
+}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto){
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li:before{margin-right:1%; padding-right:6%;}
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex input:checked ~ ul.ex2_l_4_flex_more li:last-child:before{border-bottom-left-radius:0.45rem !important;}
+}
+
+/*●非SSL●形態4　フレックス　吹き出し　押さない*/
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02{list-style:none; margin:9% 0 10%; padding:8% 5%; background-color:rgba(254,254,254,0.1); border-radius:0.2rem; font-family:Josefin Slab; font-size:1.3em; position:relative;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02:before{content:""; border:20px solid transparent; border-bottom:25px solid rgba(254,254,254,0.1); position:absolute; top:-49%; left:42%;}
+
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02 a:link{color:rgba(254,254,254,0.7); font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02 a:visited{color:rgba(254,254,254,0.7); font-weight:100;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02 a:hover{color:rgba(254,254,254,0.7); font-weight:100;}
+
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02 p{float:left;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02 img{width:22%;}
+
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02 p:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*吹き出し　押さない　複数行*/
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02a{margin-top:14%;}
+div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02a:before{top:-40%;}
+
+/*Firefoxハック*/
+@-moz-document url-prefix() {
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02a:before{top:-39%;}
+}
+
+/*IEハック*/
+@media all and (-ms-high-contrast:none){
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02:before{top:-48%;}
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02a:before{top:-39%;}
+}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto){
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02:before{top:-48%;}
+	div#ex2_leftnavi_PC div.ex2_l_4 div.ex2_l_4_flex02a:before{top:-39%;}
+}
+
+
+
+/*形態 5*/
+div#ex2_leftnavi_PC div.ex2_l_5{margin-bottom:20%;}
+div#ex2_leftnavi_PC div.ex2_l_5 div.ex2_l_5_i{width:20%; float:left; margin:-2% 3% 0 0;}
+div#ex2_leftnavi_PC div.ex2_l_5 div.ex2_l_5_t{width:80%; padding-left:20%; text-align:left;}
+div#ex2_leftnavi_PC div.ex2_l_5 div.ex2_l_5_t:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_leftnavi_PC div.ex2_l_5 p.ex2_l_5_l{color:#cc9933; border-bottom:1px solid rgba(214,197,121,0.3); font-size:1.5em; text-align:center;}
+div#ex2_leftnavi_PC div.ex2_l_5:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+/*形態 5　支払*/
+div#ex2_leftnavi_PC div#ex2_l_pay div.ex2_l_5_i{width:45%; margin:1% 0 0 0;}
+div#ex2_leftnavi_PC div#ex2_l_pay div.ex2_l_5_i img{width:40%; float:left; margin-right:5%; border:2px solid #ffffff; border-radius:0.1rem;}
+div#ex2_leftnavi_PC div#ex2_l_pay div.ex2_l_5_t{width:55%; float:left; margin:-6% 0 6% 0; padding-left:0;}
+
+/*形態 5　ギフト*/
+div#ex2_leftnavi_PC div#ex2_l_gift div.ex2_l_5_i{margin-top:-7%;}
+
+/*形態5　メルマガ*/
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto){
+	div#ex2_leftnavi_PC div#ex2_l_newsl div.ex2_l_5_i{margin-top:-1.5%;}
+}
+
+/*形態 5　メール*/
+div#ex2_leftnavi_PC div#ex2_l_email div.ex2_l_5_i{margin-top:-4.5%;}
+
+/*形態 5　実店舗*/
+div#ex2_leftnavi_PC div#ex2_l_store{margin-bottom:5%;}
+div#ex2_leftnavi_PC div#ex2_l_store div.ex2_l_5_i{margin-top:-6%;}
+div#ex2_leftnavi_PC div#ex2_l_store div.ex2_l_5_t{margin-top:6%; padding-left:23%;}
+
+
+
+
+
+

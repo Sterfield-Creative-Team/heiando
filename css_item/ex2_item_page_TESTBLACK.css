@@ -1,0 +1,47 @@
+﻿/*【テスト用CSS】本番アップの際は、htmlソースから抜く*/
+
+
+
+
+
+/*【テスト用CSS】商品ページ*/
+
+/*全体*/
+body{background:#000000;}
+
+
+/*メダル*/
+div#ex2_container div#ex2_medal{margin-top:0;}
+div#ex2_container div#ex2_medal div.ex2_descp{margin:-14.5% 0 5%;}
+
+
+/*iframe*/
+div#ex2_container div.extended div.fountain-pen iframe{height:6000px;}
+
+/*iframe　TB　Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	div#ex2_container div.extended div.fountain-pen iframe{height:5950px;}
+}
+
+/*Firefoxハック*/
+
+/*iframe　IEハック*/
+@media all and (-ms-high-contrast:none){
+	div#ex2_container div.extended div.fountain-pen iframe{height:6050px;}
+}
+
+/*Microsoft Edge Browserハック*/
+@supports (-ms-ime-align:auto) {
+	div#ex2_container div.extended div.fountain-pen iframe{height:6000px;}
+}
+
+
+
+
+
+/*【テスト用CSS】商品ページ回遊バナー*/
+/*回遊バナー*/
+div#ex2_banner{margin-left:0;}
+div#ex2_banner div#ex2_b_main{position:unset;}
+div#ex2_banner div#ex2_b_main div.ex2_b_main_tl{margin:-11% auto 5.5%; position:unset;}
+div#ex2_banner div.ex2_b_sub div.ex2_b_sub_n{margin-top:-3.8%;}

@@ -1,0 +1,96 @@
+﻿div#ex2_Wrap{width:880px; height:auto; margin:0; padding:0;
+background-color:#000000; color:#ffffff; font-size:12px; font-weight:300; line-height:1.8em; letter-spacing:0.06em; text-align:justify; text-justify:inter-ideograph;
+font-family:"Open Sans", sans-serif;
+}
+div#ex2_Wrap:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div.layout_body table.layout_table td.layout_content div.system_content{margin-left:1.5%;}
+
+div#ex2_container a:link{text-decoration:none; color:#ffffff;}
+div#ex2_container a:visited{text-decoration:none; color:#ffffff;}
+div#ex2_container a:hover{text-decoration:none; color:#cc3333; font-weight:600;}
+div#ex2_container a img{border-style:none;}
+div#ex2_container a img:hover{filter:alpha(opacity=50); opacity:0.5;}
+
+div#ex2_container img{width:100%; height:auto; image-rendering:-webkit-optimize-contrast;}
+div#ex2_container p.garamond{font-family:"Garamond";}
+div#ex2_container span.yellow{color:#cc9933;}
+div#ex2_container span.red{color:#cc3333;}
+div#ex2_container span.underline{text-decoration:underline;}
+div#ex2_container span.italic{font-style:italic;}
+
+div.clear{width:100%; height:0px; clear:both;}
+
+
+
+
+
+/*基本　導入*/
+div#ex2_container div.ex2_feature{margin-bottom:-11%;}
+div#ex2_container div.ex2_feature_title{margin-top:-1.5%; font-size:3em; color:#cc9933;}
+div#ex2_container div.ex2_feature_descp{font-size:1.4em; line-height:1.5em;}
+div#ex2_container div.ex2_feature_note{color:rgba(254,254,254,0.7); font-size:0.8em;}
+div#ex2_container div.ex2_feature_note p:before{content:"*"; margin-right:0.6%;}
+div#ex2_container div.ex2_feature:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*基本　本体*/
+div#ex2_container div.ex2_content_c{margin-top:15%;}
+div#ex2_container div.ex2_content_c p{text-align:center;}
+div#ex2_container div.ex2_content_c div.ex2_hr{background-color:rgba(204, 153, 51, 0.45); width:30%; height:1px; margin:5% auto;}
+div#ex2_container div.ex2_content_c:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex2_container div.ex2_content_r{margin-top:15%;}
+div#ex2_container div.ex2_content_r div.ex2_catch{text-align:right; width:80%; margin-top:-6.4%;}
+div#ex2_container div.ex2_content_r div.ex2_catch_r{text-align:left;}
+div#ex2_container div.ex2_content_r div.ex2_hr{background-color:rgba(204, 153, 51, 0.45); width:80%; height:1px; margin:5% 0;}
+div#ex2_container div.ex2_content_r div.ex2_descp{width:80%; margin-left:0;}
+div#ex2_container div.ex2_content_r div.ex2_descp_hr{background-color:rgba(255, 255, 255, 0.4); width:107%; height:1px; margin:4% 0;}
+div#ex2_container div.ex2_content_r div.ex2_descp_l{margin:-5% 5% -5% 20%;}
+div#ex2_container div.ex2_content_r div.ex2_descp_l div.ex2_descp_hr{background-color:rgba(255, 255, 255, 0.4); width:100%; height:1px; margin:4% 0;}
+div#ex2_container div.ex2_content_r ul.ex2_info{width:75%; margin:0 0 0 5%; padding-left:2.5%;}
+div#ex2_container div.ex2_content_r ul.ex2_info li{margin:2% 3% 2% 0;}
+div#ex2_container div.ex2_content_r ul.ex2_info li div{font-size:0.8em; line-height:1.2em; margin:2% 0;}
+div#ex2_container div.ex2_content_r:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex2_container div.ex2_content_l{margin-top:15%;}
+div#ex2_container div.ex2_content_l div.ex2_catch{text-align:left; width:80%; margin-top:-6%; margin-left:20%;}
+div#ex2_container div.ex2_content_l div.ex2_catch_r{margin-top:0; margin-left:0;}
+div#ex2_container div.ex2_content_l div.ex2_hr{background-color:rgba(204, 153, 51, 0.45); width:80%; height:1px; margin:5% 0 5% 20%;}
+div#ex2_container div.ex2_content_l div.ex2_hr_r{width:80%; margin-left:0;}
+div#ex2_container div.ex2_content_l div.ex2_descp{width:80%; margin-right:0; margin-left:20%;}
+div#ex2_container div.ex2_content_l div.ex2_descp_hr{background-color:rgba(255, 255, 255, 0.4); width:107%; height:1px; margin:4% 0;}
+div#ex2_container div.ex2_content_l div.ex2_descp_r{margin:-5% 0;}
+div#ex2_container div.ex2_content_l div.ex2_descp_r div.ex2_descp_hr_f{background-color:rgba(255, 255, 255, 0.4); width:100%; height:1px; margin:4% 0 6%;}
+div#ex2_container div.ex2_content_l div.ex2_descp_r div.ex2_descp_hr_b{background-color:rgba(255, 255, 255, 0.4); width:100%; height:1px; margin:6% 0 4%;}
+div#ex2_container div.ex2_content_l ul.ex2_info{width:75%; margin-left:20%; padding-left:2.5%;}
+div#ex2_container div.ex2_content_l ul.ex2_info li{margin:2% 3% 2% 0;}
+div#ex2_container div.ex2_content_l ul.ex2_info li img.ex2_info_icon{width:10%; float:left; margin:0 2%;}
+div#ex2_container div.ex2_content_l ul.ex2_info li div{font-size:0.8em; line-height:1.2em; margin:2% 0; padding:1.5%; border:1px solid rgba(255, 255, 255, 0.4);}
+div#ex2_container div.ex2_content_l:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex2_container div.ex2_content_h{margin-top:15%;}
+div#ex2_container div.ex2_content_h div.ex2_h_r{width:50%; float:right;}
+div#ex2_container div.ex2_content_h div.ex2_h_l{width:50%; float:left;}
+div#ex2_container div.ex2_content_h div.ex2_descp{margin:0;}
+div#ex2_container div.ex2_content_h ul#ex2_info_btn{font-size:1.3em; padding-left:3.5%;}
+div#ex2_container div.ex2_content_h ul#ex2_info_btn li{margin:1.5% 0; list-style:disc;}
+div#ex2_container div.ex2_content_h div.ex2_info_memo{margin:7% 0 0 4.5%;}
+div#ex2_container div.ex2_content_h ul#ex2_info_img{list-style:none; width:50%; padding:0; display:inline-block; position:relative;}
+div#ex2_container div.ex2_content_h ul#ex2_info_img li{position:absolute; top:0; left:0;}
+div#ex2_container div.ex2_content_h ul#ex2_info_img li:first-child{z-index:999;}
+div#ex2_container div.ex2_content_h ul#ex2_info_img li img{width:auto; height:100%;}
+div#ex2_container div.ex2_content_h:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+div#ex2_container div.ex2_catch{font-size:2.8em; font-weight:300; line-height:1em; color:#cc9933; text-shadow:1px 1px 1px rgba(0, 0, 0, 0.8);}
+div#ex2_container div.ex2_catch p{line-height:1em;}
+div#ex2_container div.ex2_descp{font-size:1.3em; font-weight:300; margin:5%;}
+
+
+
+
+
+
+
+

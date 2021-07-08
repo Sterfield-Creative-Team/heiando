@@ -1,0 +1,425 @@
+{# Reference: https://launchcart.jp/reference/1%e5%95%86%e5%93%81/ #}
+
+{% TemplateInclude "html head" %}
+
+{# Variables Settings #}
+{%- set title = 'product' -%}
+
+{# set current currency #}
+{%- set currentCurrency = app.session.has('currency_unit') ? app.session.get('currency_unit') : is_authorized() ? app.security.token.user.settingCurrency : get_entity_manager().find("EcCoreBundle:Currency", system_config("base_currency")) -%}
+{%- set selectedCurrencyLabel = '' -%}
+{%- for key , item in supported_currencies -%}
+  {%- set currency = get_entity_manager().find("EcCoreBundle:Currency", item) -%}
+  {%- set name = currency.code -%}
+  {%- if name == currentCurrency -%}
+    {%- set selectedCurrencyLabel = name -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if not selectedCurrencyLabel -%}
+  {%- set currency = get_entity_manager().find("EcCoreBundle:Currency", supported_currencies|first) -%}
+  {%- set selectedCurrencyLabel = currency.code -%}
+{%- endif -%}
+
+{# insert to html head title #}
+{%- set productName = product.attribute('product name') ? product.attribute('product name') : product.name -%}
+{%- set title = productName -%}
+
+{# get base currency unit #}
+{%- set baseCurrency = get_entity_manager().find('EcCoreBundle:Currency', system_config('base_currency')) -%}
+{%- set baseUnitFront = baseCurrency.getBeforeUnit() -%}
+{%- set baseUnitBack = baseCurrency.getAfterUnit() -%}
+
+{# flag of subscription #}
+{%- set isRegular = product.productType == 'regular' ? true : false -%}
+
+{# set primary category #}
+{%- set excludedCategories = #excluded_categories# |split(',') -%}
+{%- set primaryCategory = false -%}
+{%- for category in product.categories|reverse -%}
+  {%- if not primaryCategory -%}
+  {%- set isExcludeCategory = false -%}
+    {%- if category.name not in excludedCategories -%}
+      {%- set wrapedCategory = product_api.wrapProductCategory(category) -%}
+      {%- if (wrapedCategory.getAncestors|length > 0) -%}
+        {%- for categoryAncestor in wrapedCategory.getAncestors -%}
+          {%- if categoryAncestor.node.name in excludedCategories -%}
+              {%- set isExcludeCategory = true -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+      {%- if not isExcludeCategory -%}
+        {% set primaryCategory = category %}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- set hierarchyPrimaryCategory = [primaryCategory] -%}
+{%- set wrapedPrimaryCategory = product_api.wrapProductCategory(primaryCategory) -%}
+{%- if (wrapedPrimaryCategory.getAncestors|length > 0) -%}
+  {%- for primaryCategoryAncestor in wrapedPrimaryCategory.getAncestors -%}
+    {%- set hierarchyPrimaryCategory = hierarchyPrimaryCategory|merge([primaryCategoryAncestor.node]) -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{# organize product sku information #}
+{%- set isInStock = false -%}
+{%- set productskus = product.productSku -%}
+{%- set defaultSkuNum = 0 -%}
+{%- set isExistSku1 = productskus.first.getSkuDetail1 ? true : false -%}
+{%- set isExistSku2 = productskus.first.getSkuDetail2 ? true : false -%}
+{%- set sku1Details = [] -%}
+{%- set sku2Details = [] -%}
+{%- for productsku in productskus -%}
+  {%- if not (productsku.stockUnlimited or (productsku.stock > 0)) -%}
+    {%- if loop.index0 == defaultSkuNum -%}
+      {%- set defaultSkuNum = loop.index0 -%}
+    {%- endif -%}
+  {%- else -%}
+    {%- set isInStock = true -%}
+  {%- endif -%}
+  {%- if isExistSku1 or isExistSku2 -%}
+    {%- if not (productsku.getSkuDetail1 in sku1Details) -%}
+      {%- set sku1Details = sku1Details|merge([productsku.getSkuDetail1]) -%}
+    {%- endif -%}
+    {%- if not (productsku.getSkuDetail2 in sku2Details) -%}
+      {%- set sku2Details = sku2Details|merge([productsku.getSkuDetail2]) -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{# end Variables Settings #}
+
+
+
+<div class="layout_body">
+  
+  <div class="layout_header">
+		{% TemplateInclude "header" %}
+  </div>
+
+{# Contents #}
+  
+ <table border="0" cellspacing="0" cellpadding="0" class="layout_table">
+   <tbody>
+     <tr>
+       <td class="layout_menu">
+			{% TemplateInclude "leftnavi" %}
+       </td>
+
+       <td class="layout_content">
+          <div class="system_content">
+              <p class="pan FS2_breadcrumbs">
+                <a href="..">Top</a>
+              </p> 
+            
+              <div class="gl_Item" id="FS2_itemlayout_E">
+
+                      
+                    <div class="user_inner_content FS2_upper_comment">
+                      <div id="centerling_background">
+                        <div id="background">
+                          <div id="container">
+                            <div id="flexible-background">
+                              <div class="header">
+                                <div class="name">
+                                  <p class="en">Small Rectangular Box</p>
+                                  <p class="en2">Gold Leaf / Flowers of the Four Seasons</p>
+                                  <p class="jp">(Naga-kobako Kinpaku Shiki Soka)</p>
+                                </div>
+                              </div>
+
+                            <div class="main-photo">
+                              <img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_main-photo.jpg") }}" alt="">
+                            </div>
+                            </div>
+                            <div class="partition1">
+                              <img src="{{ asset("") }}" alt="">
+                            </div>
+                            <div id="headline1">
+                              <p>Small Rectangular Box / Gold Leaf / Flowers of the Four Seasons is...</p>
+                            </div>
+                            <div id="text">
+                              <ul>
+                                <li>
+                                  <p>This is a "kobako," or small box, with a floral design of 4 seasons.</p>
+                                </li>
+                              </ul>
+                              <p>
+                                <span class="first-letter-black">D</span>
+                                rawn by using 
+                                <a href="http://heiando1919.e01.future-shop.jp/footnote/footnote-makie.html" rel="shadowbox;width=400;height=200">"maki-e"</a> 
+                                techniques, each flower represents different seasons: 
+                                <a href="http://heiando1919.e01.future-shop.jp/footnote/footnote-ume.html" rel="shadowbox;width=400;height=200">"ume"</a> 
+                                (plums) in the spring, "botan" (peonies) in the summer, "kiku" (chrysanthemums) in the autumn, and "tessen" (clematis) in the winter.
+                              </p>
+                              <p>The gold lid is coated with 
+                                <a href="http://heiando1919.e01.future-shop.jp/footnote/footnote-kimpaku.html" rel="shadowbox;width=400;height=200">"hon-kinpaku,"
+                                </a> or pure gold leaf, to create a luxurious mood.
+                              </p>
+                              <p>The velveteen lining inside will protect its contents from being scratched.</p>
+                            </div>
+                            <div class="column2">
+                              <div id="sub-photo1">
+                                <img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_sub-photo01.jpg") }}" alt="">
+                              </div>
+                            </div>
+                            <div class="column3">
+                              <div class="partition2">
+                                <img src="{{ asset("JPG/divider_color-design.jpg") }}" alt="">
+                              </div>
+                              <ul>
+                                <li><img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_vc01.jpg") }}" alt=""></li>
+                                <li><img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_vc02.jpg") }}" alt=""></li>
+                                <li><img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_vc03.jpg") }}" alt=""></li>
+                                <li><img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_vc04.jpg") }}" alt=""></li>
+                              </ul>
+                            </div>
+                            <div class="column4">
+                              <div class="partition3">
+                                <img src="{{ asset("JPG/divider_spec.jpg") }}" alt="">
+                              </div>
+                              <ul>
+                                <li><img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_spec01.jpg") }}" alt=""></li>
+                                <li><img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_spec02.jpg") }}" alt=""></li>
+                              </ul>
+                            </div>
+                            <div id="column5">
+                              <p>&lt;Naga-kobako Kinpaku Shiki Soka&gt; Heiando</p>
+                              <p>Size (cm) : 18.5 * 12 * 7</p>
+                              <p>Material &nbsp;&nbsp;: Wood, velveteen (lining)</p>
+                              <p>Quality &nbsp;&nbsp;&nbsp;: Urethane 
+                                <a href="http://heiando1919.e01.future-shop.jp/footnote/footnote-urushi.html" rel="shadowbox;width=400;height=200">URUSHI</a> (lacquer), 
+                                <a href="http://heiando1919.e01.future-shop.jp/footnote/footnote-kimpaku.html" rel="shadowbox;width=400;height=200">KINPAKU</a> (gold leaf)
+                              </p>
+                              <p>Note &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Shipping with "kibako" (wooden box)</p>
+                            </div>
+                            <div id="more-info">
+                              <p><b>More Information</b></p>
+                              <ul>
+                                <li><p><a href="/note" target="_blank">Notes when using the Lacquerware</a></p></li>
+                                <li><p><a href="/about-material" target="_blank">About "material"</a></p></li>
+                                <li><p><a href="/about-quality" target="_blank">About "quality"</a></p></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                 
+                <!--  商品詳細  -->
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td class="FS2_itemlayout_td_Left">
+                        <div class="FS2_thumbnail_container">
+                          
+                          {%- for index in 1..8 -%}
+                            {%- if product.attribute('image' ~ index) -%}
+                              <a href="{{ ('/uploads/media/'~get_entity_manager().find('MediaCoreBundle:Media', product.attribute('image' ~ index)).path) }}" target="_blank">
+                                <img src="{{ ('/uploads/media/'~get_entity_manager().find('MediaCoreBundle:Media', product.attribute('image' ~ index)).path) }}" alt="{{ productName|striptags }}" class="thumbnail">
+                              </a>
+                            {%- elseif index == 1 -%}
+                               <img src="{{ asset('assets/img/no-image.png') }}" alt="no image">
+                            {%- endif -%}
+                          {%- endfor -%}
+                          
+									<br>
+                        </div>
+                      </td>
+                      <td class="FS2_itemlayout_td_Right">
+                        <h1 class="itemTitle" style="padding-top: 10px;">
+                          {{ productName }}
+                        </h1>
+                        <p class="itemNumber">Item number　{{ product.attribute('item', language) }}</p>
+                        <div class="FS2_itemWeight">
+                          <span class="FS2_itemWeightLabel">Weight</span>
+                          <span class="FS2_itemWeightValue">{{ product.attribute('weight', language) }}</span>
+                        </div>
+                        <div class="FS2_itemCountryofOrigin">
+                          <span class="FS2_itemCountryofOriginLabel">Country of origin</span>
+                          <span class="FS2_itemCountryofOriginValue">{{ product.attribute('country', language) }}</span>
+                        </div>
+                        <div class="FS2_itemPrice_area">
+                          <ul class="FS2_itemPrice_list">
+                            <li class="FS2_special_price">
+                              <span class="FS2_priceLabel">Sale price</span>
+                              <span class="FS2_priceInCurrentCurrency FS2_priceMain">
+                                <span class="FS2_priceValue">
+                                  {{ (productskus[defaultSkuNum].price * curRatio)|price_format(decimalPoint) }}
+                                </span>
+                                <span class="FS2_currencyLabel">
+                                  {{ #unitBack# }}
+                                </span>
+                              </span>
+                              <span class="FS2_priceInJPY FS2_priceSub">
+                                (<span class="FS2_priceValue">
+                                	{{ productskus[defaultSkuNum].price|price_format(decimalPoint) }}
+                                </span>
+                                <span class="FS2_currencyLabel">
+                                  {{ baseUnitBack }}
+                                </span>)
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <form action="{{ path('ec_client_cart_add', {'product_id': product.id}) }}" method="post">
+          						<input type="hidden" name="product_sku_id" value="{{ productskus[defaultSkuNum].id }}">
+
+                          <div class="FS2_additional_image_tableVariation">
+                            <table cellpadding="0" border="0" cellspacing="0" class="FS2_additional_image_tableVariation_table">
+                              <tbody>
+                                <tr class="FS2_additional_image_tableVariation_border FS2_additional_image_tableVariation_bg">
+                                  <th scope="row">01: Shiki Soka</th>
+                                  <td>&nbsp;</td>
+                                  <td><input type="image" onclick="return canSubmit();" src="{{ asset("btn_en/AdditionalImageInCartButton.gif") }}" alt="Add to Cart" class="js-lc--cartin"></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <input type="hidden" name="cnt" value="1">
+                          </div>
+                          <div class="FS2_figure">
+                          </div>
+                        </form>
+
+                        <div id="FS2_note_shippingToJapan">Consumption tax will be added separately if shipping to Japan.</div>
+
+
+                        <div class="FS2_TweetButton_area">
+                          <ul class="button_page_Twitter">
+                            <li>
+                              <p>Please choose your preferred currency.</p>
+                              <div class="FS2_currencySelectorBlock">
+                                <p style="margin:0;">Currency:</p>
+                                <form id="currencySelectFormOriginal">
+                                  <select class=" js-lc--selectCurrency js-lc--changeLangCurrency">
+                                    {%- for key , item in supported_currencies -%}
+                                    {%- set currency = get_entity_manager().find("EcCoreBundle:Currency", item) -%}
+                                    {%- set name = currency.code -%}
+                                    <option value="{{ name }}"{% if name == currentCurrency %} selected{% endif %}>{{ name }}</option>
+                                    {%- endfor -%}
+                                  </select>
+                                </form>
+                              </div>
+                            </li>
+                            <li>
+                              <p>After your order, we will check the packing size and send you an email about <br>
+                                the shipping fee, so please pay according to the guidance. <br>
+                                If the destination is Japan,Shipping charges will be added during the order process (
+                                  <a href="http://www.heiando1919.com/fs/heiando1919/PostageSettleList.html" target="_blank">
+                                    <span class="underline">See details</span>
+                                  </a>).
+                              </p>
+                            </li>
+                            <li>
+                              <p>You can change quantity on the next page.</p>
+                            </li>
+                            <li>
+                              <p>Consumption tax will be added to delivery within Japan.</p>
+                            </li>
+                            <li>
+                              <p>Please feel free to contact us if you have any questions regarding this item. We will soon get in touch with you from <a href="mailto:global@heiando.com">global@heiando.com</a> (Add us to your address book to ensure our emails will be sent to your inbox.).</p>
+                            </li>
+                          </ul>
+                        </div>
+                        
+                        <form action="{{ path('ec_client_cart_add', {'product_id': product.id}) }}" method="post">
+          						<input type="hidden" name="product_sku_id" value="{{ productskus[defaultSkuNum].id }}">
+                            <div class="FS2_WishListButton_area">                              
+                       {#      {%- if is_authorized() -%}   #}
+                              <a href="{{ path('ec_client_consumer_favorite_add', {'product_id': product.id}) }}" data-delete-href="{{ path('ec_client_consumer_favorite_delete', {'productId': product.id}) }}" data-product-id="{{ product.id }}" class="js-lc--favorite">
+                                <img src="{{ asset("btn_en/WishListButton.gif") }}" alt="Add to Wish List" border="0">
+                              </a>
+                   {#		{%- endif -%}   #}
+                            </div>
+                         </form>
+                        
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!--  商品詳細  -->     
+                      
+              	</div>
+             </div>
+   		</td>
+   	 </tr>
+  </tbody>
+ </table>
+{# end Contents #}
+
+
+  <div class="layout_footer">
+      {% TemplateInclude "footer" %}
+  </div>
+
+</div>
+
+<script>
+
+      $(function () { 
+       
+        // 初期表示の通貨をUSDに設定
+         $(window).load(function () {
+           var changeFlg = window.sessionStorage.getItem('changeFlg');
+           if ($('.js-lc--selectCurrency').val() != 'USD' && changeFlg != 1) {
+
+             // change currency
+             $.ajax({
+               method: 'POST',
+               url: '/currency/change',
+               data: {
+                 currency_unit: 'USD' 
+               }
+             }).done(function(result){
+               location.reload();
+             }).fail(function (jqXHR, textStatus, errorThrown) {
+               console.error(textStatus + ': ' + errorThrown);
+             });
+           }
+       });
+        
+        // change language and currency
+        $('.js-lc--changeLangCurrency').on('change', function () {
+
+          // change currency
+          $.ajax({
+            method: 'POST',
+            url: '/currency/change',
+            data: {
+              currency_unit: $('.js-lc--selectCurrency').val()
+            }
+          }).done(function(result){
+              window.sessionStorage.setItem('changeFlg','1');
+              location.reload();
+          }).fail(function (jqXHR, textStatus, errorThrown) {
+              console.error(textStatus + ': ' + errorThrown);
+          });
+
+        });
+      });
+</script>
+
+<link type="text/css" href="{{ asset("css_item/item-page_en.css")}}" rel="stylesheet" media="all">
+<style type="text/css">
+  ul.button_page_Twitter{background:black; margin:0; padding:0 0 0 2.5%; color:#ffffff; font-family:Open Sans; text-align:justify; list-style:disc;}
+  
+  ul.button_page_Twitter li{margin:-2% 0 0 0;}
+  ul.button_page_Twitter li:nth-child(-n+2){margin-left:0.5%; color:#cc9933; font-size:1.3em;}
+  ul.button_page_Twitter li:first-child{margin-top:0;}
+  ul.button_page_Twitter li:first-child p{margin:0;}
+  ul.button_page_Twitter li p{line-height:1.5em;}
+  
+  ul.button_page_Twitter div.FS2_currencySelectorBlock p{margin:0; float:left;}
+  ul.button_page_Twitter div.FS2_currencySelectorBlock form#currencySelectFormOriginal{margin:0.5% 0 0 1%;}
+  ul.button_page_Twitter div.FS2_currencySelectorBlock:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+  
+  ul.button_page_Twitter span.underline{text-decoration:underline;}
+  
+  ul.button_page_Twitter a:link{color:#ffffff; text-decoration:none;}
+  ul.button_page_Twitter a:visited{color:#ffffff; text-decoration:none;}
+  ul.button_page_Twitter a:hover{color:#cc3333; text-decoration:none;}
+  ul.button_page_Twitter li:nth-child(-n+2) a:link{color:#cc9933;}
+  ul.button_page_Twitter li:nth-child(-n+2) a:visited{color:#cc9933;}
+  ul.button_page_Twitter li:nth-child(-n+2) a:hover{color:#cc3333;}
+</style>

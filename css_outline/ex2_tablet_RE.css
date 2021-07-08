@@ -1,0 +1,102 @@
+﻿/*TB　画像きれい*/
+div#ex2_index img{image-rendering:-webkit-optimize-contrast; width:100%;}
+div#ex2_header img{image-rendering:-webkit-optimize-contrast;}
+div#ex2_leftnavi img{image-rendering:-webkit-optimize-contrast;}
+div#ex2_footer img{image-rendering:-webkit-optimize-contrast;}
+
+
+
+/*【非SSL】TB　基本枠組み*/
+@media screen and (min-device-width:600px) and (max-device-width:959px){
+	div#ex2_position_PC{width:156vw;}
+}
+
+
+
+/*【非SSL】TB　ヘッダー*/
+@media screen and (min-device-width:600px) and (max-device-width:959px){
+	iframe#iframe_header{width:158vw; height:35vh;}
+	iframe.iframe_header_c{width:159vw !important; margin:-1.4% 0% 0 -1.4% !important;}
+
+	div#ex2_header_PC{width:100% !important;}
+}
+
+
+
+/*【非SSL】TB　インデックス本体*/
+@media screen and (min-device-width:600px) and (max-device-width:959px){
+	div#ex2_position_PC div#ex2_index div#ex2_index_PC{width:114vw;}
+
+	div#ex2_index_PC div#ex2_main div.ex2_main_l div.ex2_main_t{right:2%;}
+	div#ex2_index_PC div#ex2_main div.ex2_main_l div.ex2_main_t p.ex2_main_name{margin:3% 0 !important;}
+	div#ex2_index_PC div#ex2_main div.ex2_main_l div.ex2_main_cta{top:32% !important;}
+
+	div#ex2_index_PC div#ex2_main ul.ex2_main_ul{margin-top:-0.5%;}
+	div#ex2_index_PC div#ex2_main ul.ex2_main_ul li p{padding-left:3%; text-align:left;}
+
+	div#ex2_index_PC div#ex2_fav ul.ex2_bxslider li p{width:44%;}
+	div#ex2_index_PC div#ex2_fav div.ex2_fav_cta{width:21%; margin-right:1.5%;}
+
+	div#ex2_index_PC div#ex2_lacquer div.ex2_lacquer_v div.ex2_lacquer_catch{height:104px; margin-bottom:3.5%; outline:7px solid rgba(214,197,121,0.3);}
+	div#ex2_index_PC div#ex2_lacquer div.ex2_lacquer_v img{width:100.5%;}
+
+	div#ex2_index_PC div#ex2_lacquer div.ex2_lacquer_urushi div.ex2_lacquer_review:before{bottom:-18%;}
+	div#ex2_index_PC div#ex2_lacquer div.ex2_lacquer_motif div.ex2_lacquer_review{margin-top:27.5%;}
+	div#ex2_index_PC div#ex2_lacquer div.ex2_lacquer_motif div.ex2_lacquer_review:before{bottom:-17.6%;}
+
+	div#ex2_index_PC div#ex2_brand div.ex2_brand_descp ul{margin-left:1%;}
+	div#ex2_index_PC div#ex2_brand div.ex2_brand_descp ul li{width:100%;}
+	div#ex2_index_PC div#ex2_brand div.ex2_brand_descp ul li:nth-child(even){width:100%; margin-left:0;}
+
+	div#ex2_index_PC div#ex2_gift div.ex2_gift_wrapping div.ex2_gift_descp{margin:10% 12%;}
+	div#ex2_index_PC div#ex2_gift div.ex2_gift_wrapping div.ex2_cta{width:72%; left:12%;}
+	div#ex2_index_PC div#ex2_gift div.ex2_gift_wrapping div.ex2_gift_cta1{top:40%;}
+	div#ex2_index_PC div#ex2_gift div.ex2_gift_wrapping div.ex2_gift_cta2{top:48%;}
+	div#ex2_index_PC div#ex2_gift div.ex2_gift_wrapping div.ex2_gift_cta3{top:56%;}
+	div#ex2_index_PC div#ex2_gift div.ex2_gift_rec div.ex2_gift_corp{margin-left:-6%;}
+	div#ex2_index_PC div#ex2_gift div.ex2_gift_rec div.ex2_gift_corp p{padding-right:0;}
+
+	div#ex2_index_PC div#ex2_media div.ex2_media_txt ul#ex2_info_btn li{text-align:left;}
+	div#ex2_index_PC div#ex2_media div.ex2_media_txt ul#ex2_info_btn li:nth-child(even){width:50%; margin:0;}
+	div#ex2_index_PC div#ex2_media div.ex2_media_txt ul#ex2_info_btn li:first-child{width:100%; margin:0 0 1% 0;}
+	div#ex2_index_PC div#ex2_media div.ex2_media_txt ul li:first-child{width:100%; margin:0 0 1.5% 0;}
+	div#ex2_index_PC div#ex2_media div.ex2_media_txt ul li:nth-child(even){margin-left:-6.5%;}
+	div#ex2_index_PC div#ex2_media div.ex2_media_txt ul li.wo{margin-left:0;}
+
+	div#ex2_index_PC div#ex2_cat_fav{margin-top:10%;}
+	div#ex2_index_PC div#ex2_cat_fav div.ex2_cat_fav_cta p{width:23%;}
+
+	div#ex2_index_PC div#ex2_cat ul.ex2_cat_i li{padding-bottom:5%;}
+	div#ex2_index_PC div#ex2_cat ul.ex2_cat_i li:nth-last-child(5){border-bottom: 1px solid rgba(254,254,254,0.2);}
+	div#ex2_index_PC div#ex2_cat ul.ex2_cat_i li p{margin:0 5%; text-align:center;}
+
+	div#ex2_index_PC div#ex2_cat_fav ul.ex2_cat_fav_i li:first-child p{top:5.5%; left:6.5%;}
+	div#ex2_index_PC div#ex2_cat_fav ul.ex2_cat_fav_i li:nth-child(2) p{top:5.5%; right:5.5%;}
+
+	div#ex2_index_PC div#ex2_cat_fp div.ex2_cat_fp_medal div.ex2_descp{margin-right:10%; margin-left:10%;}
+}
+
+
+
+/*【非SSL】TB　レフトナビ*/
+@media screen and (min-device-width:600px) and (max-device-width:959px){
+	iframe#iframe_leftnavi{width:35vw !important; padding:0 1.5% 0 0;}
+
+	div#ex2_leftnavi_PC{width:100%;}
+
+	div#ex2_leftnavi_PC div#ex2_l_pick div.ex2_l_pick_h div.ex2_l_pick_ht:after{border-right:65.5px solid #ff1111; border-left:65.5px solid #ff1111;}
+
+}
+
+
+
+/*【非SSL】TB　フッター*/
+@media screen and (min-device-width:600px) and (max-device-width:959px){
+	iframe#iframe_footer{width:158vw; height:125vh;}
+
+	div#ex2_footer_PC{width:100%; padding:0 1%;}
+}
+
+
+
+

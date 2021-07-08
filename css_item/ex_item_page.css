@@ -1,0 +1,243 @@
+﻿div#ex_Wrap{width:890px; height:auto; margin:0; padding:0;
+background-color:transparent; color:#ffffff; font-size:11px; line-height:1.8em; letter-spacing:0.1em; text-align:left; text-justify:inter-ideograph;
+font-family:"Meiryo UI",Arial,"Lucida Sans Unicode",sans-serif !important;
+}
+div#ex_Wrap:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex_background{width:850px; margin:20px; background-color:#000000;}
+div#ex_container{min-height:1600px; padding:20px 40px 0;}
+
+div#ex_container a:link{text-decoration:underline; color:#ffffff;}
+div#ex_container a:visited{text-decoration:underline; color:#ffffff;}
+div#ex_container a:hover{text-decoration:underline; color:#cc3333; font-weight:600; filter:alpha(opacity=100); opacity:1.0;}
+div#ex_container a img{border-style:none;}
+div#ex_container a img:hover{filter:alpha(opacity=50); opacity:0.5;}
+
+div.clear{width:100%; height:0px; clear:both;}
+
+
+/*基本*/
+div#ex_container div.feature_r{margin-bottom:7%; padding:0 3% 3%; background-color:#1a1a1a;}
+div#ex_container div.feature_r img{width:106.4%; margin:0 -3.15%;}
+div#ex_container div.feature_r p.title{width:36.5%; margin-bottom:3%; padding-right:3.5%; display:inline-block; text-align:right; margin-top:2%; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.feature_r p.description{width:60%; float:right; text-align:justify;}
+div#ex_container div.feature_r img.tn{width:14%; float:right; margin:-1% 60% 0 0; padding-right:3.5%;}
+div#ex_container div.feature_r:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div.feature_l{margin-bottom:7%; padding:0 3% 3%; background-color:#1a1a1a;}
+div#ex_container div.feature_l img{width:106.2%; margin:0 -3%;}
+div#ex_container div.feature_l p.title{width:36.5%; margin-bottom:3%; padding-left:3.5%; display:inline-block; text-align:left; margin-top:2%; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.feature_l p.description{width:60%; float:left; text-align:justify;}
+div#ex_container div.feature_l img.tn{width:14%; float:left; margin:-1% 0 0 60%; padding-left:3.5%;}
+div#ex_container div.feature_l:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div.content_c{margin-bottom:7%; text-align:center;}
+div#ex_container div.content_c img{margin:0 -6.7% 0 -6.8%;}
+div#ex_container div.content_c p.title{margin-bottom:5%; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.content_c p.description{margin:0 15.5%; text-align:justify;}
+div#ex_container div.content_c .borderdescription{margin:0 15.5%;}
+div#ex_container div.content_c:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div.content_r{margin-bottom:7%;}
+div#ex_container div.content_r img{margin:0 -5.25%;}
+div#ex_container div.content_r p.title{width:36.5%; padding-right:3.5%; display:inline-block; text-align:right; margin-top:2%; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.content_r p.description{width:60%; float:right; text-align:justify;}
+div#ex_container div.content_r img.tn{width:14%; float:right; margin:-1% 60% 0 0; padding-right:3.5%;}
+div#ex_container div.content_r:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div.content_l{margin-bottom:7%;}
+div#ex_container div.content_l img{margin:0 -5.25%;}
+div#ex_container div.content_l p.title{width:36.5%; padding-left:3.5%; display:inline-block; text-align:left; margin-top:2%; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.content_l p.description{width:60%; float:left; text-align:justify;}
+div#ex_container div.content_l img.tn{width:14%; float:left; margin:-1% 0 0 60%; padding-left:3.5%;}
+div#ex_container div.content_l:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div.content_li{margin-bottom:7%;}
+div#ex_container div.content_li li{margin-bottom:7%; text-align:justify; list-style:disc;}
+div#ex_container div.content_li p.title{margin-bottom:5%; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container div.content_li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*商品名*/
+div#ex_container h1#ex_product p.title{margin:20px 0 40px; font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; color:#ffffff;}
+div#ex_container h1#ex_product p.title span.en2{font-size:0.55em; line-height:1.55em;}
+div#ex_container h1#ex_product p.title span.jp{font-size:0.55em; line-height:1.55em;}
+
+div#ex_container h1#ex_product p.title span.jp a:link{text-decoration:underline; color:#ffffff;}
+div#ex_container h1#ex_product p.title span.jp a:visited{text-decoration:underline; color:#ffffff;}
+div#ex_container h1#ex_product p.title span.jp a:hover{text-decoration:underline; color:#cc3333; font-weight:600; filter:alpha(opacity=100); opacity:1.0;}
+
+
+/*メイン画像*/
+div#ex_container div#ex_main img{margin:0 -5.25%;}
+div#ex_container div.extra img{margin:0 -5.25%;}
+
+
+/*絵柄説明*/
+div#ex_container div.ex_design_sub{margin-top:7.5%;}
+div#ex_container div.ex_design2{width:50%; float:left; margin-bottom:2.5%;}
+div#ex_container div.ex_design2 img{width:100%; margin:0 -0.5%;}
+div#ex_container div.ex_design2 p.description{width:90%; margin:0 5%;}
+
+
+/*材料*/
+div#ex_container div#ex_materialintro p.title{width:60%; padding:0 3.5% 0 0;}
+div#ex_container div#ex_materialintro .borderdescription{width:36.5%; display:inline-block; margin:-8.5% 0 0 3.5%;}
+div#ex_container div#ex_materialintro .borderdescription img{width:50%; margin:0 -1%;}
+
+
+/*蒔絵*/
+div#ex_container div#ex_makieintro{margin-top:-7.5%;}
+div#ex_container div#ex_makieintro p.title{width:60%; padding:0 0 0 3.5%; text-align:left; float:right;}
+div#ex_container div#ex_makieintro .borderdescription{width:36.5%; display:inline-block; margin:-8.5% 3.5% 0 0;}
+div#ex_container div#ex_makieintro .borderdescription img.half{width:55.4%; margin-bottom:-2.1%;}
+
+
+/*モチーフ*/
+div#ex_container div#ex_motif_1 p.description, div#ex_container div#ex_motif_2 p.description{margin-bottom:3%; padding:1% 2%; border:1px solid rgba(255,255,255,0.25);}
+div#ex_container div#ex_motif_1 .borderdescription img, div#ex_container div#ex_motif_2 .borderdescription img{width:33.5%; margin:0 -0.5%;}
+div#ex_container div#ex_motif_1 .borderdescription img.wide, div#ex_container div#ex_motif_2 .borderdescription img.wide{width:67%; margin:0 -0.5%;}
+
+
+/*絵柄全面*/
+div#ex_container div#ex_designdetail ol{padding:0; list-style:none;}
+div#ex_container div#ex_designdetail ol li{width:20%; height:auto; text-align:center; vertical-align:top; display:inline-block; font-size:1.0em; line-height:1.55em; margin-bottom:2%;}
+div#ex_container div#ex_designdetail ol li img{width:100%; height:100%;}
+div#ex_container div#ex_designdetail:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*バリエーションコード*/
+div#ex_container div#ex_variation ol{padding:0; list-style:none; counter-reset:number;}
+div#ex_container div#ex_variation ol li{width:20%; height:auto; text-align:center; vertical-align:top; display:inline-block; font-size:1.0em; line-height:1.55em; margin-bottom:2%;}
+div#ex_container div#ex_variation ol li p:before{counter-increment:number; content:counter(number)'.'; padding:2% 4%; margin:1%;}
+div#ex_container div#ex_variation ol li img{width:100%; height:100%;}
+div#ex_container div#ex_variation:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*スペック*/
+div#ex_container div#ex_spec .column_1l{width:18%; height:45px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_1l_last{width:18%; height:45px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_2l{width:18%; height:65px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_2l_last{width:18%; height:65px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_3l{width:18%; height:85px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_3l_last{width:18%; height:85px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_4l{width:18%; height:105px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_4l_last{width:18%; height:105px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_5l{width:18%; height:125px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_5l_last{width:18%; height:125px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_6l{width:18%; height:145px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_6l_last{width:18%; height:145px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_7l{width:18%; height:165px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_7l_last{width:18%; height:165px; display:inline-block; background-color:#1a1a1a; border-right:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_1r{width:77%; height:45px; float:right; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_1r_last{width:77%; height:45px; float:right; padding-left:2%;}
+div#ex_container div#ex_spec .column_2r{width:77%; height:65px; float:right; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_2r_last{width:77%; height:65px; float:right; padding-left:2%;}
+div#ex_container div#ex_spec .column_3r{width:77%; height:85px; float:right; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_3r_last{width:77%; height:85px; float:right; padding-left:2%;}
+div#ex_container div#ex_spec .column_4r{width:77%; height:105px; float:right; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_4r_last{width:77%; height:105px; float:right; padding-left:2%;}
+div#ex_container div#ex_spec .column_5r{width:77%; height:125px; float:right; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_5r_last{width:77%; height:125px; float:right; padding-left:2%;}
+div#ex_container div#ex_spec .column_6r{width:77%; height:145px; float:right; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_6r_last{width:77%; height:145px; float:right; padding-left:2%;}
+div#ex_container div#ex_spec .column_7r{width:77%; height:165px; float:right; border-bottom:1px solid #1a1a1a; padding-left:2%;}
+div#ex_container div#ex_spec .column_7r_last{width:77%; height:165px; float:right; padding-left:2%;}
+
+div#ex_container div#ex_spec span.tab{padding-left:17.5%;}
+
+
+/*アテンション*/
+div#ex_container div#ex_attention ul{padding-left:2%;}
+div#ex_container div#ex_attention ul li{padding-left:1%; margin:1.5% 0;}
+
+/*撮影小物アテンション*/
+div#ex_container div.extra{padding-bottom:10%;}
+div#ex_container div.extra div#ex_prop p.description{padding:0.5% 0 2.5%;}
+
+
+/*桐箱*/
+div#ex_container div#ex_kiribako img.tn{width:36.5%; margin-top:-33%;}
+
+
+/*ギフトラッピング*/
+div#ex_container div#ex_wrappingintro{position:relative;}
+div#ex_container div#ex_wrappingintro p.title{position:absolute; top:100%; left:0;}
+div#ex_container div#ex_wrappingintro p.title1{font-family:"Garamond"; font-weight:600; font-size:1.7em; line-height:1.2em; width:36.5%; padding-right:3.5%; display:inline-block; text-align:right; margin-top:-0.75%; position:absolute; top:149%; left:0;}
+div#ex_container div#ex_wrappingintro img.tn{width:21%; margin-top:-40%;}
+
+
+/*切り替えバナー*/
+div#ex_container div.borderbanner_c{margin-bottom:7%; text-align:center;}
+div#ex_container div.borderbanner_c img{width:7%; margin:0; padding:0 4%;}
+div#ex_container div.borderbanner_c:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div.borderbanner_r{margin-bottom:7%; text-align:right;}
+div#ex_container div.borderbanner_r img{width:7%; margin:0;}
+div#ex_container div.borderbanner_r:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+div#ex_container div.borderbanner_l{margin-bottom:7%; text-align:left;}
+div#ex_container div.borderbanner_l img{width:7%; margin:0;}
+div#ex_container div.borderbanner_l:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+
+
+/*個別ページ*仁清梅蒔絵吸物椀*/
+div#ex_container div#ex_designdetail div.wa-ninseiumemakiesuimonowan{background-image:url("http://heiando1919.e01.future-shop.jp/images/page/ex/ex_designdetail01.jpg"); background-size:100% 100%;}
+div#ex_container div#ex_size div.wa-ninseiumemakiesuimonowan img.tn{width:20%; margin-top:-15%;}
+div#ex_container div#ex_prop div.wa-ninseiumemakiesuimonowan p.description{color:#cc1f1f;}
+div#ex_container div#ex_prop div.wa-ninseiumemakiesuimonowan p.description a:link{color:#cc1f1f;}
+div#ex_container div#ex_prop div.wa-ninseiumemakiesuimonowan p.description a:visited{color:#cc1f1f;}
+div#ex_container div#ex_prop div.wa-ninseiumemakiesuimonowan p.description a:hover{color:#cc3333;}
+
+div#ex_container div.extended div.wa-ninseiumemakiesuimonowan iframe{width:150%; height:3060px; margin:-5% -9% 0;}
+div#ex_container div#ex_spec div.wa-ninseiumemakiesuimonowan{margin:50px 0 0;}
+
+
+
+/*個別ページ*睦椀若松*/
+div#ex_container div#ex_designdetail div.mutsumiwan-wakamatsu{background-image:url("http://heiando1919.e01.future-shop.jp/images/page/ex/ex_designdetail02.jpg"); background-size:100% 100%;}
+div#ex_container div#ex_size div.mutsumiwan-wakamatsu img.tn{width:20%; margin-top:-15%;}
+div#ex_container div#ex_prop div.mutsumiwan-wakamatsu p.description{color:#f38740;}
+div#ex_container div#ex_prop div.mutsumiwan-wakamatsu p.description a:link{color:#f38740;}
+div#ex_container div#ex_prop div.mutsumiwan-wakamatsu p.description a:visited{color:#f38740;}
+div#ex_container div#ex_prop div.mutsumiwan-wakamatsu p.description a:hover{color:#cc3333;}
+
+div#ex_container div.extended div.mutsumiwan-wakamatsu iframe{width:150%; height:3230px; margin:-5% -9% 0;}
+div#ex_container div#ex_spec div.mutsumiwan-wakamatsu{margin:50px 0 0;}
+
+
+
+
+/*個別ページ*屠蘇器揃扇面蒔絵*/
+div#ex_container div#ex_designdetail div.tosokisoroi-senmen{background-image:url("http://heiando1919.e01.future-shop.jp/images/page/ex/ex_designdetail04.jpg"); background-size:100% 100%;}
+div#ex_container div#ex_logo div.tosokisoroi-senmen{position:relative;}
+div#ex_container div#ex_logo div.tosokisoroi-senmen p.title{position:absolute; top:18%; left:3.5%;}
+div#ex_container div#ex_logo div.tosokisoroi-senmen p.description{position:absolute; top:34%; left:7%; width:50%;}
+div#ex_container div#ex_prop div.tosokisoroi-senmen p.description{color:#ffff67;}
+div#ex_container div#ex_prop div.tosokisoroi-senmen p.description a:link{color:#ffff67;}
+div#ex_container div#ex_prop div.tosokisoroi-senmen p.description a:visited{color:#ffff67;}
+div#ex_container div#ex_prop div.tosokisoroi-senmen p.description a:hover{color:#ffff67;}
+
+div#ex_container div.extended div.tosokisoroi-senmen iframe{width:150%; height:4760px; margin:-5% -9% 0;}
+div#ex_container div#ex_spec div.tosokisoroi-senmen{margin:50px 0 0;}
+
+
+
+
+/*個別ページ*手文庫秋草*/
+div#ex_container div#ex_makieintro div.box-aki{margin-top:15%;}
+
+div#ex_container div#ex_designdetail div.box-aki{background-image:url("http://heiando1919.e01.future-shop.jp/images/page/ex/ex_designdetail01.jpg"); background-size:100% 100%;}
+div#ex_container div#ex_size div.box-aki img.tn_1{width:17%; float:left; margin:0 0 0 5%;}
+div#ex_container div#ex_size div.box-aki img.tn_2{width:17%; float:left; margin:7% 0 0 -2%; transform:rotate(-30deg);}
+div#ex_container div#ex_logo div.box-aki{position:relative; margin-bottom:-7%;}
+div#ex_container div#ex_logo div.box-aki p.title{position:absolute; top:18%; left:3.5%;}
+div#ex_container div#ex_logo div.box-aki p.description{position:absolute; top:37%; left:7%; width:45%;}
+div#ex_container div#ex_prop div.box-aki p.description{color:#f01f09;}
+div#ex_container div#ex_prop div.box-aki p.description a:link{color:#f01f09;}
+div#ex_container div#ex_prop div.box-aki p.description a:visited{color:#f01f09;}
+div#ex_container div#ex_prop div.box-aki p.description a:hover{color:#f01f09;}
+
+div#ex_container div.extended div.box-aki iframe{width:150%; height:1940px; margin:-5% -9% 0;}
+div#ex_container div#ex_spec div.box-aki{margin:50px 0 0;}

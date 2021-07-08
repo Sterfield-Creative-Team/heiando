@@ -1,0 +1,86 @@
+.pageTitle { border-color: rgb(204, 153, 51); }
+.CrossHead { border-color: rgb(204, 153, 51); }
+.Definition { border-color: rgb(204, 153, 51); }
+.userTable_01 caption { background: rgb(204, 153, 51); }
+.userTable_02 caption { background: rgb(204, 153, 51); }
+.cartTable caption { background: rgb(204, 153, 51); }
+#FS2_body_Goods .userTable_01 { border-top-color: rgb(204, 153, 51); }
+#FS2_body_Review .userTable_01 { border-top-color: rgb(204, 153, 51); }
+.FS2_body_MyReviewList .cartTable { border-top-color: rgb(204, 153, 51); }
+.FS2_body_MyReviewList .cartTable { border-top-color: rgb(204, 153, 51); }
+.FS2_additional_image_tableVariation_border th { border-color: rgb(204, 153, 51); }
+.FS2_additional_image_tableVariation_border td { border-color: rgb(204, 153, 51); }
+.pan { background: rgb(204, 153, 51); }
+.userTable_01 th { background: rgb(204, 153, 51); }
+.userTable_02 th { background: rgb(204, 153, 51); }
+.sellTerms { background: rgb(204, 153, 51); }
+.FS2_inputSelection_table th { background: rgb(204, 153, 51); }
+.GoodsSelectionTable th { background: rgb(204, 153, 51); }
+.FS2_Review_Detail_td { background: rgb(204, 153, 51); }
+.cartTable th { background: rgb(204, 153, 51); }
+.FS2_MyReviewList_Detail_td { background: rgb(204, 153, 51); }
+.ODTable th { background: rgb(204, 153, 51); }
+.ODTable2 th { background: rgb(204, 153, 51); }
+.FS2_OptionPrice_table th { background: rgb(204, 153, 51); }
+.userTable_01 { border-color: rgb(255, 240, 209); }
+.userTable_01 th { border-color: rgb(255, 240, 209); }
+.userTable_01 td { border-color: rgb(255, 240, 209); }
+.userTable_02 { border-color: rgb(255, 240, 209); }
+.userTable_02 th { border-color: rgb(255, 240, 209); }
+.userTable_02 td { border-color: rgb(255, 240, 209); }
+.FS2_privacyPageLink_container { border-color: rgb(255, 240, 209); }
+.FS2_point { border-color: rgb(255, 240, 209); }
+.sellTerms { border-color: rgb(255, 240, 209); }
+.FS2_inputSelection_table th { border-color: rgb(255, 240, 209); }
+.FS2_inputSelection_table td { border-color: rgb(255, 240, 209); }
+.GoodsSelectionTable th { border-color: rgb(255, 240, 209); }
+.GoodsSelectionTable td { border-color: rgb(255, 240, 209); }
+#FS2_body_Goods .userTable_01 { border-bottom-color: rgb(255, 240, 209); }
+#FS2_body_Review .userTable_01 { border-bottom-color: rgb(255, 240, 209); }
+.FS2_body_ReviewList td.FS2_Review_Detail_td { border-color: rgb(255, 240, 209); }
+.cartTable { border-color: rgb(255, 240, 209); }
+.cartTable th { border-color: rgb(255, 240, 209); }
+.cartTable td { border-color: rgb(255, 240, 209); }
+.ODTable { border-color: rgb(255, 240, 209); }
+.ODTable th { border-color: rgb(255, 240, 209); }
+.ODTable td { border-color: rgb(255, 240, 209); }
+.ODTable2 { border-color: rgb(255, 240, 209); }
+.ODTable2 { border-color: rgb(255, 240, 209); }
+.ODTable2 th { border-color: rgb(255, 240, 209); }
+.ODTable2 td { border-color: rgb(255, 240, 209); }
+#FS2_bundleInformationBlock { border-color: rgb(255, 240, 209); }
+a:link { color: rgb(255, 255, 255); }
+a:visited { color: rgb(255, 255, 255); }
+a:active { color: rgb(204, 51, 51); }
+a:hover { color: rgb(204, 51, 51); }
+body { background-color: rgb(0, 0, 0); }
+body { background-image: url(""); }
+body { background-repeat: no-repeat; }
+body { background-position: center top; }
+body { color: rgb(255, 255, 255); }
+body { font-size: 16px; }
+p { line-height: 25px; }
+.pageTitle { color: rgb(255, 255, 255); }
+.pageTitle { }
+.pageTitle { }
+.pan { color: rgb(255, 255, 255); }
+.pan { font-size: 80%; }
+.pan { }
+.itemTitle, .itemGroup a { color: rgb(204, 153, 51); }
+.itemTitle, .itemGroup { font-size: 110%; }
+.itemTitle, .itemGroup { }
+.FS2_body_Goods_GoodsDetail .itemTitle, .itemTitle a { color: rgb(204, 153, 51); }
+.FS2_body_Goods_GoodsDetail .itemTitle { font-size: 110%; }
+.FS2_body_Goods_GoodsDetail .itemTitle { }
+.FS2_GroupLayout .FS2_special_price .FS2_priceMain .FS2_priceValue, .FS2_GroupLayout .FS2_special_members_price .FS2_priceMain .FS2_priceValue { color: rgb(204, 51, 51); }
+.FS2_GroupLayout .FS2_special_price .FS2_priceMain .FS2_priceValue, .FS2_GroupLayout .FS2_special_members_price .FS2_priceMain .FS2_priceValue { }
+.FS2_GroupLayout .FS2_special_price .FS2_priceMain .FS2_priceValue, .FS2_GroupLayout .FS2_special_members_price .FS2_priceMain .FS2_priceValue { }
+.FS2_body_Goods_GoodsDetail .FS2_special_price .FS2_priceMain .FS2_priceValue { color: rgb(204, 51, 51); }
+.FS2_body_Goods_GoodsDetail .FS2_special_price .FS2_priceMain .FS2_priceValue { }
+.FS2_body_Goods_GoodsDetail .FS2_special_price .FS2_priceMain .FS2_priceValue { }
+.FS2_special_members_price .FS2_priceMain .FS2_priceValue { color: rgb(204, 51, 51); }
+.FS2_special_members_price .FS2_priceMain .FS2_priceValue { }
+.FS2_special_members_price .FS2_priceMain .FS2_priceValue { }
+.error_content { color: rgb(204, 51, 51); }
+.error_content { }
+.error_content { }

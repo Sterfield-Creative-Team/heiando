@@ -1,0 +1,59 @@
+﻿/*店舗*/
+div#ex2_container div#ex2_about_store{margin-bottom:4%;}
+div#ex2_container div#ex2_about_store div.ex2_feature_descp p a:link{text-decoration:underline;}
+div#ex2_container div#ex2_about_store div.ex2_feature_descp p a:visited{text-decoration:underline;}
+div#ex2_container div#ex2_about_store div.ex2_feature_descp p a:hover{text-decoration:none;}
+
+div#ex2_container div#ex2_about_store:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*店舗　ジャンル*/
+div#ex2_container div.ex2_about_store_g p{border-bottom: 1px solid rgba(214,197,121,0.5); color:#cc9933; font-size:2.2em;}
+
+/*店舗　住所*/
+div#ex2_container ul.ex2_about_store_l{list-style:none; margin:6% 0 0; padding:0;}
+div#ex2_container ul.ex2_about_store_l li{margin:0 0 6% 0; font-size:1.4em;}
+div#ex2_container ul.ex2_about_store_l li:first-child{margin-left:0;}
+div#ex2_container ul.ex2_about_store_l li:last-child{font-size:1em;}
+div#ex2_container ul.ex2_about_store_l li p{margin:0; color:#cc9933;}
+div#ex2_container ul.ex2_about_store_l li ul.ex2_about_store_s{list-style:none; padding:0; font-size:0.8em;}
+div#ex2_container ul.ex2_about_store_l li ul.ex2_about_store_s li{margin:0; padding:0; font-size:0.9em;}
+div#ex2_container ul.ex2_about_store_l li ul.ex2_about_store_s li:first-child{margin:1.5% 0 1%; padding:0; font-size:1.3em;}
+div#ex2_container ul.ex2_about_store_l li ul.ex2_about_store_s li:nth-child(3){padding-left:3%;}
+div#ex2_container ul.ex2_about_store_l li ul.ex2_about_store_s li span.memo{color:rgba(254,254,254,0.4); font-size:0.7em;}
+div#ex2_container ul.ex2_about_store_l li ul.ex2_about_store_s li img{width:2.6%; vertical-align:middle;}
+
+div#ex2_container ul.ex2_about_store_l:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+div#ex2_container ul.ex2_about_store_l li:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*直営店*/
+div#ex2_container div#ex2_about_store_yh ul#ex2_about_store_yh li:first-child p{float:left;}
+div#ex2_container div#ex2_about_store_yh ul#ex2_about_store_yh li:first-child div{width:9%; display:inline-block; margin:-0.5% 0 0 2.5%; padding:0.5% 0 0.7%; background:#CC3333; font-size:0.7em; text-align:center; position:relative;}
+div#ex2_container div#ex2_about_store_yh ul#ex2_about_store_yh li:first-child div:before{content:""; border:8px solid transparent; border-right:10px solid #CC3333; position:absolute; top:25%; left:-20.8%;}
+div#ex2_container div#ex2_about_store_yh ul#ex2_about_store_yh li:first-child div p{float:none; color:#ffffff;}
+
+div#ex2_container div#ex2_about_store_yh:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*百貨店*/
+div#ex2_container div#ex2_about_store_ds ul#ex2_about_store_ds{height:400px; overflow:auto; margin:-3% 0 0; padding-top:6%;}
+div#ex2_container div#ex2_about_store_ds ul#ex2_about_store_ds li.ex2_about_store_ds_pref{margin-bottom:2.5%; font-size:1em;}
+div#ex2_container div#ex2_about_store_ds ul#ex2_about_store_ds li.ex2_about_store_ds_pref p{padding:0.7% 2%; border:1px solid rgba(254,254,254,0.6); color:#ffffff;}
+div#ex2_container div#ex2_about_store_ds ul#ex2_about_store_ds li p{float:left;}
+div#ex2_container div#ex2_about_store_ds ul#ex2_about_store_ds li div{width:10%; display:inline-block; margin:-0.5% 0 0 2%; padding:0.5% 0 0.7%; background:rgba(254,254,254,0.1); font-size:0.7em; text-align:center; position:relative;}
+div#ex2_container div#ex2_about_store_ds ul#ex2_about_store_ds li div:before{content:""; border:8px solid transparent; border-right:10px solid rgba(254,254,254,0.1); position:absolute; top:25%; left:-20.5%;}
+div#ex2_container div#ex2_about_store_ds ul#ex2_about_store_ds li div p{float:none; color:#ffffff;}
+
+div#ex2_container div#ex2_about_store_ds:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+
+
+/*Googleマップ*/
+div#ex2_container div#map_canvas div.gm-style-iw{text-align:center;}
+div#ex2_container div#map_canvas div.gm-style-iw div{padding:3% 3% 3% 0; color:#cc3333; font-weight:600;}
+
+div#ex2_container div#map_canvas div.gm-style-iw div div{width:100%;}
+
+
+/*iframe*/
+div#ex2_container div.extended div.about_store iframe{width:101%; height:500px; margin:3.5% 0 0 -0.9%;}
