@@ -4,7 +4,7 @@ body{background:#000000;}
 #iframe_header{width:100vw; height:320px; margin:0;}
 #iframe_footer{width:100vw; height:1660px; margin:0 0 -4% 0;}
 
-body:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+/* body:after{content:"."; display:block; height:0; clear:both; visibility:hidden;} */
 #iframe_header:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
 #iframe_footer:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
 #iframe_leftnavi:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}

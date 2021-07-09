@@ -116,94 +116,7 @@
 
                       
                     <div class="user_inner_content FS2_upper_comment">
-                      <div id="centerling_background">
-                        <div id="background">
-                          <div id="container">
-                            <div id="flexible-background">
-                              <div class="header">
-                                <div class="name">
-                                  <p class="en">Small Rectangular Box</p>
-                                  <p class="en2">Gold Leaf / Flowers of the Four Seasons</p>
-                                  <p class="jp">(Naga-kobako Kinpaku Shiki Soka)</p>
-                                </div>
-                              </div>
-
-                            <div class="main-photo">
-                              <img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_main-photo.jpg") }}" alt="">
-                            </div>
-                            </div>
-                            <div class="partition1">
-                              <img src="{{ asset("") }}" alt="">
-                            </div>
-                            <div id="headline1">
-                              <p>Small Rectangular Box / Gold Leaf / Flowers of the Four Seasons is...</p>
-                            </div>
-                            <div id="text">
-                              <ul>
-                                <li>
-                                  <p>This is a "kobako," or small box, with a floral design of 4 seasons.</p>
-                                </li>
-                              </ul>
-                              <p>
-                                <span class="first-letter-black">D</span>
-                                rawn by using 
-                                <a href="http://heiando1919.e01.future-shop.jp/footnote/footnote-makie.html" rel="shadowbox;width=400;height=200">"maki-e"</a> 
-                                techniques, each flower represents different seasons: 
-                                <a href="http://heiando1919.e01.future-shop.jp/footnote/footnote-ume.html" rel="shadowbox;width=400;height=200">"ume"</a> 
-                                (plums) in the spring, "botan" (peonies) in the summer, "kiku" (chrysanthemums) in the autumn, and "tessen" (clematis) in the winter.
-                              </p>
-                              <p>The gold lid is coated with 
-                                <a href="http://heiando1919.e01.future-shop.jp/footnote/footnote-kimpaku.html" rel="shadowbox;width=400;height=200">"hon-kinpaku,"
-                                </a> or pure gold leaf, to create a luxurious mood.
-                              </p>
-                              <p>The velveteen lining inside will protect its contents from being scratched.</p>
-                            </div>
-                            <div class="column2">
-                              <div id="sub-photo1">
-                                <img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_sub-photo01.jpg") }}" alt="">
-                              </div>
-                            </div>
-                            <div class="column3">
-                              <div class="partition2">
-                                <img src="{{ asset("JPG/divider_color-design.jpg") }}" alt="">
-                              </div>
-                              <ul>
-                                <li><img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_vc01.jpg") }}" alt=""></li>
-                                <li><img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_vc02.jpg") }}" alt=""></li>
-                                <li><img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_vc03.jpg") }}" alt=""></li>
-                                <li><img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_vc04.jpg") }}" alt=""></li>
-                              </ul>
-                            </div>
-                            <div class="column4">
-                              <div class="partition3">
-                                <img src="{{ asset("JPG/divider_spec.jpg") }}" alt="">
-                              </div>
-                              <ul>
-                                <li><img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_spec01.jpg") }}" alt=""></li>
-                                <li><img src="{{ asset("images/page/stationeries/nagakobako-sikisoka/nagakobako-sikisoka_spec02.jpg") }}" alt=""></li>
-                              </ul>
-                            </div>
-                            <div id="column5">
-                              <p>&lt;Naga-kobako Kinpaku Shiki Soka&gt; Heiando</p>
-                              <p>Size (cm) : 18.5 * 12 * 7</p>
-                              <p>Material &nbsp;&nbsp;: Wood, velveteen (lining)</p>
-                              <p>Quality &nbsp;&nbsp;&nbsp;: Urethane 
-                                <a href="http://heiando1919.e01.future-shop.jp/footnote/footnote-urushi.html" rel="shadowbox;width=400;height=200">URUSHI</a> (lacquer), 
-                                <a href="http://heiando1919.e01.future-shop.jp/footnote/footnote-kimpaku.html" rel="shadowbox;width=400;height=200">KINPAKU</a> (gold leaf)
-                              </p>
-                              <p>Note &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Shipping with "kibako" (wooden box)</p>
-                            </div>
-                            <div id="more-info">
-                              <p><b>More Information</b></p>
-                              <ul>
-                                <li><p><a href="/note" target="_blank">Notes when using the Lacquerware</a></p></li>
-                                <li><p><a href="/about-material" target="_blank">About "material"</a></p></li>
-                                <li><p><a href="/about-quality" target="_blank">About "quality"</a></p></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      {{ product.attribute('detail', language) | raw }}
                     </div>
                  
                 <!--  商品詳細  -->
@@ -227,13 +140,13 @@
                         </div>
                       </td>
                       <td class="FS2_itemlayout_td_Right">
-                        <h1 class="itemTitle" style="padding-top: 10px;">
+                        <h1 class="itemTitle">
                           {{ productName }}
                         </h1>
                         <p class="itemNumber">Item number　{{ product.attribute('item', language) }}</p>
                         <div class="FS2_itemWeight">
                           <span class="FS2_itemWeightLabel">Weight</span>
-                          <span class="FS2_itemWeightValue">{{ product.attribute('weight', language) }}</span>
+                          <span class="FS2_itemWeightValue">{{ productskus[defaultSkuNum].weight|number_format }}g</span>
                         </div>
                         <div class="FS2_itemCountryofOrigin">
                           <span class="FS2_itemCountryofOriginLabel">Country of origin</span>
@@ -270,9 +183,56 @@
                             <table cellpadding="0" border="0" cellspacing="0" class="FS2_additional_image_tableVariation_table">
                               <tbody>
                                 <tr class="FS2_additional_image_tableVariation_border FS2_additional_image_tableVariation_bg">
-                                  <th scope="row">01: Shiki Soka</th>
+                                  <th scope="row">
+                                     {# Select Product SKU #}
+        									 {#   {% TemplateInclude "select productsku" %}   #}
+            {%- if isExistSku1 or isExistSku2 -%}
+            <dl class="skuList">
+            {%- for productsku in productskus -%}
+              <div class="skuList__item">
+                <dt class="skuList__label">
+                  {% if isExistSku1 %}{%- if productsku.getSkuDetail1.getTransAttribute(lang_id) %}{{ productsku.getSkuDetail1.getTransAttribute(lang_id) }}{% else %}{{ productsku.getSkuDetail1.title }}{% endif -%}{% endif -%}{% if isExistSku2 %}&nbsp;×&nbsp;{%- if productsku.getSkuDetail2.getTransAttribute(lang_id) %}{{ productsku.getSkuDetail2.getTransAttribute(lang_id) }}{% else %}{{ productsku.getSkuDetail2.title }}{% endif -%}{% endif -%}</dt>
+                <dd class="skuList__detail">
+                  {% set productSkuStock = productsku.stockUnlimited ? 10 : productsku.stock %}
+                  {%- if (productSkuStock > 0) -%}
+                   <div class="lc-selectBox" style="display: none;">
+                      <select class="lc-selectBox__select" name="quantity[{{ productsku.id }}]">                    
+                          <option value="1">1</option>
+                  {#        {%- for i in (productskus|length > 1 ? 0 : 1)..(productSkuStock) -%}  
+                          <option value="{{ i }}">{{ i }}</option>
+                        {%- endfor -%}  #}
+                      </select>
+                    </div>   
+                  {%- else -%}
+                    {{ #no_stock# }}
+                  {%- endif -%}
+                </dd>
+              </div>
+            {%- endfor -%}
+            </dl>
+          {%- else -%}
+            <dl class="skuList">
+              <div class="skuList__item">
+                <dt class="skuList__label">{{ #quantity_label# }}</dt>
+                <dd class="skuList__detail">
+                  {% set productSkuStock = (productskus|first).stockUnlimited ? 10 : (productskus|first).stock %}
+                  <input type="hidden" name="product_sku_id" value="{{ (productskus|first).id }}">
+                  <div class="lc-selectBox"  style="display: none;">
+                    <select class="lc-selectBox__select" name="quantity">
+                       <option value="1">1</option>
+              {#         {%- for i in 1..(productSkuStock) -%}
+                        <option value="{{ i }}">{{ i }}</option>
+                      {%- endfor -%}   #}
+                    </select>
+                  </div>
+                </dd>
+              </div>
+            </dl>
+          {%- endif -%}  
+                                    
+                                  </th>
                                   <td>&nbsp;</td>
-                                  <td><input type="image" onclick="return canSubmit();" src="{{ asset("btn_en/AdditionalImageInCartButton.gif") }}" alt="Add to Cart" class="js-lc--cartin"></td>
+                                  <td><input type="image" src="{{ asset("btn_en/AdditionalImageInCartButton.gif") }}" alt="Add to Cart" class="js-lc--cartin"></td>
                                 </tr>
                               </tbody>
                             </table>

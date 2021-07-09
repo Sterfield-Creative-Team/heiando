@@ -1,3 +1,4 @@
+{{ init_language(3) }}
 {# Reference: https://launchcart.jp/reference/1-%e3%82%ab%e3%83%bc%e3%83%88/ #}
 
 {# In the case of Ajax, output JSON #}
@@ -45,6 +46,7 @@
   {# Contents #}
 
   {# Breadcrumb list (this variable setting method is written in module template "breadcrumb list") #}
+{#
   {%- set breadcrumbList = [] -%}
   {%- set breadcrumbListItem = {
       name: #cart_label# ,
@@ -53,7 +55,10 @@
   -%}
   {%- set breadcrumbList = breadcrumbList|merge([breadcrumbListItem]) -%}
   {% TemplateInclude "breadcrumb list" %}
+#}
 
+
+<div class="lc-root">
   <section class="lc-contentSection">
     <h1 class="lc-contentSection__title lc-contentSection__title--center">{{ #cart_label# }}</h1>
     
@@ -223,7 +228,7 @@
                   $('.js-lc--cartTotal').text(price_format(data.cart_total * curRatio, decimalPoint));
                   $('.js-lc--cartTotalBase').text(price_format(data.cart_total, decimalPoint));
                   $('.js-lc--pointTotal').text(number_format(data.point_total));
-                  $('.js-lc--cartBadge').text(data.cart_count);
+                  //$('.js-lc--cartBadge').text(data.cart_count);
                 } else {
                   // fail
                   console.error('Error: ' + data.message);
@@ -237,6 +242,7 @@
             }
           });
         </script>
+
       {%- endif -%}
       {# end Items in the cart #}
 
@@ -251,8 +257,31 @@
       </form>
     </div>
   </section>
-
+{% TemplateInclude "common scripts" %}
+</div>
   {# end Contents #}
 
-  {% TemplateInclude "footer" %}
+<script>
+
+      $(function () { 
+ 		var changeFlg = window.sessionStorage.getItem('changeFlg');
+        if ( '{{ #unitBack# }}' != 'USD' && changeFlg != 1) {
+             // change currency
+             $.ajax({
+               method: 'POST',
+               url: '/currency/change',
+               data: {
+                 currency_unit: 'USD' 
+               }
+             }).done(function(result){
+               //location.reload();
+             }).fail(function (jqXHR, textStatus, errorThrown) {
+               console.error(textStatus + ': ' + errorThrown);
+             });
+      		}
+      });
+</script>
+
+</body>
+</html>
 {%- endif -%}
