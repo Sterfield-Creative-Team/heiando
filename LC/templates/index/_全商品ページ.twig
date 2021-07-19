@@ -9,7 +9,7 @@
 {% if set_lang %}
 {{ init_language(set_lang) }}
 {% endif %}
-
+  
 {# insert to html head title #}
 {% set title = "allitems" %}
   
@@ -268,34 +268,51 @@
                     </div>
                   </div>
                 </div>
-                
 
          <div class="FS2_GroupLayout">
-                  
-          {%- set qb = get_entity_manager().getRepository('EcCoreBundle:Product').createQueryBuilder('p').leftJoin('p.categories', 'c') -%}
-          {%- set products = qb.where('c.id = :id').setParameter('id', 16).getQuery().getResult() -%}
-      			{%- set productsTotal = products | length -%}
-                  
-						{# page information #}
-                  <p class="pager">
+           
+          {%- set page = app.request.get('page') ? app.request.get('page') : 1 -%}
+				  {%- set limit = 2 -%}
+
+          {%- set totalResults = get_entity_manager().getRepository('EcCoreBundle:Product').createQueryBuilder('p').where('p.deleted_at is NULL').andWhere('p.available_before IS NULL OR p.available_before >= NOW()').andWhere('p.released_at <= NOW()').andWhere('p.release_status != 1').select('COUNT(p.id)').getQuery().getResult() -%}
+          {%- set totalResults = totalResults|first|first -%}
+             
+          {%- set products = get_entity_manager().getRepository('EcCoreBundle:Product').createQueryBuilder('p').where('p.deleted_at is NULL').andWhere('p.available_before IS NULL OR p.available_before >= NOW()').andWhere('p.released_at <= NOW()').andWhere('p.release_status != 1').orderBy('p.released_at', 'DESC').setFirstResult(limit * (page - 1)).setMaxResults(limit).getQuery().getResult() -%}
+
+				{# page information #}
+               <p class="pager">
                    <span class="FS2_pager_text">
                       {{ #pagingnavi_showing# }}
                       <em>
-                        {{1}} -  {{ productsTotal }}
+                        {{1}} -  {{ totalResults }}
                       </em>
                       of
-                      <em>{{ productsTotal }}</em>  
-                    </span>  
-                  </p>
-               <!--   <span class="FS2_pager_stay">1</span>
-                  <a href="http://www.heiando1919.com/fs/heiando1919/c/shop/1/2" class="FS2_pager_link">2</a>
-                  <a href="http://www.heiando1919.com/fs/heiando1919/c/shop/1/2" class="FS2_pager_link_next"><img src="../btn_en/pager_next.gif" alt="Go to next page" border="0"></a><a href="http://www.heiando1919.com/fs/heiando1919/c/shop/1/2" class="FS2_pager_link_last"><img src="../btn_en/pager_last.gif" alt="Go to last page" border="0"></a>  -->
+                      <em>{{ totalResults }}</em>  
+                   </span>
 
-                  <div class="groupLayout">
-                    <div class="alignItem_08">
+                     {% set maxPages = (totalResults / limit)|round(0, 'ceil')  %}
+                     {% for pagerPage in 1..maxPages %}
+                       {% if pagerPage == page %}
+                       	  <span>{{ pagerPage }}</span>
+                       {% else %}
+                         {% if pagerPage == 1 and page !=1 %}
+                           <a href="?page={{ 1 }}"><img src="../btn_en/pager_top.gif" alt="Go to next page" border="0"></a>
+                           <a href="?page={{ page - 1 }}"><img src="../btn_en/pager_previous.gif" alt="Go to last page" border="0"></a>
+                         {% endif %}  
+                         <a href="?page={{ pagerPage }}">{{ pagerPage }}</a>
+                         {% if pagerPage == maxPages and page != maxPages%}
+                           <a href="?page={{ page + 1 }}"><img src="../btn_en/pager_next.gif" alt="Go to next page" border="0"></a>
+                           <a href="?page={{ maxPages }}"><img src="../btn_en/pager_last.gif" alt="Go to last page" border="0"></a>
+                         {% endif %}
+                       {% endif %}
+                     {% endfor %}
+                  </p>
+
+                 <div class="groupLayout">
+                   <div class="alignItem_08">
           
                    {# Products #}
-                  {%- for product in products -%}
+                    {%- for product in products -%}
                     {%- set productskus = get_entity_manager().getRepository('EcCoreBundle:ProductSku').createQueryBuilder('ps').innerJoin('ps.product', 'p').where(' p.id = :id').setParameter('id', product.id).getQuery().getResult() -%}
                       {%- set productAvailable = false -%}
                       {%- set isMultiplePrices = false -%}
@@ -343,7 +360,7 @@
 
                       </li>
                     </ul>
-						</div>
+						      </div>
                     <p class="FS2_ItemShortComment"></p>	
 
                     </div>
@@ -351,6 +368,7 @@
 
                      {%- endfor -%}
                     {# end Products #}
+             			</div>
                   </div>
                   <br clear="all">
 
@@ -359,16 +377,29 @@
                    <span class="FS2_pager_text">
                       {{ #pagingnavi_showing# }}
                       <em>
-                        {{1}} -  {{ productsTotal }}
+                        {{1}} -  {{ totalResults }}
                       </em>
                       of
-                      <em>{{ productsTotal }}</em>  
-                    </span>  
+                      <em>{{ totalResults }}</em>  
+                    </span> 
+             		    {% set maxPages = (totalResults / limit)|round(0, 'ceil')  %}
+                     {% for pagerPage in 1..maxPages %}
+                       {% if pagerPage == page %}
+                       	  <span>{{ pagerPage }}</span>
+                       {% else %}
+                         {% if pagerPage == 1 and page !=1 %}
+                           <a href="?page={{ 1 }}"><img src="../btn_en/pager_top.gif" alt="Go to next page" border="0"></a>
+                           <a href="?page={{ page - 1 }}"><img src="../btn_en/pager_previous.gif" alt="Go to last page" border="0"></a>
+                         {% endif %}  
+                         <a href="?page={{ pagerPage }}">{{ pagerPage }}</a>
+                         {% if pagerPage == maxPages and page != maxPages%}
+                           <a href="?page={{ page + 1 }}"><img src="../btn_en/pager_next.gif" alt="Go to next page" border="0"></a>
+                           <a href="?page={{ maxPages }}"><img src="../btn_en/pager_last.gif" alt="Go to last page" border="0"></a>
+                         {% endif %}
+                       {% endif %}
+                     {% endfor %}
                   </p>
-                <!--  <span class="FS2_pager_stay">1</span>
-                  <a href="http://www.heiando1919.com/fs/heiando1919/c/shop/1/2" class="FS2_pager_link">2</a>
-                  <a href="http://www.heiando1919.com/fs/heiando1919/c/shop/1/2" class="FS2_pager_link_next"><img src="../btn_en/pager_next.gif" alt="Go to next page" border="0"></a><a href="http://www.heiando1919.com/fs/heiando1919/c/shop/1/2" class="FS2_pager_link_last"><img src="../btn_en/pager_last.gif" alt="Go to last page" border="0"></a>   -->
-                  
+                  </div>
                 </div>
               </div>
             </div>
