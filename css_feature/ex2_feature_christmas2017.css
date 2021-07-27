@@ -65,7 +65,7 @@ div.ex2_xmas ul#ex2_xmas_menu li:after{content:"."; display:block; height:0; cle
 
 
 /*クリスマス　おすすめ*/
-div.ex2_xmas div#ex2_xmas_rec{background:url(http://heiando1919.e01.future-shop.jp/images/page/feature/christmas/christmas01.jpg) center fixed; background-size:100%;}
+div.ex2_xmas div#ex2_xmas_rec{background:url(/images/page/feature/christmas/christmas01.jpg) center fixed; background-size:100%;}
 
 div.ex2_xmas div#ex2_xmas_rec p.ex2_catch{color:#ffffff; text-shadow:1px 1px 1px rgba(0,0,0,0.8);}
 
@@ -83,7 +83,7 @@ div.ex2_xmas div#ex2_xmas_rec ul.ex2_xmas_c li:after{content:"."; display:block;
 
 
 /*クリスマス　ディナー*/
-div.ex2_xmas div#ex2_xmas_dinner{background:url(http://heiando1919.e01.future-shop.jp/images/page/feature/christmas/christmas02.jpg) center fixed; background-size:100%;}
+div.ex2_xmas div#ex2_xmas_dinner{background:url(/images/page/feature/christmas/christmas02.jpg) center fixed; background-size:100%;}
 
 div.ex2_xmas div#ex2_xmas_dinner p.ex2_catch{color:#ffffff; text-shadow:1px 1px 1px rgba(0,0,0,0.8);}
 
@@ -105,7 +105,7 @@ div.ex2_xmas div#ex2_xmas_dinner ul.ex2_xmas_c li:after{content:"."; display:blo
 
 
 /*クリスマス　プチ*/
-div.ex2_xmas div#ex2_xmas_little{background:url(http://heiando1919.e01.future-shop.jp/images/page/feature/christmas/christmas03.jpg) center fixed; background-size:100%;}
+div.ex2_xmas div#ex2_xmas_little{background:url(/images/page/feature/christmas/christmas03.jpg) center fixed; background-size:100%;}
 
 div.ex2_xmas div#ex2_xmas_little p.ex2_catch{color:#ffffff; text-shadow:1px 1px 1px rgba(0,0,0,0.8);}
 
@@ -124,7 +124,7 @@ div.ex2_xmas div#ex2_xmas_little ul li:after{content:"."; display:block; height:
 
 /*クリスマス　カタログ*/
 div.ex2_xmas div#ex2_xmas_catalogue{display:none;
-background:url(http://heiando1919.e01.future-shop.jp/images/page/feature/item/item_store01.jpg) no-repeat center; background-size:100%; padding:9.5% 0;}
+background:url(/images/page/feature/item/item_store01.jpg) no-repeat center; background-size:100%; padding:9.5% 0;}
 
 div.ex2_xmas div#ex2_xmas_catalogue div.ex2_xmas_cta{width:50%; margin:0 auto; padding:2% 0 4%; background:rgba(0,0,0,0.7);}
 div.ex2_xmas div#ex2_xmas_catalogue div.ex2_xmas_cta p:first-child{font-family:Josefin Slab; font-size:3em;}
@@ -134,7 +134,7 @@ div.ex2_xmas div#ex2_xmas_catalogue div.ex2_xmas_cta:after{content:"."; display:
 
 
 /*クリスマス　情報*/
-div.ex2_xmas div#ex2_xmas_info{background:url(http://heiando1919.e01.future-shop.jp/images/page/feature/christmas/christmas01.jpg) center fixed; background-size:100%;}
+div.ex2_xmas div#ex2_xmas_info{background:url(/images/page/feature/christmas/christmas01.jpg) center fixed; background-size:100%;}
 
 div.ex2_xmas div#ex2_xmas_info div.ex2_xmas_m{position:relative;}
 div.ex2_xmas div#ex2_xmas_info div.ex2_xmas_m p{padding:5%; position:absolute;}

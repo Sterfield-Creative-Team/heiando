@@ -9,7 +9,7 @@ div#container a:hover {color:#949494;}
 
 div#background {width:890px;height:auto;float:left;margin:0 auto;background-color:#831111;}
 div#container {width:850px;height:auto;float:left;margin:0 20px;}
-div#flexible-background{width:850px;height:auto;float:left;margin:0;padding:0;background:url(http://heiando1919.e01.future-shop.jp/JPG/flexible-background.jpg) no-repeat 0 0;}
+div#flexible-background{width:850px;height:auto;float:left;margin:0;padding:0;background:url(/JPG/flexible-background.jpg) no-repeat 0 0;}
 div.header {width:850px;height:90px;float:left;margin:0;padding:0;}
 div.english-name {width:355px;height:75px;float:left;margin:0 25px 15px 0;padding:0;display:table;}
 div.english-name p {line-height:0.9em; text-align:right;margin:0 ;padding:0;color:#FFFFFF;font-family:"Meiryo UI",Arial,"Lucida Sans Unicode";font-size:30px;font-smoothing:subpixel-antialiased;text-rendering:opximizeLegibility;display:table-cell;vertical-align:bottom;letter-spacing:1px;}

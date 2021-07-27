@@ -183,7 +183,7 @@ div#ex_container div.borderbanner_l:after{content:"."; display:block; height:0; 
 
 
 /*個別ページ*仁清梅蒔絵吸物椀*/
-div#ex_container div#ex_designdetail div.wa-ninseiumemakiesuimonowan{background-image:url("http://heiando1919.e01.future-shop.jp/images/page/ex/ex_designdetail01.jpg"); background-size:100% 100%;}
+div#ex_container div#ex_designdetail div.wa-ninseiumemakiesuimonowan{background-image:url("/images/page/ex/ex_designdetail01.jpg"); background-size:100% 100%;}
 div#ex_container div#ex_size div.wa-ninseiumemakiesuimonowan img.tn{width:20%; margin-top:-15%;}
 div#ex_container div#ex_prop div.wa-ninseiumemakiesuimonowan p.description{color:#cc1f1f;}
 div#ex_container div#ex_prop div.wa-ninseiumemakiesuimonowan p.description a:link{color:#cc1f1f;}
@@ -196,7 +196,7 @@ div#ex_container div#ex_spec div.wa-ninseiumemakiesuimonowan{margin:50px 0 0;}
 
 
 /*個別ページ*睦椀若松*/
-div#ex_container div#ex_designdetail div.mutsumiwan-wakamatsu{background-image:url("http://heiando1919.e01.future-shop.jp/images/page/ex/ex_designdetail02.jpg"); background-size:100% 100%;}
+div#ex_container div#ex_designdetail div.mutsumiwan-wakamatsu{background-image:url("/images/page/ex/ex_designdetail02.jpg"); background-size:100% 100%;}
 div#ex_container div#ex_size div.mutsumiwan-wakamatsu img.tn{width:20%; margin-top:-15%;}
 div#ex_container div#ex_prop div.mutsumiwan-wakamatsu p.description{color:#f38740;}
 div#ex_container div#ex_prop div.mutsumiwan-wakamatsu p.description a:link{color:#f38740;}
@@ -210,7 +210,7 @@ div#ex_container div#ex_spec div.mutsumiwan-wakamatsu{margin:50px 0 0;}
 
 
 /*個別ページ*屠蘇器揃扇面蒔絵*/
-div#ex_container div#ex_designdetail div.tosokisoroi-senmen{background-image:url("http://heiando1919.e01.future-shop.jp/images/page/ex/ex_designdetail04.jpg"); background-size:100% 100%;}
+div#ex_container div#ex_designdetail div.tosokisoroi-senmen{background-image:url("/images/page/ex/ex_designdetail04.jpg"); background-size:100% 100%;}
 div#ex_container div#ex_logo div.tosokisoroi-senmen{position:relative;}
 div#ex_container div#ex_logo div.tosokisoroi-senmen p.title{position:absolute; top:18%; left:3.5%;}
 div#ex_container div#ex_logo div.tosokisoroi-senmen p.description{position:absolute; top:34%; left:7%; width:50%;}
@@ -228,7 +228,7 @@ div#ex_container div#ex_spec div.tosokisoroi-senmen{margin:50px 0 0;}
 /*個別ページ*手文庫秋草*/
 div#ex_container div#ex_makieintro div.box-aki{margin-top:15%;}
 
-div#ex_container div#ex_designdetail div.box-aki{background-image:url("http://heiando1919.e01.future-shop.jp/images/page/ex/ex_designdetail01.jpg"); background-size:100% 100%;}
+div#ex_container div#ex_designdetail div.box-aki{background-image:url("/images/page/ex/ex_designdetail01.jpg"); background-size:100% 100%;}
 div#ex_container div#ex_size div.box-aki img.tn_1{width:17%; float:left; margin:0 0 0 5%;}
 div#ex_container div#ex_size div.box-aki img.tn_2{width:17%; float:left; margin:7% 0 0 -2%; transform:rotate(-30deg);}
 div#ex_container div#ex_logo div.box-aki{position:relative; margin-bottom:-7%;}

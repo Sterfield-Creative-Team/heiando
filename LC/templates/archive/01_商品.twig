@@ -1,4 +1,5 @@
 {# Reference: https://launchcart.jp/reference/1%e5%95%86%e5%93%81/ #}
+{{ init_language(3) }}
 
 {% TemplateInclude "html head" %}
 
@@ -97,28 +98,30 @@
 		{% TemplateInclude "header" %}
   </div>
 
-{# Contents #}
-  
- <table border="0" cellspacing="0" cellpadding="0" class="layout_table">
-   <tbody>
-     <tr>
-       <td class="layout_menu">
-			{% TemplateInclude "leftnavi" %}
-       </td>
+  {# Contents #}
+    
+  <table border="0" cellspacing="0" cellpadding="0" class="layout_table">
+    <tbody>
+      <tr>
+        <td class="layout_menu">
+        {% TemplateInclude "leftnavi" %}
+        </td>
 
-       <td class="layout_content">
+        <td class="layout_content">
           <div class="system_content">
-              <p class="pan FS2_breadcrumbs">
-                <a href="..">Top</a>
-              </p> 
+            <p class="pan FS2_breadcrumbs">
+              <a href="..">Top</a>
+            </p> 
+
+            <div class="FS2_GroupLayout">
             
               <div class="gl_Item" id="FS2_itemlayout_E">
 
-                      
-                    <div class="user_inner_content FS2_upper_comment">
-                      {{ product.attribute('detail', language) | raw }}
-                    </div>
-                 
+                        
+                <div class="user_inner_content FS2_upper_comment">
+                  {{ product.attribute('detail', language) | raw }}
+                </div>
+                    
                 <!--  商品詳細  -->
                 <table border="0" cellspacing="0" cellpadding="0">
                   <tbody>
@@ -132,11 +135,11 @@
                                 <img src="{{ ('/uploads/media/'~get_entity_manager().find('MediaCoreBundle:Media', product.attribute('image' ~ index)).path) }}" alt="{{ productName|striptags }}" class="thumbnail">
                               </a>
                             {%- elseif index == 1 -%}
-                               <img src="{{ asset('assets/img/no-image.png') }}" alt="no image">
+                                <img src="{{ asset('assets/img/no-image.png') }}" alt="no image">
                             {%- endif -%}
                           {%- endfor -%}
                           
-									<br>
+                          <br>
                         </div>
                       </td>
                       <td class="FS2_itemlayout_td_Right">
@@ -166,7 +169,7 @@
                               </span>
                               <span class="FS2_priceInJPY FS2_priceSub">
                                 (<span class="FS2_priceValue">
-                                	{{ productskus[defaultSkuNum].price|price_format(decimalPoint) }}
+                                  {{ productskus[defaultSkuNum].price|price_format(decimalPoint) }}
                                 </span>
                                 <span class="FS2_currencyLabel">
                                   {{ baseUnitBack }}
@@ -176,74 +179,61 @@
                           </ul>
                         </div>
 
-                        <form action="{{ path('ec_client_cart_add', {'product_id': product.id}) }}" method="post">
-          						<input type="hidden" name="product_sku_id" value="{{ productskus[defaultSkuNum].id }}">
-
-                          <div class="FS2_additional_image_tableVariation">
-                            <table cellpadding="0" border="0" cellspacing="0" class="FS2_additional_image_tableVariation_table">
-                              <tbody>
+                        <div class="FS2_additional_image_tableVariation">
+                          <table cellpadding="0" border="0" cellspacing="0" class="FS2_additional_image_tableVariation_table">
+                            <tbody>
+                              {# Select Product SKU #}
+                              {%- if isExistSku1 or isExistSku2 -%}
+                                {%- for productsku in productskus -%}
+                                  {% set productSkuStock = productsku.stockUnlimited ? 10 : productsku.stock %}
+                                  <tr class="FS2_additional_image_tableVariation_border FS2_additional_image_tableVariation_bg">
+                                    <th scope="row">
+                                      {% if isExistSku1 %}{%- if productsku.getSkuDetail1.getTransAttribute(lang_id) %}{{ productsku.getSkuDetail1.getTransAttribute(lang_id) }}{% else %}{{ productsku.getSkuDetail1.title }}{% endif -%}{% endif -%}{% if isExistSku2 %}&nbsp;×&nbsp;{%- if productsku.getSkuDetail2.getTransAttribute(lang_id) %}{{ productsku.getSkuDetail2.getTransAttribute(lang_id) }}{% else %}{{ productsku.getSkuDetail2.title }}{% endif -%}{% endif -%}
+                                    </th>
+                                    <td>{% if (productSkuStock < 5) %}/Only a few left{% endif %}&nbsp;</td>
+                                    <td>
+                                      {%- if (productSkuStock > 0) -%}
+                                        <form action="{{ path('ec_client_cart_add', {'product_id': product.id}) }}" method="post">
+                                          <input type="hidden" name="product_sku_id" value="{{ productsku.id }}">
+                                          <div class="lc-selectBox" style="display: none;">
+                                            <select class="lc-selectBox__select" name="quantity[{{ productsku.id }}]">                    
+                                              <option value="1">1</option>
+                                            </select>
+                                          </div>   
+                                          <input type="image" src="{{ asset("btn_en/AdditionalImageInCartButton.gif") }}" alt="Add to Cart" class="js-lc--cartin">
+                                        </form>
+                                      {%- else -%}
+                                        {{ #no_stock# }}
+                                      {%- endif -%}
+                                    </td>
+                                  </tr>
+                                {%- endfor -%}
+                              {%- else -%}
+                                {% set productSkuStock = (productskus|first).stockUnlimited ? 10 : (productskus|first).stock %}
                                 <tr class="FS2_additional_image_tableVariation_border FS2_additional_image_tableVariation_bg">
                                   <th scope="row">
-                                     {# Select Product SKU #}
-        									 {#   {% TemplateInclude "select productsku" %}   #}
-            {%- if isExistSku1 or isExistSku2 -%}
-            <dl class="skuList">
-            {%- for productsku in productskus -%}
-              <div class="skuList__item">
-                <dt class="skuList__label">
-                  {% if isExistSku1 %}{%- if productsku.getSkuDetail1.getTransAttribute(lang_id) %}{{ productsku.getSkuDetail1.getTransAttribute(lang_id) }}{% else %}{{ productsku.getSkuDetail1.title }}{% endif -%}{% endif -%}{% if isExistSku2 %}&nbsp;×&nbsp;{%- if productsku.getSkuDetail2.getTransAttribute(lang_id) %}{{ productsku.getSkuDetail2.getTransAttribute(lang_id) }}{% else %}{{ productsku.getSkuDetail2.title }}{% endif -%}{% endif -%}</dt>
-                <dd class="skuList__detail">
-                  {% set productSkuStock = productsku.stockUnlimited ? 10 : productsku.stock %}
-                  {%- if (productSkuStock > 0) -%}
-                   <div class="lc-selectBox" style="display: none;">
-                      <select class="lc-selectBox__select" name="quantity[{{ productsku.id }}]">                    
-                          <option value="1">1</option>
-                  {#        {%- for i in (productskus|length > 1 ? 0 : 1)..(productSkuStock) -%}  
-                          <option value="{{ i }}">{{ i }}</option>
-                        {%- endfor -%}  #}
-                      </select>
-                    </div>   
-                  {%- else -%}
-                    {{ #no_stock# }}
-                  {%- endif -%}
-                </dd>
-              </div>
-            {%- endfor -%}
-            </dl>
-          {%- else -%}
-            <dl class="skuList">
-              <div class="skuList__item">
-                <dt class="skuList__label">{{ #quantity_label# }}</dt>
-                <dd class="skuList__detail">
-                  {% set productSkuStock = (productskus|first).stockUnlimited ? 10 : (productskus|first).stock %}
-                  <input type="hidden" name="product_sku_id" value="{{ (productskus|first).id }}">
-                  <div class="lc-selectBox"  style="display: none;">
-                    <select class="lc-selectBox__select" name="quantity">
-                       <option value="1">1</option>
-              {#         {%- for i in 1..(productSkuStock) -%}
-                        <option value="{{ i }}">{{ i }}</option>
-                      {%- endfor -%}   #}
-                    </select>
-                  </div>
-                </dd>
-              </div>
-            </dl>
-          {%- endif -%}  
-                                    
                                   </th>
-                                  <td>&nbsp;</td>
-                                  <td><input type="image" src="{{ asset("btn_en/AdditionalImageInCartButton.gif") }}" alt="Add to Cart" class="js-lc--cartin"></td>
+                                  <td>{% if (productSkuStock < 5) %}/Only a few left{% endif %}&nbsp;</td>
+                                  <td>
+                                    <form action="{{ path('ec_client_cart_add', {'product_id': product.id}) }}" method="post">
+                                      <input type="hidden" name="product_sku_id" value="{{ (productskus|first).id }}">
+                                      <div class="lc-selectBox"  style="display: none;">
+                                        <select class="lc-selectBox__select" name="quantity">
+                                          <option value="1">1</option>
+                                        </select>
+                                      </div>
+                                      <input type="image" src="{{ asset("btn_en/AdditionalImageInCartButton.gif") }}" alt="Add to Cart" class="js-lc--cartin">
+                                    </form>
+                                  </td>
                                 </tr>
-                              </tbody>
-                            </table>
-                            <input type="hidden" name="cnt" value="1">
-                          </div>
-                          <div class="FS2_figure">
-                          </div>
-                        </form>
+                              {%- endif -%}  
+                            </tbody>
+                          </table>
+                          <input type="hidden" name="cnt" value="1">
+                        </div>
+                        <div class="FS2_figure"></div>
 
                         <div id="FS2_note_shippingToJapan">Consumption tax will be added separately if shipping to Japan.</div>
-
 
                         <div class="FS2_TweetButton_area">
                           <ul class="button_page_Twitter">
@@ -282,31 +272,29 @@
                             </li>
                           </ul>
                         </div>
-                        
-                        <form action="{{ path('ec_client_cart_add', {'product_id': product.id}) }}" method="post">
-          						<input type="hidden" name="product_sku_id" value="{{ productskus[defaultSkuNum].id }}">
-                            <div class="FS2_WishListButton_area">                              
-                       {#      {%- if is_authorized() -%}   #}
-                              <a href="{{ path('ec_client_consumer_favorite_add', {'product_id': product.id}) }}" data-delete-href="{{ path('ec_client_consumer_favorite_delete', {'productId': product.id}) }}" data-product-id="{{ product.id }}" class="js-lc--favorite">
-                                <img src="{{ asset("btn_en/WishListButton.gif") }}" alt="Add to Wish List" border="0">
-                              </a>
-                   {#		{%- endif -%}   #}
-                            </div>
-                         </form>
-                        
+                                             
+                        {%- if is_authorized() -%}  
+                          <div class="FS2_WishListButton_area">         
+                            <a href="{{ path('ec_client_consumer_favorite_add', {'product_id': product.id}) }}" data-delete-href="{{ path('ec_client_consumer_favorite_delete', {'productId': product.id}) }}" data-product-id="{{ product.id }}" class="js-lc--favorite">
+                              <img src="{{ asset("btn_en/WishListButton.gif") }}" alt="Add to Wish List" border="0">
+                            </a>  
+                          </div>
+                        {%- endif -%}
                       </td>
                     </tr>
                   </tbody>
                 </table>
                 <!--  商品詳細  -->     
-                      
-              	</div>
-             </div>
-   		</td>
-   	 </tr>
-  </tbody>
- </table>
-{# end Contents #}
+                        
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  {# end Contents #}
 
 
   <div class="layout_footer">

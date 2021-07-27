@@ -3,7 +3,7 @@ img {margin:0;padding:0;}
 p {float:left;margin:0;padding:0;text-align:left;color:#000000;font-family:"Meiryo UI",Arial,"Lucida Sans Unicode";font-size:12px;line-height:18px;text-align:justify;-ms-text-justify:inter-word;text-rendering:opximizeLegibility;letter-spacing:1px;}
 span.signboard {float:left;margin:0;padding:0;text-align:left;color:#000000;font-family:"Meiryo UI",Arial,"Lucida Sans Unicode";font-size:16px;line-height:20px;text-align:justify;-ms-text-justify:inter-word;text-rendering:opximizeLegibility;letter-spacing:1px;}
 
-div#background_sub {width:890px;height:auto;float:left;margin:0;padding:0 0 40px 0;background-image:url('http://heiando1919.e01.future-shop.jp/JPG/subcontents_bg.jpg');background-repeat:repeat-y;}
+div#background_sub {width:890px;height:auto;float:left;margin:0;padding:0 0 40px 0;background-image:url('/JPG/subcontents_bg.jpg');background-repeat:repeat-y;}
 div#background_sub a:link {color:#000000;text-decoration:underline;}
 div#background_sub a:visited {color:#000000;}
 div#background_sub a:active {color:#000000;}

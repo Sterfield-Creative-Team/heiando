@@ -123,7 +123,7 @@ div#ex2_container div#ex2_style div.ex2_style_3 div.ex2_style_sns:after{content:
 
 
 /*金箔*/
-div#ex2_container div#ex2_kinpaku div.ex2_kinpaku_1{float:left; width:61%; margin:-12% 3% 1% 0; background:url("http://heiando1919.e01.future-shop.jp/images/page/interiors/gaku-kh/gaku-kh_kinpaku01a.jpg") no-repeat; background-size:100%;}
+div#ex2_container div#ex2_kinpaku div.ex2_kinpaku_1{float:left; width:61%; margin:-12% 3% 1% 0; background:url("/images/page/interiors/gaku-kh/gaku-kh_kinpaku01a.jpg") no-repeat; background-size:100%;}
 div#ex2_container div#ex2_kinpaku div.ex2_kinpaku_1:hover{background-color:transparent;}
 div#ex2_container div#ex2_kinpaku div.ex2_kinpaku_1:hover img{visibility:hidden;}
 
