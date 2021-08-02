@@ -147,7 +147,9 @@
                                               </li>
                                             </ul>
                                           </div>
-                                          <p class="FS2_ItemShortComment">{{ product.attribute('product name' , language) }}</p>
+                                          {%- if product.attribute('short comment' , language) -%}
+                                            <p class="FS2_ItemShortComment">{{ product.attribute('short comment' , language) }}</p>
+                                          {%- endif -%}
                                           <div class="itemRight">
                                             <a href="{{ path('ec_product_detail', {'id': product.id}) }}" onclick="return canSubmit();">
                                               <img type="image" src="{{ asset("btn_en/DetailButton.gif") }}" value="詳しく見る" border="0" alt="View Details">
